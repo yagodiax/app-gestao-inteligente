@@ -1,0 +1,1195 @@
+object Form3: TForm3
+  Left = -1366
+  Height = 745
+  Top = 0
+  Width = 1360
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Form3'
+  ClientHeight = 745
+  ClientWidth = 1360
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 82
+    Top = 0
+    Width = 1366
+    BevelColor = clGray
+    TabOrder = 0
+  end
+  object lblEntre: TLabel
+    Left = 456
+    Height = 50
+    Top = 16
+    Width = 491
+    Alignment = taCenter
+    Caption = 'Gerenciamento de Lojas'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -45
+    Font.Name = 'Quattrocento'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 1304
+    Height = 42
+    Top = 672
+    Width = 40
+    Glyph.Data = {
+      36100000424D3610000000000000360000002800000020000000200000000100
+      2000000000000010000064000000640000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000620000009C00000002FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000062000000FE000000FF000000A000000002FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0000000062000000FE000000FF000000FF000000FF000000A20000
+      0002FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0000000062000000FE000000FF000000FF000000FF000000FF000000FF0000
+      0093FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0062000000FE000000FF000000FF000000FF000000FF000000FF000000EA0000
+      002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000620000
+      00FE000000FF000000FF000000FF000000FF000000FF000000EA0000002DFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE0000
+      00FF000000FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE000000FF0000
+      00FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE000000FF000000FF0000
+      00FF000000FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000062000000FE000000FF000000FF000000FF0000
+      00FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0000000062000000FE000000FF000000FF000000FF000000FF0000
+      00FF000000EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0000000062000000FE000000FF000000FF000000FF000000FF000000FF0000
+      00EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0062000000FE000000FF000000FF000000FF000000FF000000FF000000EA0000
+      002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000620000
+      00FE000000FF000000FF000000FF000000FF000000FF000000EA0000002DFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE0000
+      00FF000000FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE000000FF0000
+      00FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE000000FF0000
+      00FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE0000
+      00FF000000FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000620000
+      00FE000000FF000000FF000000FF000000FF000000FF000000EA0000002DFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0062000000FE000000FF000000FF000000FF000000FF000000FF000000EA0000
+      002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0000000062000000FE000000FF000000FF000000FF000000FF000000FF0000
+      00EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0000000062000000FE000000FF000000FF000000FF000000FF0000
+      00FF000000EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000062000000FE000000FF000000FF000000FF0000
+      00FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE000000FF000000FF0000
+      00FF000000FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE000000FF0000
+      00FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000062000000FE0000
+      00FF000000FF000000FF000000FF000000FF000000EA0000002DFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000620000
+      00FE000000FF000000FF000000FF000000FF000000FF000000EA0000002DFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0062000000FE000000FF000000FF000000FF000000FF000000FF000000EA0000
+      002DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0000000062000000FE000000FF000000FF000000FF000000FF000000FF0000
+      0093FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0000000062000000FE000000FF000000FF000000FF000000A20000
+      0002FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0000000062000000FE000000FF000000A000000002FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000620000009C00000002FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+    }
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 556
+    Top = 80
+    Width = 1360
+    ActivePage = TabSheet1
+    AutoSize = True
+    TabIndex = 0
+    TabOrder = 2
+    OnChange = PageControl1Change
+    object TabSheet1: TTabSheet
+      Caption = 'Consultar Lojas'
+      ClientHeight = 528
+      ClientWidth = 1352
+      object Label7: TLabel
+        Left = 184
+        Height = 17
+        Top = 72
+        Width = 152
+        Caption = 'Insira o Nome da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object tnome: TEdit
+        Left = 184
+        Height = 25
+        Top = 96
+        Width = 184
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 0
+      end
+      object Button6: TButton
+        Left = 416
+        Height = 33
+        Top = 80
+        Width = 96
+        Caption = 'Consultar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 1
+        OnClick = Button6Click
+      end
+      object Button7: TButton
+        Left = 528
+        Height = 33
+        Top = 80
+        Width = 72
+        Caption = 'Limpar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 2
+        OnClick = Button7Click
+      end
+      object timg: TDBGroupBox
+        Left = 184
+        Height = 185
+        Top = 192
+        Width = 185
+        ClientHeight = 165
+        ClientWidth = 181
+        TabOrder = 3
+        object tlogo: TDBImage
+          Left = -2
+          Height = 185
+          Top = -16
+          Width = 185
+          Stretch = True
+        end
+      end
+      object tlinkinstac: TEdit
+        Left = 416
+        Height = 25
+        Top = 248
+        Width = 193
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 4
+        OnClick = tlinkinstacClick
+      end
+      object tlinksitec: TEdit
+        Left = 416
+        Height = 25
+        Top = 320
+        Width = 193
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 5
+        OnClick = tlinksitecClick
+      end
+      object Label3: TLabel
+        Left = 416
+        Height = 17
+        Top = 224
+        Width = 123
+        Caption = 'Instagram da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 416
+        Height = 17
+        Top = 296
+        Width = 80
+        Caption = 'Site da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object DBGrid3: TDBGrid
+        Left = 976
+        Height = 528
+        Top = 0
+        Width = 344
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSource3
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+        ParentFont = False
+        TabOrder = 6
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Modificar Dados'
+      ClientHeight = 528
+      ClientWidth = 1352
+      OnContextPopup = TabSheet2ContextPopup
+      object Button1: TButton
+        Left = 136
+        Height = 52
+        Top = 400
+        Width = 120
+        Caption = 'Inserir ✔️'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+      object Label2: TLabel
+        Left = 121
+        Height = 17
+        Top = 136
+        Width = 96
+        Caption = 'Insira o Email:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 120
+        Height = 17
+        Top = 208
+        Width = 115
+        Caption = 'Insira o Numero:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object temail: TEdit
+        Left = 121
+        Height = 25
+        Top = 160
+        Width = 193
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 1
+      end
+      object tnumero: TEdit
+        Left = 120
+        Height = 25
+        Top = 232
+        Width = 193
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 2
+      end
+      object Button2: TButton
+        Left = 272
+        Height = 52
+        Top = 400
+        Width = 120
+        Caption = 'Atualizar 🟰'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 3
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Left = 408
+        Height = 52
+        Top = 400
+        Width = 120
+        Caption = 'Deletar ❌'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 4
+        OnClick = Button3Click
+      end
+      object Label8: TLabel
+        Left = 188
+        Height = 17
+        Top = 32
+        Width = 152
+        Caption = 'Insira o Nome da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object tnomemd: TEdit
+        Left = 188
+        Height = 25
+        Top = 56
+        Width = 184
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 5
+        OnChange = tnomemdChange
+      end
+      object Button9: TButton
+        Left = 592
+        Height = 33
+        Top = 480
+        Width = 80
+        Caption = 'Limpar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 6
+        OnClick = Button9Click
+      end
+      object Label5: TLabel
+        Left = 121
+        Height = 17
+        Top = 280
+        Width = 140
+        Caption = 'Insira o Cpf ou Cpnj:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object tcpf: TEdit
+        Left = 121
+        Height = 25
+        Top = 304
+        Width = 193
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 7
+      end
+      object tlinkinsta: TEdit
+        Left = 352
+        Height = 25
+        Top = 160
+        Width = 193
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 8
+      end
+      object tlinksite: TEdit
+        Left = 352
+        Height = 25
+        Top = 232
+        Width = 193
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 9
+      end
+      object Label9: TLabel
+        Left = 352
+        Height = 17
+        Top = 136
+        Width = 181
+        Caption = 'Insira o Link do Instagram:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label10: TLabel
+        Left = 352
+        Height = 17
+        Top = 208
+        Width = 138
+        Caption = 'Insira o Link do Site:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label11: TLabel
+        Left = 352
+        Height = 17
+        Top = 280
+        Width = 215
+        Caption = 'Selecione os Tipos de Produtos'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object CheckBoxMasculino: TCheckBox
+        Left = 352
+        Height = 19
+        Top = 304
+        Width = 73
+        Caption = 'Masculino'
+        TabOrder = 10
+      end
+      object CheckBoxFeminino: TCheckBox
+        Left = 434
+        Height = 19
+        Top = 304
+        Width = 68
+        Caption = 'Feminino'
+        TabOrder = 11
+      end
+      object CheckBoxInfantil: TCheckBox
+        Left = 507
+        Height = 19
+        Top = 304
+        Width = 55
+        Caption = 'Infantil'
+        TabOrder = 12
+      end
+      object DBGrid1: TDBGrid
+        Left = 688
+        Height = 528
+        Top = 0
+        Width = 662
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSource1
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+        ParentFont = False
+        TabOrder = 13
+      end
+      object Button11: TButton
+        Left = 408
+        Height = 33
+        Top = 40
+        Width = 82
+        Caption = 'Button11'
+        TabOrder = 14
+        OnClick = Button11Click
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Modificar Endereço'
+      ClientHeight = 528
+      ClientWidth = 1352
+      object Button5: TButton
+        Left = 254
+        Height = 52
+        Top = 432
+        Width = 127
+        Caption = 'Atualizar 🟰'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 0
+        OnClick = Button5Click
+      end
+      object Button8: TButton
+        Left = 398
+        Height = 52
+        Top = 432
+        Width = 127
+        Caption = 'Deletar ❌'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 1
+        OnClick = Button8Click
+      end
+      object Button13: TButton
+        Left = 592
+        Height = 33
+        Top = 480
+        Width = 76
+        Caption = 'Limpar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 2
+        OnClick = Button13Click
+      end
+      object Label14: TLabel
+        Left = 212
+        Height = 17
+        Top = 120
+        Width = 100
+        Caption = 'Insira o Feirão:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label15: TLabel
+        Left = 212
+        Height = 17
+        Top = 192
+        Width = 167
+        Caption = 'Insira o Numero da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object tnumerol: TEdit
+        Left = 212
+        Height = 25
+        Top = 216
+        Width = 204
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 3
+      end
+      object Label16: TLabel
+        Left = 213
+        Height = 17
+        Top = 264
+        Width = 103
+        Caption = 'Insira a Cidade:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label18: TLabel
+        Left = 212
+        Height = 17
+        Top = 336
+        Width = 104
+        Caption = 'Insira o Estado:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label17: TLabel
+        Left = 136
+        Height = 17
+        Top = 40
+        Width = 152
+        Caption = 'Insira o Nome da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object tnomeloja: TEdit
+        Left = 136
+        Height = 25
+        Top = 64
+        Width = 184
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 4
+      end
+      object tfeirao: TComboBox
+        Left = 212
+        Height = 25
+        Top = 144
+        Width = 204
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ItemHeight = 17
+        Items.Strings = (
+          'Feirão Das Malhas'
+          'Bras RJ'
+          'Feirão da Lu'
+        )
+        ParentFont = False
+        TabOrder = 5
+      end
+      object tcidade: TComboBox
+        Left = 212
+        Height = 25
+        Top = 288
+        Width = 204
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ItemHeight = 17
+        Items.Strings = (
+          'Duque de Caxias'
+        )
+        ParentFont = False
+        TabOrder = 6
+      end
+      object testado: TComboBox
+        Left = 212
+        Height = 25
+        Top = 360
+        Width = 59
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ItemHeight = 17
+        Items.Strings = (
+          'RJ'
+        )
+        ParentFont = False
+        TabOrder = 7
+      end
+      object Button12: TButton
+        Left = 112
+        Height = 52
+        Top = 432
+        Width = 127
+        Caption = 'Button12'
+        TabOrder = 8
+        OnClick = Button12Click
+      end
+      object DBGrid2: TDBGrid
+        Left = 688
+        Height = 528
+        Top = 0
+        Width = 664
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSource2
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+        TabOrder = 9
+      end
+      object Button15: TButton
+        Left = 376
+        Height = 25
+        Top = 48
+        Width = 75
+        Caption = 'Button15'
+        TabOrder = 10
+        OnClick = Button15Click
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Modificar Logo'
+      ClientHeight = 528
+      ClientWidth = 1352
+      object timg1: TDBGroupBox
+        Left = 336
+        Height = 185
+        Top = 166
+        Width = 185
+        ClientHeight = 165
+        ClientWidth = 181
+        TabOrder = 0
+        object tlogo1: TDBImage
+          Left = -2
+          Height = 185
+          Top = -18
+          Width = 185
+          DataSource = DataSource1
+          OnClick = tlogo1Click
+          Stretch = True
+        end
+      end
+      object Label13: TLabel
+        Left = 336
+        Height = 17
+        Top = 144
+        Width = 142
+        Caption = 'Insira a Logo da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object Label19: TLabel
+        Left = 456
+        Height = 17
+        Top = 32
+        Width = 152
+        Caption = 'Insira o Nome da Loja:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object tnome3: TEdit
+        Left = 456
+        Height = 25
+        Top = 56
+        Width = 184
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 1
+      end
+      object Button14: TButton
+        Left = 648
+        Height = 52
+        Top = 424
+        Width = 120
+        Caption = 'Deletar ❌'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 2
+        OnClick = Button14Click
+      end
+      object Button17: TButton
+        Left = 1240
+        Height = 33
+        Top = 472
+        Width = 72
+        Caption = 'Limpar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 3
+        OnClick = Button17Click
+      end
+      object Button10: TButton
+        Left = 688
+        Height = 33
+        Top = 40
+        Width = 91
+        Caption = 'Button10'
+        TabOrder = 4
+        OnClick = Button10Click
+      end
+      object Button16: TButton
+        Left = 480
+        Height = 52
+        Top = 424
+        Width = 120
+        Caption = 'Inserir ✔️'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Quattrocento'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 5
+        OnClick = Button16Click
+      end
+    end
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = Form1.MySQL56Connection1
+    Left = 40
+    Top = 648
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'loja'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'email'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'numero'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'cpf_cnpj'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'logo'
+        DataType = ftBlob
+        Precision = -1
+      end    
+      item
+        Name = 'tipo_produto'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'link_site'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'link_instagram'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end>
+    Active = True
+    Database = Form1.MySQL56Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM lojas'
+    )
+    Params = <>
+    Macros = <>
+    Left = 192
+    Top = 648
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 120
+    Top = 648
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    DefaultExt = '.jpg'
+    Filter = 'Arquivo de Imagem|*.jpg'
+    Left = 320
+    Top = 648
+  end
+  object SQLQuery2: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'loja'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'feirao'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'bloco'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'cidade'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'estado'
+        DataType = ftString
+        Precision = -1
+        Size = 2
+      end>
+    Active = True
+    Database = Form1.MySQL56Connection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM endereco'
+    )
+    Params = <>
+    Macros = <>
+    Left = 528
+    Top = 648
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLQuery2
+    Left = 456
+    Top = 648
+  end
+  object SQLQuery3: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'loja'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end>
+    Active = True
+    Database = Form1.MySQL56Connection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'SELECT loja'
+      'FROM lojas;'
+    )
+    Params = <>
+    Macros = <>
+    Left = 832
+    Top = 648
+  end
+  object DataSource3: TDataSource
+    DataSet = SQLQuery3
+    Left = 752
+    Top = 648
+  end
+  object SQLQuery4: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'loja'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'email'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'numero'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'cpf_cnpj'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'logo'
+        DataType = ftBlob
+        Precision = -1
+      end    
+      item
+        Name = 'tipo_produto'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'link_site'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'link_instagram'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end>
+    Active = True
+    Database = Form1.MySQL56Connection1
+    Transaction = Form1.SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM lojas'
+    )
+    Params = <>
+    Macros = <>
+    Left = 1032
+    Top = 648
+  end
+  object DataSource4: TDataSource
+    DataSet = SQLQuery4
+    Left = 960
+    Top = 648
+  end
+end
