@@ -21,7 +21,7 @@ object Form3: TForm3
     Left = 456
     Height = 50
     Top = 16
-    Width = 491
+    Width = 493
     Alignment = taCenter
     Caption = 'Gerenciamento de Lojas'
     Font.CharSet = ANSI_CHARSET
@@ -176,9 +176,9 @@ object Form3: TForm3
     Height = 556
     Top = 80
     Width = 1360
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     AutoSize = True
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 2
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
@@ -189,7 +189,7 @@ object Form3: TForm3
         Left = 184
         Height = 17
         Top = 72
-        Width = 152
+        Width = 145
         Caption = 'Insira o Nome da Loja:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -291,7 +291,7 @@ object Form3: TForm3
         Left = 416
         Height = 17
         Top = 224
-        Width = 123
+        Width = 120
         Caption = 'Instagram da Loja:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -335,7 +335,6 @@ object Form3: TForm3
       Caption = 'Modificar Dados'
       ClientHeight = 528
       ClientWidth = 1352
-      OnContextPopup = TabSheet2ContextPopup
       object Button1: TButton
         Left = 136
         Height = 52
@@ -355,7 +354,7 @@ object Form3: TForm3
         Left = 121
         Height = 17
         Top = 136
-        Width = 96
+        Width = 92
         Caption = 'Insira o Email:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -368,7 +367,7 @@ object Form3: TForm3
         Left = 120
         Height = 17
         Top = 208
-        Width = 115
+        Width = 107
         Caption = 'Insira o Numero:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -437,7 +436,7 @@ object Form3: TForm3
         Left = 188
         Height = 17
         Top = 32
-        Width = 152
+        Width = 145
         Caption = 'Insira o Nome da Loja:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -479,7 +478,7 @@ object Form3: TForm3
         Left = 121
         Height = 17
         Top = 280
-        Width = 140
+        Width = 132
         Caption = 'Insira o Cpf ou Cpnj:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -531,7 +530,7 @@ object Form3: TForm3
         Left = 352
         Height = 17
         Top = 136
-        Width = 181
+        Width = 170
         Caption = 'Insira o Link do Instagram:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -544,7 +543,7 @@ object Form3: TForm3
         Left = 352
         Height = 17
         Top = 208
-        Width = 138
+        Width = 130
         Caption = 'Insira o Link do Site:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -557,7 +556,7 @@ object Form3: TForm3
         Left = 352
         Height = 17
         Top = 280
-        Width = 215
+        Width = 206
         Caption = 'Selecione os Tipos de Produtos'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -670,7 +669,7 @@ object Form3: TForm3
         Left = 212
         Height = 17
         Top = 120
-        Width = 100
+        Width = 96
         Caption = 'Insira o Feirão:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -683,7 +682,7 @@ object Form3: TForm3
         Left = 212
         Height = 17
         Top = 192
-        Width = 167
+        Width = 158
         Caption = 'Insira o Numero da Loja:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -709,7 +708,7 @@ object Form3: TForm3
         Left = 213
         Height = 17
         Top = 264
-        Width = 103
+        Width = 101
         Caption = 'Insira a Cidade:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -722,7 +721,7 @@ object Form3: TForm3
         Left = 212
         Height = 17
         Top = 336
-        Width = 104
+        Width = 101
         Caption = 'Insira o Estado:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -735,7 +734,7 @@ object Form3: TForm3
         Left = 136
         Height = 17
         Top = 40
-        Width = 152
+        Width = 145
         Caption = 'Insira o Nome da Loja:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -863,7 +862,7 @@ object Form3: TForm3
         Left = 336
         Height = 17
         Top = 144
-        Width = 142
+        Width = 138
         Caption = 'Insira a Logo da Loja:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -876,7 +875,7 @@ object Form3: TForm3
         Left = 456
         Height = 17
         Top = 32
-        Width = 152
+        Width = 145
         Caption = 'Insira o Nome da Loja:'
         Font.CharSet = ANSI_CHARSET
         Font.Height = -15
@@ -955,7 +954,7 @@ object Form3: TForm3
     end
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Database = Form1.MySQL56Connection1
     Left = 40
     Top = 648
@@ -1016,7 +1015,6 @@ object Form3: TForm3
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = SQLTransaction1
     SQL.Strings = (
@@ -1077,7 +1075,6 @@ object Form3: TForm3
         Precision = -1
         Size = 2
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -1103,7 +1100,6 @@ object Form3: TForm3
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -1176,7 +1172,6 @@ object Form3: TForm3
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (

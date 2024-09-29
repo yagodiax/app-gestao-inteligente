@@ -20,9 +20,9 @@ object Form2: TForm2
   end
   object lblEntre: TLabel
     Left = 576
-    Height = 47
+    Height = 49
     Top = 24
-    Width = 242
+    Width = 231
     Caption = 'Menu Inicial'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -43
@@ -8343,9 +8343,9 @@ object Form2: TForm2
   end
   object Label1: TLabel
     Left = 496
-    Height = 39
+    Height = 40
     Top = 456
-    Width = 79
+    Width = 82
     Caption = 'Lojas'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -35
@@ -8356,7 +8356,7 @@ object Form2: TForm2
   end
   object Label2: TLabel
     Left = 760
-    Height = 39
+    Height = 40
     Top = 456
     Width = 180
     Caption = 'Assinaturas'
@@ -8372,7 +8372,6 @@ object Form2: TForm2
     Height = 152
     Top = 616
     Width = 155
-    OnClick = Image1Click
     Picture.Data = {
       1754506F727461626C654E6574776F726B4772617068696369BA000089504E47
       0D0A1A0A0000000D49484452000001F4000001F40806000000CBD6DF8A000000

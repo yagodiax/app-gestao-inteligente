@@ -40,6 +40,7 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
 
   public
@@ -103,6 +104,11 @@ begin
 end;
 
 procedure TForm5.Button6Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm5.FormCreate(Sender: TObject);
 begin
 
 end;

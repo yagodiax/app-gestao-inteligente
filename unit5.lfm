@@ -5,8 +5,9 @@ object Form5: TForm5
   Width = 1355
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Form5'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 731
+  ClientWidth = 1355
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
@@ -42,9 +43,9 @@ object Form5: TForm5
   end
   object lblEntre: TLabel
     Left = 504
-    Height = 47
+    Height = 49
     Top = 16
-    Width = 424
+    Width = 426
     Alignment = taCenter
     Caption = 'Gerenciar Assinaturas'
     Font.CharSet = ANSI_CHARSET
@@ -1711,7 +1712,7 @@ object Form5: TForm5
     Left = 152
     Height = 17
     Top = 136
-    Width = 152
+    Width = 145
     Caption = 'Insira o Nome da Loja:'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
@@ -1781,7 +1782,7 @@ object Form5: TForm5
     Left = 352
     Height = 17
     Top = 360
-    Width = 75
+    Width = 72
     Caption = 'Valor pago:'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
@@ -1806,7 +1807,7 @@ object Form5: TForm5
     Left = 352
     Height = 17
     Top = 296
-    Width = 157
+    Width = 150
     Caption = 'Metodo de Pagamento:'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
@@ -1837,7 +1838,7 @@ object Form5: TForm5
     Left = 136
     Height = 17
     Top = 264
-    Width = 137
+    Width = 133
     Caption = 'Selecione o Serviço:'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
@@ -1978,7 +1979,6 @@ object Form5: TForm5
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (

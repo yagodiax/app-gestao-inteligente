@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  ExtCtrls, Unit4, Unit7, Unit5;
+  ExtCtrls, Unit5;
 
 type
 
@@ -25,7 +25,6 @@ type
     procedure BitBtn2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Image1Click(Sender: TObject);
   private
   public
 
@@ -47,29 +46,16 @@ begin
 
 end;
 
-procedure TForm2.Image1Click(Sender: TObject);
-begin
-        Form3 := TForm3.Create(Self);
-  try
-    Form3.Left := Left;
-    Form3.Top := Top;
-    Hide;
-    Form3.ShowModal;
-  finally
-    Form3.Free;
-  end;
-end;
-
 procedure TForm2.BitBtn1Click(Sender: TObject);
 begin
-  Form6 := TForm6.Create(Self);
+  Form3 := TForm3.Create(Self);
     try
-      Form6.Left := Left;
-      Form6.Top := Top;
+      Form3.Left := Left;
+      Form3.Top := Top;
       Hide;
-      Form6.ShowModal;
+      Form3.ShowModal;
     finally
-      Form6.Free;
+      Form3.Free;
     end;
 end;
 
