@@ -1,7 +1,7 @@
 object Form5: TForm5
-  Left = -1368
+  Left = -1381
   Height = 731
-  Top = 0
+  Top = 232
   Width = 1355
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Form5'
@@ -15,31 +15,7 @@ object Form5: TForm5
     Top = 0
     Width = 1366
     BevelColor = clGray
-    ClientHeight = 82
-    ClientWidth = 1366
     TabOrder = 0
-    object DateTimePicker1: TDateTimePicker
-      Left = 1240
-      Height = 23
-      Top = 32
-      Width = 83
-      CenturyFrom = 1941
-      MaxDate = 2958465
-      MinDate = -53780
-      TabOrder = 0
-      TrailingSeparator = False
-      TextForNullDate = 'NULL'
-      LeadingZeros = True
-      Kind = dtkDate
-      TimeFormat = tf24
-      TimeDisplay = tdHMS
-      DateMode = dmComboBox
-      Date = 45538
-      Time = 0.819931087964505
-      UseDefaultSeparators = True
-      HideDateTimeParts = []
-      MonthNames = 'Long'
-    end
   end
   object lblEntre: TLabel
     Left = 504
@@ -1734,7 +1710,7 @@ object Form5: TForm5
     TabOrder = 3
   end
   object Button7: TButton
-    Left = 384
+    Left = 464
     Height = 35
     Top = 142
     Width = 72
@@ -1747,6 +1723,7 @@ object Form5: TForm5
     Font.Quality = fqDraft
     ParentFont = False
     TabOrder = 4
+    OnClick = Button7Click
   end
   object Label6: TLabel
     Left = 352
@@ -1919,6 +1896,7 @@ object Form5: TForm5
     Font.Quality = fqDraft
     ParentFont = False
     TabOrder = 11
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 456
@@ -1934,6 +1912,16 @@ object Form5: TForm5
     Font.Quality = fqDraft
     ParentFont = False
     TabOrder = 12
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 360
+    Height = 35
+    Top = 142
+    Width = 78
+    Caption = 'Consultar'
+    TabOrder = 13
+    OnClick = Button4Click
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'

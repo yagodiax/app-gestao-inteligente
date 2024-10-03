@@ -17,9 +17,9 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     Button7: TButton;
     DataSource1: TDataSource;
-    DateTimePicker1: TDateTimePicker;
     DBGrid1: TDBGrid;
     Image1: TImage;
     Label10: TLabel;
@@ -39,7 +39,11 @@ type
     tdetalhes: TEdit;
     procedure BitBtn1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -103,15 +107,48 @@ begin
   end;
 end;
 
+procedure TForm5.Button2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm5.Button3Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm5.Button4Click(Sender: TObject);
+begin
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    SQL.Add('SELECT * FROM vendas WHERE loja = :ploja');
+    ParamByName('ploja').AsString:= tnome.text;
+    Open;
+  end;
+end;
+
 procedure TForm5.Button6Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm5.Button7Click(Sender: TObject);
 begin
 
 end;
 
 procedure TForm5.FormCreate(Sender: TObject);
 begin
-
+    with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas');
+    open;
+    Last;
+  end;
 end;
-
 end.
 

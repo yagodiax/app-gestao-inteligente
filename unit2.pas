@@ -13,17 +13,20 @@ type
   { TForm2 }
 
   TForm2 = class(TForm)
-    BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
     Image1: TImage;
-    Label1: TLabel;
     Label2: TLabel;
     lblEntre: TLabel;
     Panel1: TPanel;
+    Panel2: TPanel;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
   public
@@ -34,7 +37,7 @@ var
 
 implementation
 
-uses Unit1, Unit3;
+uses Unit1, Unit3, Unit4;
 
 {$R *.lfm}
 
@@ -84,5 +87,32 @@ begin
       Form1.Free;
     end;
 end;
+
+procedure TForm2.Button2Click(Sender: TObject);
+begin
+  Form3 := TForm3.Create(Self);
+  try
+    Form3.Left := Left;
+    Form3.Top := Top;
+    Hide;
+    Form3.ShowModal;
+  finally
+    Form3.Free;
+  end;
+end;
+
+procedure TForm2.Button3Click(Sender: TObject);
+begin
+  Form4 := TForm4.Create(Self);
+  try
+    Form4.Left := Left;
+    Form4.Top := Top;
+    Hide;
+    Form4.ShowModal;
+  finally
+    Form4.Free;
+  end;
+end;
+
 end.
 

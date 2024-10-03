@@ -12,12 +12,13 @@ type
   { TForm1 }
   TForm1 = class(TForm)
     btnLogin: TBitBtn;
+    imgLogo: TImage;
     Label1: TLabel;
+    lblEntre: TLabel;
     lblLogin: TEdit;
     lblSenha: TEdit;
-    imgLogo: TImage;
-    lblEntre: TLabel;
     MySQL56Connection1: TMySQL56Connection;
+    Panel1: TPanel;
     SQLTransaction1: TSQLTransaction;
     procedure btnLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
