@@ -15,6 +15,7 @@ type
     imgLogo: TImage;
     lblEntre: TLabel;
     lblEntre1: TLabel;
+    Panel1: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure lblEntre1Click(Sender: TObject);
   private

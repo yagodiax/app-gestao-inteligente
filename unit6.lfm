@@ -1,17 +1,224 @@
-object Form4: TForm4
-  Left = -1368
+object Form6: TForm6
+  Left = -1369
   Height = 745
-  Top = -8
+  Top = 0
   Width = 1360
-  Caption = 'Form4'
+  Caption = 'Form6'
   ClientHeight = 745
   ClientWidth = 1360
-  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
+  object Panel2: TPanel
+    Left = 0
+    Height = 659
+    Top = 85
+    Width = 1360
+    ClientHeight = 659
+    ClientWidth = 1360
+    Color = 15984107
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object Button7: TButton
+      Left = 552
+      Height = 35
+      Top = 376
+      Width = 104
+      Caption = 'Cancelar'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clRed
+      Font.Height = -16
+      Font.Name = 'Quattrocento'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Label4: TLabel
+      Left = 192
+      Height = 1
+      Top = 290
+      Width = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Quattrocento'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 440
+      Height = 1
+      Top = 288
+      Width = 1
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -15
+      Font.Name = 'Quattrocento'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+    end
+    object Button1: TButton
+      Left = 552
+      Height = 36
+      Top = 255
+      Width = 104
+      Caption = 'Registrar ✔️'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = 6896431
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Button2: TButton
+      Left = 1272
+      Height = 25
+      Top = 624
+      Width = 75
+      Caption = 'Button2'
+      TabOrder = 2
+    end
+    object Panel3: TPanel
+      Left = 232
+      Height = 364
+      Top = 144
+      Width = 243
+      ClientHeight = 364
+      ClientWidth = 243
+      Color = 6896431
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 3
+      object tdata: TMaskEdit
+        Left = 41
+        Height = 25
+        Top = 224
+        Width = 78
+        EnableSets = False
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MaxLength = 10
+        ParentFont = False
+        TabOrder = 0
+        EditMask = '!99/99/0000;1;_'
+        Text = '  /  /    '
+        SpaceChar = '_'
+      end
+      object Label6: TLabel
+        Left = 40
+        Height = 25
+        Top = 192
+        Width = 108
+        Caption = 'Insira a Data'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 15984107
+        Font.Height = -19
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object tvalor1: TEdit
+        Left = 40
+        Height = 25
+        Top = 80
+        Width = 160
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        Left = 40
+        Height = 25
+        Top = 48
+        Width = 136
+        Caption = 'Insira o Serviço:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 15984107
+        Font.Height = -19
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object tvalor: TEdit
+        Left = 40
+        Height = 25
+        Top = 152
+        Width = 160
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 2
+      end
+      object Label9: TLabel
+        Left = 40
+        Height = 25
+        Top = 120
+        Width = 97
+        Caption = 'Valor pago:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 15984107
+        Font.Height = -19
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 40
+        Height = 25
+        Top = 264
+        Width = 156
+        Caption = 'Insira os Detalhes:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 15984107
+        Font.Height = -19
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object tdetalhes: TEdit
+        Left = 41
+        Height = 25
+        Top = 296
+        Width = 157
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 3
+      end
+    end
+    object DBGrid1: TDBGrid
+      Left = 736
+      Height = 364
+      Top = 144
+      Width = 472
+      Color = clWindow
+      Columns = <>
+      TabOrder = 4
+    end
+  end
   object Panel1: TPanel
     Left = 0
     Height = 98
-    Top = -8
+    Top = 0
     Width = 1366
     BevelColor = clNone
     ClientHeight = 98
@@ -19,14 +226,14 @@ object Form4: TForm4
     Color = 6896431
     ParentBackground = False
     ParentColor = False
-    TabOrder = 0
+    TabOrder = 1
     object lblEntre: TLabel
       Left = 552
       Height = 49
       Top = 24
-      Width = 310
+      Width = 298
       Alignment = taCenter
-      Caption = 'Registrar Venda'
+      Caption = 'Registrar Saida'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
       Font.Color = 15984107
@@ -854,345 +1061,20 @@ object Form4: TForm4
       Stretch = True
     end
   end
-  object Panel2: TPanel
-    Left = 0
-    Height = 659
-    Top = 85
-    Width = 1360
-    ClientHeight = 659
-    ClientWidth = 1360
-    Color = 15984107
-    ParentBackground = False
-    ParentColor = False
-    TabOrder = 1
-    object tdetalhes: TEdit
-      Left = 144
-      Height = 25
-      Top = 376
-      Width = 157
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      TabOrder = 0
-    end
-    object tservico: TComboBox
-      Left = 144
-      Height = 25
-      Top = 200
-      Width = 160
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ItemHeight = 17
-      Items.Strings = (
-        'Criação de Post'
-        'Criação de Site'
-      )
-      ParentFont = False
-      TabOrder = 1
-    end
-    object tnome: TEdit
-      Left = 512
-      Height = 25
-      Top = 64
-      Width = 184
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      TabOrder = 2
-    end
-    object Button4: TButton
-      Left = 744
-      Height = 35
-      Top = 46
-      Width = 78
-      Caption = 'Consultar'
-      TabOrder = 3
-      OnClick = Button4Click
-    end
-    object Button7: TButton
-      Left = 848
-      Height = 35
-      Top = 46
-      Width = 72
-      Caption = 'Limpar'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -16
-      Font.Name = 'Quattrocento'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      TabOrder = 4
-    end
-    object tdata: TMaskEdit
-      Left = 144
-      Height = 25
-      Top = 288
-      Width = 78
-      EnableSets = False
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      MaxLength = 10
-      ParentFont = False
-      TabOrder = 5
-      EditMask = '!99/99/0000;1;_'
-      Text = '  /  /    '
-      SpaceChar = '_'
-    end
-    object Label4: TLabel
-      Left = 192
-      Height = 1
-      Top = 290
-      Width = 1
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -15
-      Font.Name = 'Quattrocento'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-    end
-    object ComboBox1: TComboBox
-      Left = 432
-      Height = 25
-      Top = 200
-      Width = 160
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ItemHeight = 17
-      Items.Strings = (
-        'Pix'
-        'Cartão de Credito'
-        'Cartão de Debito'
-      )
-      ParentFont = False
-      TabOrder = 6
-    end
-    object Label5: TLabel
-      Left = 440
-      Height = 1
-      Top = 288
-      Width = 1
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -15
-      Font.Name = 'Quattrocento'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-    end
-    object tvalor: TEdit
-      Left = 432
-      Height = 25
-      Top = 288
-      Width = 160
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -13
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      TabOrder = 7
-    end
-    object Button1: TButton
-      Left = 952
-      Height = 36
-      Top = 45
-      Width = 104
-      Caption = 'Registrar ✔️'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -16
-      Font.Name = 'Segoe UI'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-      TabOrder = 8
-      OnClick = Button1Click
-    end
-    object DBGrid1: TDBGrid
-      Left = 704
-      Height = 364
-      Top = 144
-      Width = 537
-      Color = clWindow
-      Columns = <>
-      DataSource = DataSource1
-      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
-      TabOrder = 9
-    end
-    object Label2: TLabel
-      Left = 144
-      Height = 25
-      Top = 168
-      Width = 170
-      Caption = 'Selecione o Serviço:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -19
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label3: TLabel
-      Left = 144
-      Height = 25
-      Top = 344
-      Width = 156
-      Caption = 'Insira os Detalhes:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -19
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label6: TLabel
-      Left = 144
-      Height = 25
-      Top = 256
-      Width = 108
-      Caption = 'Insira a Data'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -19
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label8: TLabel
-      Left = 432
-      Height = 25
-      Top = 168
-      Width = 201
-      Caption = 'Metodo de Pagamento:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -19
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label9: TLabel
-      Left = 432
-      Height = 25
-      Top = 256
-      Width = 97
-      Caption = 'Valor pago:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -19
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label10: TLabel
-      Left = 512
-      Height = 25
-      Top = 32
-      Width = 124
-      Caption = 'Nome da Loja:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -19
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Button2: TButton
-      Left = 1272
-      Height = 25
-      Top = 624
-      Width = 75
-      Caption = 'Button2'
-      TabOrder = 10
-      OnClick = Button2Click
-    end
-  end
-  object DataSource1: TDataSource
-    DataSet = SQLQuery1
-    Left = 1144
-    Top = 24
-  end
   object SQLQuery1: TSQLQuery
-    IndexName = 'DEFAULT_ORDER'
-    MaxIndexesCount = 4
-    FieldDefs = <    
-      item
-        Name = 'id'
-        DataType = ftAutoInc
-        Precision = -1
-      end    
-      item
-        Name = 'loja'
-        DataType = ftString
-        Precision = -1
-        Size = 255
-      end    
-      item
-        Name = 'servico'
-        DataType = ftString
-        Precision = -1
-        Size = 255
-      end    
-      item
-        Name = 'data'
-        DataType = ftDate
-        Precision = -1
-      end    
-      item
-        Name = 'valor'
-        DataType = ftBCD
-        Precision = -1
-        Size = 2
-      end    
-      item
-        Name = 'forma_pagamento'
-        DataType = ftString
-        Precision = -1
-        Size = 50
-      end    
-      item
-        Name = 'detalhes'
-        DataType = ftString
-        Precision = -1
-        Size = 255
-      end>
-    Active = True
-    Database = Form1.MySQL56Connection1
-    Transaction = Form1.SQLTransaction1
-    SQL.Strings = (
-      'SELECT * FROM vendas'
-    )
+    FieldDefs = <>
     Params = <>
     Macros = <>
-    Left = 1056
-    Top = 24
+    Left = 1096
+    Top = 32
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
-    Action = caCommit
-    Database = Form1.MySQL56Connection1
-    Left = 976
-    Top = 24
+    Active = False
+    Left = 1176
+    Top = 32
+  end
+  object DataSource1: TDataSource
+    Left = 1264
+    Top = 32
   end
 end

@@ -20,19 +20,22 @@ type
     DBGrid1: TDBGrid;
     Image1: TImage;
     Image2: TImage;
-    Image3: TImage;
     Label1: TLabel;
+    Label10: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     lblEntre: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
+    Panel5: TPanel;
     SQLQuery1: TSQLQuery;
     tdata: TMaskEdit;
     tdata1: TMaskEdit;
@@ -58,14 +61,27 @@ uses
 { TForm3 }
 
 
+
+
 procedure TForm3.Button1Click(Sender: TObject);
 var
   startDate, endDate, comboBoxText: String;
   totalValue: Double;
+  recordCount: Integer;
+  itemList: TStringList;
+  serviceList: TStringList;
+  i, j: Integer;
+  serviceCount: Integer;
+  serviceName: String;
 begin
   startDate := tdata.Text;
   endDate := tdata1.Text;
   comboBoxText := ComboBox1.Text;
+
+  // Limpa os dados das labels antes da consulta
+  Label7.Caption := 'R$ 0,00';
+  Label6.Caption := '0';
+  Label10.Caption := '';
 
   SQLQuery1.Close;
 
@@ -95,25 +111,55 @@ begin
   if SQLQuery1.IsEmpty then
   begin
     ShowMessage('Nenhum dado encontrado.');
-    Label7.Caption := 'Total de valor: R$ 0,00';
-    Label6.Caption := 'Total de registros: 0';
     Exit;
   end;
 
-  // Conta os registros retornados
-  Label6.Caption := IntToStr(SQLQuery1.RecordCount);
-
-  // Soma os valores do campo 'valor'
   totalValue := 0;
-  SQLQuery1.First;
-  while not SQLQuery1.EOF do
-  begin
-    totalValue := totalValue + SQLQuery1.FieldByName('valor').AsFloat;
-    SQLQuery1.Next;
-  end;
+  recordCount := 0;
+  itemList := TStringList.Create;
+  serviceList := TStringList.Create;
+  serviceList.Sorted := True;
+  serviceList.Duplicates := dupIgnore;
+  try
+    itemList.Clear;
+    serviceList.Clear;
 
-  // Exibe o total de valores em Label7
-  Label7.Caption := 'R$: ' + FormatFloat('0.00', totalValue);
+    SQLQuery1.First;
+    while not SQLQuery1.EOF do
+    begin
+      totalValue := totalValue + SQLQuery1.FieldByName('valor').AsFloat;
+      recordCount := recordCount + 1;
+      serviceName := SQLQuery1.FieldByName('servico').AsString;
+
+      itemList.Add(serviceName);
+      serviceList.Add(serviceName);
+
+      SQLQuery1.Next;
+    end;
+
+    // Exibe o total de valores em Label7
+    Label7.Caption := 'R$ ' + FormatFloat('0.00', totalValue);
+    // Exibe a contagem total de registros em Label6
+    Label6.Caption := IntToStr(recordCount);
+
+    // Exibe a lista de serviços mais contratados sem repetição em Label10
+    itemList.Sort;
+    Label10.Caption := '';
+    for i := 0 to serviceList.Count - 1 do
+    begin
+      serviceName := serviceList[i];
+      serviceCount := 0;
+      for j := 0 to itemList.Count - 1 do
+      begin
+        if itemList[j] = serviceName then
+          Inc(serviceCount);
+      end;
+      Label10.Caption := Label10.Caption + serviceName + ': ' + IntToStr(serviceCount) + sLineBreak;
+    end;
+  finally
+    itemList.Free;
+    serviceList.Free;
+  end;
 end;
 
 procedure TForm3.Button2Click(Sender: TObject);

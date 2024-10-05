@@ -4,8 +4,8 @@ object Form3: TForm3
   Top = -8
   Width = 1360
   Caption = 'Form3'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
@@ -406,7 +406,7 @@ object Form3: TForm3
       end
     end
     object Panel4: TPanel
-      Left = 520
+      Left = 528
       Height = 152
       Top = 160
       Width = 224
@@ -1111,6 +1111,63 @@ object Form3: TForm3
       TabOrder = 7
       OnClick = Button2Click
     end
+    object Panel5: TPanel
+      Left = 904
+      Height = 152
+      Top = 160
+      Width = 224
+      ClientHeight = 152
+      ClientWidth = 224
+      Color = 6896431
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 8
+      object Label8: TLabel
+        Left = 24
+        Height = 25
+        Top = 16
+        Width = 151
+        Caption = 'Mais Contratados'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 15984107
+        Font.Height = -19
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label9: TLabel
+        Left = 32
+        Height = 85
+        Top = 48
+        Width = 6
+        Caption = '*'#13#10'*'#13#10'*'#13#10'*'#13#10'*'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 15984107
+        Font.Height = -13
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label10: TLabel
+        Left = 48
+        Height = 85
+        Top = 48
+        Width = 44
+        Caption = 'Serviço'#13#10'Serviço'#13#10'Serviço'#13#10'Serviço'#13#10'Serviço'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 15984107
+        Font.Height = -13
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
@@ -1156,6 +1213,7 @@ object Form3: TForm3
         Precision = -1
         Size = 255
       end>
+    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (

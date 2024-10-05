@@ -164,12 +164,12 @@ begin
   SQLQuery1.Open;
 
   // Limpa o ComboBox antes de adicionar novos itens
-  ComboBox1.Items.Clear;
+  tservico.Items.Clear;
 
   // Adiciona os valores retornados da consulta ao ComboBox
   while not SQLQuery1.EOF do
   begin
-    ComboBox1.Items.Add(SQLQuery1.FieldByName('nome').AsString);
+    tservico.Items.Add(SQLQuery1.FieldByName('nome').AsString);
     SQLQuery1.Next;
   end;
 
