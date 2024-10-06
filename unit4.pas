@@ -13,12 +13,14 @@ type
   { TForm4 }
 
   TForm4 = class(TForm)
-    Button1: TButton;
     Button2: TButton;
     Button4: TButton;
     Button7: TButton;
+    ComboBox1: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
+    Image1: TImage;
+    Image2: TImage;
     Image3: TImage;
     Label10: TLabel;
     Label2: TLabel;
@@ -31,18 +33,18 @@ type
     lblEntre: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
+    Panel3: TPanel;
     SQLQuery1: TSQLQuery;
     SQLTransaction1: TSQLTransaction;
     tdata: TMaskEdit;
     tdetalhes: TEdit;
-    ComboBox1: TComboBox;
     tnome: TEdit;
     tservico: TComboBox;
     tvalor: TEdit;
-    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
   private
 
   public
@@ -61,37 +63,6 @@ uses
 
 { TForm4 }
 
-procedure TForm4.Button1Click(Sender: TObject);
-begin
-   if (tnome.Text = '') then
-  begin
-    ShowMessage('Por favor, insira o nome da Loja.');
-    Exit;
-  end;
-   with SQLQuery1 do
-  begin
-    close;
-    sql.clear;
-    sql.add('insert into vendas (loja, servico, data, valor, forma_pagamento, detalhes)');
-    sql.add('values (:ploja, :pservico, :pdata, :pvalor, :pforma, :pdetalhes)');
-    ParamByName('ploja').AsString:= tnome.text;
-    ParamByName('pservico').AsString:= tservico.text;
-    ParamByName('pdata').AsDate:= strtodate (tdata.text);
-    ParamByName('pvalor').AsString:= tvalor.text;
-    ParamByName('pforma').AsString:= ComboBox1.text;
-    ParamByName('pdetalhes').AsString:= tdetalhes.text;
-    ExecSQL;
-    SQLTransaction1.Commit;
-  end;
-  with SQLQuery1 do
-  begin
-    close;
-    sql.clear;
-    sql.add('select * from vendas');
-    open;
-    Last;
-  end;
-end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
@@ -183,6 +154,38 @@ begin
   SQLQuery1.Open;
   end;
 end
+end;
+
+procedure TForm4.Image1Click(Sender: TObject);
+begin
+   if (tnome.Text = '') then
+  begin
+    ShowMessage('Por favor, insira o nome da Loja.');
+    Exit;
+  end;
+   with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('insert into vendas (loja, servico, data, valor, forma_pagamento, detalhes)');
+    sql.add('values (:ploja, :pservico, :pdata, :pvalor, :pforma, :pdetalhes)');
+    ParamByName('ploja').AsString:= tnome.text;
+    ParamByName('pservico').AsString:= tservico.text;
+    ParamByName('pdata').AsDate:= strtodate (tdata.text);
+    ParamByName('pvalor').AsString:= tvalor.text;
+    ParamByName('pforma').AsString:= ComboBox1.text;
+    ParamByName('pdetalhes').AsString:= tdetalhes.text;
+    ExecSQL;
+    SQLTransaction1.Commit;
+  end;
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas');
+    open;
+    Last;
+  end;
 end;
 
 end.

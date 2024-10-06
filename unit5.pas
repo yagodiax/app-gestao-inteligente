@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, Buttons, DBGrids, MaskEdit, DateTimePicker;
+  StdCtrls, Buttons, DBGrids, MaskEdit;
 
 type
 

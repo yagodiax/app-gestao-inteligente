@@ -1,12 +1,12 @@
 object Form5: TForm5
-  Left = -1381
+  Left = -1359
   Height = 731
-  Top = 232
+  Top = 48
   Width = 1355
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Form5'
-  ClientHeight = 731
-  ClientWidth = 1355
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel

@@ -18,6 +18,8 @@ type
     Button7: TButton;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
+    Image1: TImage;
+    Image2: TImage;
     Image3: TImage;
     Label2: TLabel;
     Label3: TLabel;

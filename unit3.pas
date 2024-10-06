@@ -14,12 +14,12 @@ type
 
   TForm3 = class(TForm)
     Button1: TButton;
-    Button2: TButton;
     ComboBox1: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
     Image1: TImage;
     Image2: TImage;
+    Image3: TImage;
     Label1: TLabel;
     Label10: TLabel;
     Label2: TLabel;
@@ -36,12 +36,14 @@ type
     Panel3: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
+    Panel6: TPanel;
     SQLQuery1: TSQLQuery;
     tdata: TMaskEdit;
     tdata1: TMaskEdit;
-    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Panel6Click(Sender: TObject);
   private
 
   public
@@ -62,9 +64,57 @@ uses
 
 
 
+procedure TForm3.Button2Click(Sender: TObject);
+begin
 
-procedure TForm3.Button1Click(Sender: TObject);
-var
+end;
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+  begin
+  // Configura a consulta SQL para selecionar os valores desejados
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
+  SQLQuery1.Open;
+
+  // Limpa o ComboBox antes de adicionar novos itens
+  ComboBox1.Items.Clear;
+
+  // Adiciona os valores retornados da consulta ao ComboBox
+  while not SQLQuery1.EOF do
+  begin
+    ComboBox1.Items.Add(SQLQuery1.FieldByName('nome').AsString);
+    SQLQuery1.Next;
+  end;
+
+  // Fecha a consulta
+  SQLQuery1.Close;
+
+  begin
+  // Define a consulta original para o TDBGrid
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
+  SQLQuery1.Open;
+  end;
+end
+end;
+
+procedure TForm3.Image3Click(Sender: TObject);
+begin
+      Form2 := TForm2.Create(Self);
+    try
+      Form2.Left := Left;
+      Form2.Top := Top;
+      Form2.WindowState := wsMaximized;
+      Hide;
+      Form2.ShowModal;
+    finally
+      Form2.Free;
+    end;
+end;
+
+procedure TForm3.Panel6Click(Sender: TObject);
+  var
   startDate, endDate, comboBoxText: String;
   totalValue: Double;
   recordCount: Integer;
@@ -73,8 +123,8 @@ var
   i, j: Integer;
   serviceCount: Integer;
   serviceName: String;
-begin
-  startDate := tdata.Text;
+  begin
+    startDate := tdata.Text;
   endDate := tdata1.Text;
   comboBoxText := ComboBox1.Text;
 
@@ -160,49 +210,6 @@ begin
     itemList.Free;
     serviceList.Free;
   end;
-end;
-
-procedure TForm3.Button2Click(Sender: TObject);
-begin
-    Form2 := TForm2.Create(Self);
-    try
-      Form2.Left := Left;
-      Form2.Top := Top;
-      Hide;
-      Form2.ShowModal;
-    finally
-      Form2.Free;
-    end;
-end;
-
-procedure TForm3.FormCreate(Sender: TObject);
-begin
-  begin
-  // Configura a consulta SQL para selecionar os valores desejados
-  SQLQuery1.Close;
-  SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
-  SQLQuery1.Open;
-
-  // Limpa o ComboBox antes de adicionar novos itens
-  ComboBox1.Items.Clear;
-
-  // Adiciona os valores retornados da consulta ao ComboBox
-  while not SQLQuery1.EOF do
-  begin
-    ComboBox1.Items.Add(SQLQuery1.FieldByName('nome').AsString);
-    SQLQuery1.Next;
-  end;
-
-  // Fecha a consulta
-  SQLQuery1.Close;
-
-  begin
-  // Define a consulta original para o TDBGrid
-  SQLQuery1.Close;
-  SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
-  SQLQuery1.Open;
-  end;
-end
 end;
 
 end.

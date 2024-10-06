@@ -11,7 +11,7 @@ uses
 type
   { TForm1 }
   TForm1 = class(TForm)
-    btnLogin: TBitBtn;
+    Image1: TImage;
     imgLogo: TImage;
     Label1: TLabel;
     lblEntre: TLabel;
@@ -20,8 +20,8 @@ type
     MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     SQLTransaction1: TSQLTransaction;
-    procedure btnLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure lblEntreClick(Sender: TObject);
     procedure lblLoginChange(Sender: TObject);
@@ -71,7 +71,7 @@ begin
   begin
     SelectNext(ActiveControl as TWinControl, True, True);
     Key := #0;
-    btnLogin.Click;
+    Image1.OnClick(Self);
   end;
 end;
 
@@ -80,9 +80,15 @@ begin
   lblLogin.Caption := '';
 end;
 
-procedure TForm1.btnLoginClick(Sender: TObject);
+procedure TForm1.FormCreate(Sender: TObject);
 begin
-  if ValidateLogin(lblLogin.Text, lblSenha.Text) then
+  Position := poScreenCenter;
+  Form1.WindowState := wsMaximized;
+end;
+
+procedure TForm1.Image1Click(Sender: TObject);
+begin
+    if ValidateLogin(lblLogin.Text, lblSenha.Text) then
   begin
     NavigateToNextPage;
   end
@@ -90,11 +96,6 @@ begin
   begin
     ShowMessage('Usuário ou senha inválidos.');
   end;
-end;
-
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-  Position := poScreenCenter;
 end;
 
 procedure TForm1.Label1Click(Sender: TObject);
@@ -156,6 +157,7 @@ begin
   try
     Form2.Left := Left;
     Form2.Top := Top;
+    Form2.WindowState := wsMaximized;
     Form1.Hide;
     Form2.ShowModal;
   finally
