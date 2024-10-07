@@ -13,21 +13,18 @@ type
   { TForm2 }
 
   TForm2 = class(TForm)
-    BitBtn2: TBitBtn;
     Image1: TImage;
     Image2: TImage;
     Image6: TImage;
     Image7: TImage;
     Image8: TImage;
     Image9: TImage;
-    Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     lblEntre: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
     procedure BitBtn1Click(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
@@ -123,20 +120,6 @@ begin
     finally
       Form3.Free;
     end;
-end;
-
-procedure TForm2.BitBtn2Click(Sender: TObject);
-begin
-Form5 := TForm5.Create(Self);
-  try
-    Form5.Left := Left;
-    Form5.Top := Top;
-    Form5.WindowState := wsMaximized;
-    Hide;
-    Form5.ShowModal;
-  finally
-    Form5.Free;
-  end;
 end;
 end.
 

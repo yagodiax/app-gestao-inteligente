@@ -13,13 +13,12 @@ type
   { TForm3 }
 
   TForm3 = class(TForm)
-    Button1: TButton;
     ComboBox1: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
-    Image1: TImage;
     Image2: TImage;
     Image3: TImage;
+    Image4: TImage;
     Label1: TLabel;
     Label10: TLabel;
     Label2: TLabel;

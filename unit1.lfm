@@ -1,21 +1,21 @@
 object Form1: TForm1
-  Left = -1373
+  Left = -1368
   Height = 745
-  Top = 0
-  Width = 1366
+  Top = -8
+  Width = 1360
   BorderStyle = bsSingle
   Caption = 'Pagina de Login'
   ClientHeight = 745
-  ClientWidth = 1366
+  ClientWidth = 1360
   KeyPreview = True
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 736
+    Height = 744
     Top = 0
     Width = 1366
-    ClientHeight = 736
+    ClientHeight = 744
     ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
@@ -921,7 +921,7 @@ object Form1: TForm1
       OnClick = Label1Click
     end
     object Image1: TImage
-      Left = 760
+      Left = 768
       Height = 64
       Top = 432
       Width = 64
