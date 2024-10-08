@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, Forms, datetimectrls, unit1, unit2,
-  unit8, unit3, unit4, unit6;
+  unit8, unit3, unit4, unit6, unit5, unit7, unit9;
 
 {$R *.res}
 
@@ -25,6 +25,9 @@ begin
   Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TForm4, Form4);
   Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TForm8, Form8);
+  Application.CreateForm(TForm9, Form9);
   Application.Run;
 end.
 

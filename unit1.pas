@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  ExtCtrls, Unit8, Unit2, mysql56conn, SQLDB;
+  ExtCtrls, mysql56conn, SQLDB;
 
 type
   { TForm1 }
@@ -32,7 +32,7 @@ type
     procedure lblSenhaKeyPress(Sender: TObject; var Key: char);
   private
     function ValidateLogin(const Nome, Senha: string): Boolean;
-    procedure NavigateToNextPage;
+    procedure NavigateToNextPage(Cargo: string);
   public
   end;
 
@@ -40,6 +40,9 @@ var
   Form1: TForm1;
 
 implementation
+
+uses
+  unit2, unit7, unit8;
 
 {$R *.lfm}
 
@@ -88,9 +91,9 @@ end;
 
 procedure TForm1.Image1Click(Sender: TObject);
 begin
-    if ValidateLogin(lblLogin.Text, lblSenha.Text) then
+  if ValidateLogin(lblLogin.Text, lblSenha.Text) then
   begin
-    NavigateToNextPage;
+    // O cargo já está sendo tratado dentro do ValidateLogin
   end
   else
   begin
@@ -124,6 +127,7 @@ end;
 function TForm1.ValidateLogin(const Nome, Senha: string): Boolean;
 var
   Query: TSQLQuery;
+  Cargo: string;
 begin
   Result := False;
   Query := TSQLQuery.Create(nil);
@@ -135,12 +139,17 @@ begin
     Query.Transaction := SQLTransaction1;
     SQLTransaction1.StartTransaction;
     try
-      Query.SQL.Text := 'SELECT COUNT(*) FROM admin WHERE usuario = :usuario AND senha = :senha';
+      Query.SQL.Text := 'SELECT cargo FROM admin WHERE usuario = :usuario AND senha = :senha';
       Query.Params.ParamByName('usuario').AsString := Nome;
       Query.Params.ParamByName('senha').AsString := Senha;
       Query.Open;
-      if not Query.EOF and (Query.Fields[0].AsInteger > 0) then
+      if not Query.EOF then
+      begin
+        Cargo := Query.FieldByName('cargo').AsString;
         Result := True;
+        // Chama função para navegar para o formulário correto
+        NavigateToNextPage(Cargo);
+      end;
       SQLTransaction1.Commit;
     except
       SQLTransaction1.Rollback;
@@ -151,17 +160,33 @@ begin
   end;
 end;
 
-procedure TForm1.NavigateToNextPage;
+procedure TForm1.NavigateToNextPage(Cargo: string);
 begin
-  Form2 := TForm2.Create(Self);
-  try
-    Form2.Left := Left;
-    Form2.Top := Top;
-    Form2.WindowState := wsMaximized;
-    Form1.Hide;
-    Form2.ShowModal;
-  finally
-    Form2.Free;
+  if Cargo = 'administrador' then
+  begin
+    Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Form1.Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
+  end
+  else
+  begin
+    Form2 := TForm2.Create(Self);
+    try
+      Form2.Left := Left;
+      Form2.Top := Top;
+      Form2.WindowState := wsMaximized;
+      Form1.Hide;
+      Form2.ShowModal;
+    finally
+      Form2.Free;
+    end;
   end;
 end;
 

@@ -13,6 +13,7 @@ type
   { TForm4 }
 
   TForm4 = class(TForm)
+    Image6: TImage;
     tpagamento: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
@@ -48,7 +49,9 @@ type
     procedure Image2Click(Sender: TObject);
     procedure Image4Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
+    procedure Image6Click(Sender: TObject);
     procedure Panel6Click(Sender: TObject);
+    procedure tservicoChange(Sender: TObject);
   private
 
   public
@@ -132,8 +135,7 @@ end;
 
 procedure TForm4.FormCreate(Sender: TObject);
 begin
-  begin
-  // Configura a consulta SQL para selecionar os valores desejados
+  // Configura a Panel6 SQL para selecionar os valores desejados
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
   SQLQuery1.Open;
@@ -141,47 +143,53 @@ begin
   // Limpa o ComboBox antes de adicionar novos itens
   tservico.Items.Clear;
 
-  // Adiciona os valores retornados da consulta ao ComboBox
+  // Adiciona os valores retornados da Panel6 ao ComboBox
   while not SQLQuery1.EOF do
   begin
     tservico.Items.Add(SQLQuery1.FieldByName('nome').AsString);
     SQLQuery1.Next;
   end;
 
-  // Fecha a consulta
+  // Fecha a Panel6
   SQLQuery1.Close;
 
-  begin
-  // Define a consulta original para o TDBGrid
+  // Define a Panel6 original para o TDBGrid
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
   SQLQuery1.Open;
-  end;
-end
+
+  // Insere a data atual no campo tdata
+  tdata.Text := DateToStr(Now);
 end;
 
 procedure TForm4.Image1Click(Sender: TObject);
+var
+  valorFormatado: String;
 begin
-   if (tnome.Text = '') then
+  if (tnome.Text = '') then
   begin
     ShowMessage('Por favor, insira o nome da Loja.');
     Exit;
   end;
-   with SQLQuery1 do
+
+  valorFormatado := StringReplace(tvalor.Text, ',', '.', [rfReplaceAll]);
+
+  with SQLQuery1 do
   begin
     close;
     sql.clear;
     sql.add('insert into vendas (loja, servico, data, valor, forma_pagamento, detalhes)');
     sql.add('values (:ploja, :pservico, :pdata, :pvalor, :pforma, :pdetalhes)');
-    ParamByName('ploja').AsString:= tnome.text;
-    ParamByName('pservico').AsString:= tservico.text;
-    ParamByName('pdata').AsDate:= strtodate (tdata.text);
-    ParamByName('pvalor').AsString:= tvalor.text;
-    ParamByName('pforma').AsString:= tpagamento.text;
-    ParamByName('pdetalhes').AsString:= tdetalhes.text;
+    ParamByName('ploja').AsString := tnome.Text;
+    ParamByName('pservico').AsString := tservico.Text;
+    ParamByName('pdata').AsDate := StrToDate(tdata.Text);
+    ParamByName('pvalor').AsString := valorFormatado;
+    ParamByName('pforma').AsString := tpagamento.Text;
+    ParamByName('pdetalhes').AsString := tdetalhes.Text;
     ExecSQL;
     SQLTransaction1.Commit;
   end;
+
   with SQLQuery1 do
   begin
     close;
@@ -221,8 +229,59 @@ begin
   Panel6Click(Sender);
 end;
 
+procedure TForm4.Image6Click(Sender: TObject);
+begin
+    with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas');
+    open;
+    Last;
+  end;
+end;
+
 procedure TForm4.Panel6Click(Sender: TObject);
 begin
+   if tnome.Text = '' then
+  begin
+    ShowMessage('Por favor, insira o nome da Loja para filtrar.');
+    Exit;
+  end;
+
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas where loja = :ploja');
+    ParamByName('ploja').AsString := tnome.Text;
+    open;
+  end;
+
+  if SQLQuery1.IsEmpty then
+  begin
+    ShowMessage('Nenhum resultado encontrado para a loja especificada.');
+  end;
+end;
+
+procedure TForm4.tservicoChange(Sender: TObject);
+begin
+  with SQLQuery1 do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('SELECT valor FROM servicos WHERE nome = :pservico');
+    ParamByName('pservico').AsString := tservico.Text;
+    Open;
+    if not EOF then
+    begin
+      tvalor.Text := FieldByName('valor').AsString;
+    end
+    else
+    begin
+      ShowMessage('Serviço não encontrado.');
+    end;
+  end;
   with SQLQuery1 do
   begin
     close;

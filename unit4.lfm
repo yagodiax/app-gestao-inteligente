@@ -4,8 +4,8 @@ object Form4: TForm4
   Top = -8
   Width = 1360
   Caption = 'Form4'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1360
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
@@ -978,6 +978,7 @@ object Form4: TForm4
         )
         ParentFont = False
         TabOrder = 0
+        OnChange = tservicoChange
       end
       object tdata: TMaskEdit
         Left = 64
@@ -4723,6 +4724,13 @@ object Form4: TForm4
         }
         Proportional = True
         Stretch = True
+      end
+      object Image6: TImage
+        Left = 488
+        Height = 34
+        Top = 312
+        Width = 34
+        OnClick = Image6Click
       end
     end
     object Image4: TImage

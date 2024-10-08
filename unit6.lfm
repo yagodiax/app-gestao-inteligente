@@ -4,16 +4,16 @@ object Form6: TForm6
   Top = -8
   Width = 1360
   Caption = 'Form6'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel2: TPanel
     Left = 0
-    Height = 667
-    Top = 77
+    Height = 672
+    Top = 72
     Width = 1360
-    ClientHeight = 667
+    ClientHeight = 672
     ClientWidth = 1360
     Color = 15984107
     ParentBackground = False
@@ -4250,7 +4250,7 @@ object Form6: TForm6
     object Image4: TImage
       Left = 1288
       Height = 74
-      Top = 592
+      Top = 599
       Width = 75
       OnClick = Image4Click
       Picture.Data = {
@@ -6777,8 +6777,9 @@ object Form6: TForm6
       end    
       item
         Name = 'detalhes'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
+        Size = 255
       end    
       item
         Name = 'categoria'

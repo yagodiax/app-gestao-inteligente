@@ -130,7 +130,7 @@ procedure TForm3.Panel6Click(Sender: TObject);
   serviceCount: Integer;
   serviceName: String;
   begin
-    startDate := tdata.Text;
+  startDate := tdata.Text;
   endDate := tdata1.Text;
   comboBoxText := ComboBox1.Text;
 

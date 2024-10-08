@@ -1,0 +1,8 @@
+object Form9: TForm9
+  Left = -1368
+  Height = 745
+  Top = -8
+  Width = 1360
+  Caption = 'Form9'
+  LCLVersion = '3.4.0.0'
+end

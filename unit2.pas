@@ -13,23 +13,22 @@ type
   { TForm2 }
 
   TForm2 = class(TForm)
+    Image10: TImage;
+    logo: TImage;
     Image2: TImage;
-    Image3: TImage;
-    Image6: TImage;
-    Image7: TImage;
     Image8: TImage;
-    Image9: TImage;
-    Label3: TLabel;
     Label4: TLabel;
+    Label6: TLabel;
     lblEntre: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Image10Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
-    procedure Image6Click(Sender: TObject);
-    procedure Image7Click(Sender: TObject);
     procedure Image8Click(Sender: TObject);
+    procedure Image9Click(Sender: TObject);
   private
   public
 
@@ -51,7 +50,7 @@ begin
   Form2.WindowState := wsMaximized;
 end;
 
-procedure TForm2.Image2Click(Sender: TObject);
+procedure TForm2.Image10Click(Sender: TObject);
 begin
   Form1 := TForm1.Create(Self);
     try
@@ -65,7 +64,7 @@ begin
     end;
 end;
 
-procedure TForm2.Image6Click(Sender: TObject);
+procedure TForm2.Image1Click(Sender: TObject);
 begin
     Form3 := TForm3.Create(Self);
   try
@@ -80,7 +79,7 @@ begin
   end;
 end;
 
-procedure TForm2.Image7Click(Sender: TObject);
+procedure TForm2.Image2Click(Sender: TObject);
 begin
   Form4 := TForm4.Create(Self);
   try
@@ -105,6 +104,20 @@ begin
     Form6.ShowModal;
   finally
     Form6.Free;
+  end;
+end;
+
+procedure TForm2.Image9Click(Sender: TObject);
+begin
+       Form5 := TForm5.Create(Self);
+  try
+    Form5.Left := Left;
+    Form5.Top := Top;
+    Form5.WindowState := wsMaximized;
+    Hide;
+    Form5.ShowModal;
+  finally
+    Form5.Free;
   end;
 end;
 
