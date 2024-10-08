@@ -13,15 +13,14 @@ type
   { TForm4 }
 
   TForm4 = class(TForm)
-    Button2: TButton;
-    Button4: TButton;
-    Button7: TButton;
-    ComboBox1: TComboBox;
+    tpagamento: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
     Image1: TImage;
     Image2: TImage;
     Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
     Label10: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -34,6 +33,7 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    Panel6: TPanel;
     SQLQuery1: TSQLQuery;
     SQLTransaction1: TSQLTransaction;
     tdata: TMaskEdit;
@@ -45,6 +45,10 @@ type
     procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
+    procedure Panel6Click(Sender: TObject);
   private
 
   public
@@ -116,7 +120,7 @@ begin
       tservico.Text := FieldByName('servico').AsString;
       tdata.Text := DateToStr(FieldByName('data').AsDateTime);
       tvalor.Text := FieldByName('valor').AsString;
-      ComboBox1.Text := FieldByName('forma_pagamento').AsString;
+      tpagamento.Text := FieldByName('forma_pagamento').AsString;
       tdetalhes.Text := FieldByName('detalhes').AsString;
     end
     else
@@ -173,11 +177,52 @@ begin
     ParamByName('pservico').AsString:= tservico.text;
     ParamByName('pdata').AsDate:= strtodate (tdata.text);
     ParamByName('pvalor').AsString:= tvalor.text;
-    ParamByName('pforma').AsString:= ComboBox1.text;
+    ParamByName('pforma').AsString:= tpagamento.text;
     ParamByName('pdetalhes').AsString:= tdetalhes.text;
     ExecSQL;
     SQLTransaction1.Commit;
   end;
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas');
+    open;
+    Last;
+  end;
+end;
+
+procedure TForm4.Image2Click(Sender: TObject);
+begin
+  tnome.Caption := '';
+  tservico.Caption := '';
+  tdata.Caption := '';
+  tdetalhes.Caption := '';
+  tpagamento.Caption := '';
+  tvalor.Caption := '';
+end;
+
+procedure TForm4.Image4Click(Sender: TObject);
+begin
+  Form2 := TForm2.Create(Self);
+    try
+      Form2.Left := Left;
+      Form2.Top := Top;
+      Form2.WindowState := wsMaximized;
+      Hide;
+      Form2.ShowModal;
+    finally
+      Form2.Free;
+    end;
+end;
+
+procedure TForm4.Image5Click(Sender: TObject);
+begin
+  Panel6Click(Sender);
+end;
+
+procedure TForm4.Panel6Click(Sender: TObject);
+begin
   with SQLQuery1 do
   begin
     close;

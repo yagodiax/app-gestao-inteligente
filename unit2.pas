@@ -13,8 +13,8 @@ type
   { TForm2 }
 
   TForm2 = class(TForm)
-    Image1: TImage;
     Image2: TImage;
+    Image3: TImage;
     Image6: TImage;
     Image7: TImage;
     Image8: TImage;

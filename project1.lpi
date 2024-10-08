@@ -70,14 +70,6 @@
         <UnitName Value="Unit8"/>
       </Unit>
       <Unit>
-        <Filename Value="unit5.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form5"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit5"/>
-      </Unit>
-      <Unit>
         <Filename Value="unit3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form3"/>

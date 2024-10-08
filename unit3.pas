@@ -16,6 +16,7 @@ type
     ComboBox1: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
+    Image1: TImage;
     Image2: TImage;
     Image3: TImage;
     Image4: TImage;
@@ -41,6 +42,7 @@ type
     tdata1: TMaskEdit;
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
     procedure Image3Click(Sender: TObject);
     procedure Panel6Click(Sender: TObject);
   private
@@ -96,6 +98,11 @@ begin
   SQLQuery1.Open;
   end;
 end
+end;
+
+procedure TForm3.Image1Click(Sender: TObject);
+begin
+  Panel6Click(Sender);
 end;
 
 procedure TForm3.Image3Click(Sender: TObject);
