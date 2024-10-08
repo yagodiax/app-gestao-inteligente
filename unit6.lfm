@@ -5910,12 +5910,12 @@ object Form6: TForm6
     ParentColor = False
     TabOrder = 1
     object lblEntre: TLabel
-      Left = 552
+      Left = 512
       Height = 49
       Top = 24
-      Width = 298
+      Width = 358
       Alignment = taCenter
-      Caption = 'Registrar Saida'
+      Caption = 'Registrar Despesa'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
       Font.Color = 15984107

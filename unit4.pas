@@ -212,16 +212,7 @@ end;
 
 procedure TForm4.Image4Click(Sender: TObject);
 begin
-  Form2 := TForm2.Create(Self);
-    try
-      Form2.Left := Left;
-      Form2.Top := Top;
-      Form2.WindowState := wsMaximized;
-      Hide;
-      Form2.ShowModal;
-    finally
-      Form2.Free;
-    end;
+
 end;
 
 procedure TForm4.Image5Click(Sender: TObject);

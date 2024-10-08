@@ -5,8 +5,8 @@ unit Unit2;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  ExtCtrls;
+  Classes, SysUtils, SQLDB, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  Buttons, ExtCtrls;
 
 type
 
@@ -22,13 +22,10 @@ type
     lblEntre: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
-    procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image10Click(Sender: TObject);
-    procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure Image8Click(Sender: TObject);
-    procedure Image9Click(Sender: TObject);
   private
   public
 
@@ -38,7 +35,7 @@ var
 
 implementation
 
-uses Unit1, Unit3, Unit4, Unit5, Unit6;
+uses Unit1, Unit4, Unit6;
 
 {$R *.lfm}
 
@@ -64,20 +61,6 @@ begin
     end;
 end;
 
-procedure TForm2.Image1Click(Sender: TObject);
-begin
-    Form3 := TForm3.Create(Self);
-  try
-    Form3.Left := Left;
-    Form3.Top := Top;
-    Form3.WindowState := wsMaximized;
-    Hide;
-    Form3.ShowModal;
-
-  finally
-    Form3.Free;
-  end;
-end;
 
 procedure TForm2.Image2Click(Sender: TObject);
 begin
@@ -105,34 +88,6 @@ begin
   finally
     Form6.Free;
   end;
-end;
-
-procedure TForm2.Image9Click(Sender: TObject);
-begin
-       Form5 := TForm5.Create(Self);
-  try
-    Form5.Left := Left;
-    Form5.Top := Top;
-    Form5.WindowState := wsMaximized;
-    Hide;
-    Form5.ShowModal;
-  finally
-    Form5.Free;
-  end;
-end;
-
-procedure TForm2.BitBtn1Click(Sender: TObject);
-begin
-  Form3 := TForm3.Create(Self);
-    try
-      Form3.Left := Left;
-      Form3.Top := Top;
-      Form3.WindowState := wsMaximized;
-      Hide;
-      Form3.ShowModal;
-    finally
-      Form3.Free;
-    end;
 end;
 end.
 

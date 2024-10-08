@@ -19,13 +19,14 @@ type
     DBGrid2: TDBGrid;
     Image2: TImage;
     Image3: TImage;
-    Image4: TImage;
     Image5: TImage;
     Image6: TImage;
     Image7: TImage;
     Image8: TImage;
     Image9: TImage;
     Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
     MySQL56Connection1: TMySQL56Connection;
     SQLQuery3: TSQLQuery;
     SQLTransaction3: TSQLTransaction;
@@ -53,7 +54,9 @@ type
     SQLTransaction2: TSQLTransaction;
     tdata: TMaskEdit;
     tdata1: TMaskEdit;
+    procedure Image2Click(Sender: TObject);
     procedure Image4Click(Sender: TObject);
+    procedure Image7Click(Sender: TObject);
     procedure Panel7Click(Sender: TObject);
   private
 
@@ -67,7 +70,7 @@ var
 implementation
 
 uses
-  unit1;
+  unit7;
 
 {$R *.lfm}
 
@@ -91,6 +94,25 @@ begin
     open;
     Last;
   end;
+end;
+
+procedure TForm5.Image7Click(Sender: TObject);
+begin
+  Panel7Click(Sender);
+end;
+
+procedure TForm5.Image2Click(Sender: TObject);
+begin
+    Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm5.Panel7Click(Sender: TObject);
