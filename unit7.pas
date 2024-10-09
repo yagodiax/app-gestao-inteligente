@@ -49,7 +49,7 @@ var
 implementation
 
 uses
-  unit1, unit3, unit5, unit9, unit10;
+  unit1, unit3, unit5, unit9, unit10, unit11, unit12;
 
 {$R *.lfm}
 
@@ -75,7 +75,7 @@ begin
   try
     Form9.Left := Left;
     Form9.Top := Top;
-    Form9.WindowState := wsMaximized; // Corrigido para maximizar Form4
+    Form9.WindowState := wsMaximized;
     Hide;
     Form9.ShowModal;
   finally
@@ -89,7 +89,7 @@ begin
   try
     Form5.Left := Left;
     Form5.Top := Top;
-    Form5.WindowState := wsMaximized; // Corrigido para maximizar Form4
+    Form5.WindowState := wsMaximized;
     Hide;
     Form5.ShowModal;
   finally
@@ -103,7 +103,7 @@ begin
 try
   Form10.Left := Left;
   Form10.Top := Top;
-  Form10.WindowState := wsMaximized; // Corrigido para maximizar Form4
+  Form10.WindowState := wsMaximized;
   Hide;
   Form10.ShowModal;
 finally
@@ -113,7 +113,16 @@ end;
 
 procedure TForm8.Image14Click(Sender: TObject);
 begin
-
+      Form11 := TForm11.Create(Self);
+try
+  Form11.Left := Left;
+  Form11.Top := Top;
+  Form11.WindowState := wsMaximized;
+  Hide;
+  Form11.ShowModal;
+finally
+  Form11.Free;
+end;
 end;
 
 procedure TForm8.Image15Click(Sender: TObject);
@@ -127,7 +136,7 @@ begin
 try
   Form3.Left := Left;
   Form3.Top := Top;
-  Form3.WindowState := wsMaximized; // Corrigido para maximizar Form4
+  Form3.WindowState := wsMaximized;
   Hide;
   Form3.ShowModal;
 finally

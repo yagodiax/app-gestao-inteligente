@@ -1,11 +1,11 @@
 object Form5: TForm5
-  Left = -1369
+  Left = -1368
   Height = 745
-  Top = 0
+  Top = -8
   Width = 1360
   Caption = 'Form5'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1360
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = -14
@@ -867,7 +867,7 @@ object Form5: TForm5
     object Image2: TImage
       Left = 1288
       Height = 74
-      Top = 591
+      Top = 592
       Width = 75
       OnClick = Image2Click
       Picture.Data = {

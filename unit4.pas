@@ -13,12 +13,13 @@ type
   { TForm4 }
 
   TForm4 = class(TForm)
+    Image1: TImage;
+    Image2: TImage;
     Image6: TImage;
+    Image7: TImage;
     tpagamento: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
-    Image1: TImage;
-    Image2: TImage;
     Image3: TImage;
     Image4: TImage;
     Image5: TImage;
@@ -64,7 +65,7 @@ var
 implementation
 
 uses
-  unit2;
+  unit2, Unit7;
 
 {$R *.lfm}
 
@@ -212,7 +213,16 @@ end;
 
 procedure TForm4.Image4Click(Sender: TObject);
 begin
-
+        Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm4.Image5Click(Sender: TObject);
