@@ -33,6 +33,7 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    Panel4: TPanel;
     SQLQuery1: TSQLQuery;
     SQLTransaction1: TSQLTransaction;
     tcategoria: TComboBox;
@@ -46,6 +47,7 @@ type
     procedure Image2Click(Sender: TObject);
     procedure Image4Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
+    procedure Panel4Click(Sender: TObject);
   private
 
   public
@@ -172,6 +174,17 @@ begin
     open;
     Last;
   end;
+end;
+
+procedure TForm12.Panel4Click(Sender: TObject);
+begin
+  tservico.Caption := '';
+  tvalor.Caption := '';
+  tfornecedor.Caption := '';
+  tdetalhes.Caption := '';
+  tpagamento.Caption := '';
+  tcategoria.Caption := '';
+  tdata.Caption := '';
 end;
 end.
 

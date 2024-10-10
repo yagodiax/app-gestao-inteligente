@@ -19,7 +19,6 @@ type
     Image10: TImage;
     Image2: TImage;
     Image3: TImage;
-    Image6: TImage;
     Label3: TLabel;
     Label9: TLabel;
     lblEntre: TLabel;
@@ -27,6 +26,7 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    Panel4: TPanel;
     SQLQuery1: TSQLQuery;
     SQLTransaction1: TSQLTransaction;
     tservico: TEdit;
@@ -36,6 +36,7 @@ type
     procedure Image2Click(Sender: TObject);
     procedure Image3Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
+    procedure Panel4Click(Sender: TObject);
   private
 
   public
@@ -57,6 +58,12 @@ uses
 procedure TForm9.Image6Click(Sender: TObject);
 begin
 
+end;
+
+procedure TForm9.Panel4Click(Sender: TObject);
+begin
+  tservico.Caption := '';
+  tvalor.Caption := '';
 end;
 
 procedure TForm9.Image10Click(Sender: TObject);

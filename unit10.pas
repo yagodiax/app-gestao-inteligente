@@ -19,7 +19,6 @@ type
     Image10: TImage;
     Image2: TImage;
     Image3: TImage;
-    Image6: TImage;
     Label3: TLabel;
     Label4: TLabel;
     Label9: TLabel;
@@ -28,6 +27,7 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    Panel4: TPanel;
     SQLQuery1: TSQLQuery;
     SQLTransaction1: TSQLTransaction;
     tcargo: TComboBox;
@@ -37,6 +37,7 @@ type
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure Image3Click(Sender: TObject);
+    procedure Panel4Click(Sender: TObject);
   private
 
   public
@@ -159,6 +160,13 @@ begin
     SQL.Add('SELECT * FROM admin');
     Open;
   end;
+end;
+
+procedure TForm10.Panel4Click(Sender: TObject);
+begin
+  tusuario.Caption := '';
+  tsenha.Caption := '';
+  tcargo.Caption := '';
 end;
 end.
 

@@ -8312,12 +8312,6 @@ object Form10: TForm10
         ParentFont = False
         TabOrder = 1
       end
-      object Image6: TImage
-        Left = 488
-        Height = 34
-        Top = 312
-        Width = 34
-      end
       object tsenha: TEdit
         Left = 80
         Height = 25
@@ -8344,6 +8338,26 @@ object Form10: TForm10
         Font.Quality = fqDraft
         Font.Style = [fsBold]
         ParentFont = False
+      end
+      object Panel4: TPanel
+        Left = 432
+        Height = 34
+        Top = 312
+        Width = 90
+        Caption = 'Limpar'
+        Color = 15984107
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 6896431
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 3
+        OnClick = Panel4Click
       end
     end
     object DBGrid1: TDBGrid
@@ -8394,7 +8408,6 @@ object Form10: TForm10
         Precision = -1
         Size = 50
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -8402,19 +8415,19 @@ object Form10: TForm10
     )
     Params = <>
     Macros = <>
-    Left = 1024
-    Top = 32
+    Left = 1072
+    Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
     Database = Form1.MySQL56Connection1
-    Left = 1113
-    Top = 32
+    Left = 1160
+    Top = 24
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
-    Left = 1200
-    Top = 32
+    Left = 1248
+    Top = 24
   end
 end

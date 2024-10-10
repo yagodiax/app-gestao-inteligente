@@ -15,7 +15,6 @@ type
   TForm4 = class(TForm)
     Image1: TImage;
     Image2: TImage;
-    Image6: TImage;
     Image7: TImage;
     tpagamento: TComboBox;
     DataSource1: TDataSource;

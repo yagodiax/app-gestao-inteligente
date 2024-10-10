@@ -1099,13 +1099,6 @@ object Form4: TForm4
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Image6: TImage
-        Left = 488
-        Height = 34
-        Top = 312
-        Width = 34
-        OnClick = Image6Click
-      end
       object Image1: TImage
         Left = 288
         Height = 64
@@ -10877,7 +10870,7 @@ object Form4: TForm4
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 976

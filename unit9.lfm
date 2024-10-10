@@ -8,7 +8,7 @@ object Form9: TForm9
   ClientWidth = 1360
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
-    Left = 0
+    Left = -2
     Height = 90
     Top = -8
     Width = 1368
@@ -8307,11 +8307,25 @@ object Form9: TForm9
         Proportional = True
         Stretch = True
       end
-      object Image6: TImage
-        Left = 488
+      object Panel4: TPanel
+        Left = 432
         Height = 34
         Top = 312
-        Width = 34
+        Width = 90
+        Caption = 'Limpar'
+        Color = 15984107
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = 6896431
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 2
+        OnClick = Panel4Click
       end
     end
     object DBGrid1: TDBGrid
@@ -8368,7 +8382,7 @@ object Form9: TForm9
     Top = 16
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1192
