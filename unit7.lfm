@@ -2,10 +2,10 @@ object Form8: TForm8
   Left = -1368
   Height = 745
   Top = -8
-  Width = 1348
+  Width = 1360
   Caption = 'Form8'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1360
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
