@@ -127,7 +127,16 @@ end;
 
 procedure TForm8.Image15Click(Sender: TObject);
 begin
-
+      Form12 := TForm12.Create(Self);
+try
+  Form12.Left := Left;
+  Form12.Top := Top;
+  Form12.WindowState := wsMaximized;
+  Hide;
+  Form12.ShowModal;
+finally
+  Form12.Free;
+end;
 end;
 
 procedure TForm8.Image9Click(Sender: TObject);

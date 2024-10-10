@@ -65,7 +65,7 @@ var
 implementation
 
 uses
-  unit2, Unit7;
+  unit2;
 
 {$R *.lfm}
 
@@ -213,15 +213,15 @@ end;
 
 procedure TForm4.Image4Click(Sender: TObject);
 begin
-        Form8 := TForm8.Create(Self);
+  Form2 := TForm2.Create(Self);
     try
-      Form8.Left := Left;
-      Form8.Top := Top;
-      Form8.WindowState := wsMaximized;
+      Form2.Left := Left;
+      Form2.Top := Top;
+      Form2.WindowState := wsMaximized;
       Hide;
-      Form8.ShowModal;
+      Form2.ShowModal;
     finally
-      Form8.Free;
+      Form2.Free;
     end;
 end;
 

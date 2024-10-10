@@ -44,6 +44,7 @@ type
     tservico: TComboBox;
     tvalor: TEdit;
     procedure Image1Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
     procedure Image7Click(Sender: TObject);
@@ -59,6 +60,9 @@ var
   Form11: TForm11;
 
 implementation
+
+uses
+  unit7;
 
 {$R *.lfm}
 
@@ -102,6 +106,20 @@ begin
   end;
 end;
 
+procedure TForm11.Image4Click(Sender: TObject);
+begin
+        Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
+end;
+
 procedure TForm11.Image5Click(Sender: TObject);
 begin
   Panel6Click(Sender);
@@ -114,7 +132,30 @@ end;
 
 procedure TForm11.Image7Click(Sender: TObject);
 begin
+  if (tnome.Text = '') then
+  begin
+    ShowMessage('Por favor, insira o ID do registro a ser deletado.');
+    Exit;
+  end;
 
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('delete from vendas where id = :pid');
+    ParamByName('pid').AsInteger := StrToInt(tnome.text);
+    ExecSQL;
+    SQLTransaction1.Commit;
+  end;
+
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas');
+    open;
+    Last;
+  end;
 end;
 
 procedure TForm11.Image8Click(Sender: TObject);
