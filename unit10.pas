@@ -88,11 +88,10 @@ end;
 
 procedure TForm10.Image10Click(Sender: TObject);
 begin
-        Form8 := TForm8.Create(Self);
+  Form8 := TForm8.Create(Self);
     try
       Form8.Left := Left;
       Form8.Top := Top;
-      Form8.WindowState := wsMaximized;
       Hide;
       Form8.ShowModal;
     finally

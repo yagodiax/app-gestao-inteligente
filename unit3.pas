@@ -20,6 +20,7 @@ type
     Image2: TImage;
     Image3: TImage;
     Image4: TImage;
+    Image5: TImage;
     Label1: TLabel;
     Label10: TLabel;
     Label2: TLabel;
@@ -40,7 +41,6 @@ type
     SQLQuery1: TSQLQuery;
     tdata: TMaskEdit;
     tdata1: TMaskEdit;
-    procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image3Click(Sender: TObject);
@@ -64,15 +64,8 @@ uses
 { TForm3 }
 
 
-
-procedure TForm3.Button2Click(Sender: TObject);
-begin
-
-end;
-
 procedure TForm3.FormCreate(Sender: TObject);
 begin
-  begin
   // Configura a consulta SQL para selecionar os valores desejados
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
@@ -97,7 +90,6 @@ begin
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
   SQLQuery1.Open;
   end;
-end
 end;
 
 procedure TForm3.Image1Click(Sender: TObject);
@@ -111,7 +103,6 @@ begin
     try
       Form8.Left := Left;
       Form8.Top := Top;
-      Form8.WindowState := wsMaximized;
       Hide;
       Form8.ShowModal;
     finally
@@ -120,16 +111,14 @@ begin
 end;
 
 procedure TForm3.Panel6Click(Sender: TObject);
-  var
+var
   startDate, endDate, comboBoxText: String;
   totalValue: Double;
   recordCount: Integer;
-  itemList: TStringList;
-  serviceList: TStringList;
-  i, j: Integer;
-  serviceCount: Integer;
+  itemList, serviceList: TStringList;
+  i, j, serviceCount: Integer;
   serviceName: String;
-  begin
+begin
   startDate := tdata.Text;
   endDate := tdata1.Text;
   comboBoxText := ComboBox1.Text;
@@ -138,7 +127,6 @@ procedure TForm3.Panel6Click(Sender: TObject);
   Label7.Caption := 'R$ 0,00';
   Label6.Caption := '0';
   Label10.Caption := '';
-
   SQLQuery1.Close;
 
   // Verifica se os campos de data estão preenchidos
@@ -150,13 +138,11 @@ procedure TForm3.Panel6Click(Sender: TObject);
 
   // Define a consulta com os parâmetros necessários
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas WHERE data BETWEEN :startDate AND :endDate';
-
   if comboBoxText <> '' then
   begin
     SQLQuery1.SQL.Add(' AND servico = :comboBoxText');
     SQLQuery1.Params.ParamByName('comboBoxText').AsString := comboBoxText;
   end;
-
   SQLQuery1.Params.ParamByName('startDate').AsDate := StrToDate(startDate);
   SQLQuery1.Params.ParamByName('endDate').AsDate := StrToDate(endDate);
 
@@ -176,20 +162,18 @@ procedure TForm3.Panel6Click(Sender: TObject);
   serviceList := TStringList.Create;
   serviceList.Sorted := True;
   serviceList.Duplicates := dupIgnore;
+
   try
     itemList.Clear;
     serviceList.Clear;
-
     SQLQuery1.First;
     while not SQLQuery1.EOF do
     begin
       totalValue := totalValue + SQLQuery1.FieldByName('valor').AsFloat;
       recordCount := recordCount + 1;
       serviceName := SQLQuery1.FieldByName('servico').AsString;
-
       itemList.Add(serviceName);
       serviceList.Add(serviceName);
-
       SQLQuery1.Next;
     end;
 
@@ -197,7 +181,6 @@ procedure TForm3.Panel6Click(Sender: TObject);
     Label7.Caption := 'R$ ' + FormatFloat('0.00', totalValue);
     // Exibe a contagem total de registros em Label6
     Label6.Caption := IntToStr(recordCount);
-
     // Exibe a lista de serviços mais contratados sem repetição em Label10
     itemList.Sort;
     Label10.Caption := '';

@@ -1,19 +1,20 @@
 object Form11: TForm11
-  Left = -1368
-  Height = 745
-  Top = -8
+  Left = 414
+  Height = 747
+  Top = 162
   Width = 1360
   Caption = 'Form11'
-  ClientHeight = 745
+  ClientHeight = 747
   ClientWidth = 1360
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 98
+    Height = 88
     Top = -8
     Width = 1374
+    Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
-    ClientHeight = 98
+    ClientHeight = 88
     ClientWidth = 1374
     Color = 6896431
     ParentBackground = False
@@ -25,6 +26,7 @@ object Form11: TForm11
       Top = 24
       Width = 310
       Alignment = taCenter
+      Anchors = [akTop]
       Caption = 'Registrar Venda'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
@@ -39,7 +41,7 @@ object Form11: TForm11
     object Image3: TImage
       Left = 0
       Height = 168
-      Top = -32
+      Top = -36
       Width = 200
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869639864000089504E47
@@ -855,10 +857,11 @@ object Form11: TForm11
   end
   object Panel2: TPanel
     Left = 0
-    Height = 659
-    Top = 85
+    Height = 667
+    Top = 80
     Width = 1360
-    ClientHeight = 659
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 667
     ClientWidth = 1360
     Color = 15984107
     ParentBackground = False
@@ -869,6 +872,7 @@ object Form11: TForm11
       Height = 25
       Top = 64
       Width = 184
+      Anchors = []
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -905,6 +909,7 @@ object Form11: TForm11
       Height = 25
       Top = 32
       Width = 124
+      Anchors = []
       Caption = 'Nome da Loja:'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -918,8 +923,9 @@ object Form11: TForm11
     object Panel3: TPanel
       Left = 128
       Height = 364
-      Top = 144
+      Top = 148
       Width = 538
+      Anchors = []
       ClientHeight = 364
       ClientWidth = 538
       Color = 6896431
@@ -931,6 +937,7 @@ object Form11: TForm11
         Height = 25
         Top = 88
         Width = 160
+        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -948,6 +955,7 @@ object Form11: TForm11
         Height = 25
         Top = 264
         Width = 157
+        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -960,6 +968,7 @@ object Form11: TForm11
         Height = 25
         Top = 176
         Width = 160
+        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -972,6 +981,7 @@ object Form11: TForm11
         Height = 25
         Top = 88
         Width = 160
+        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -990,6 +1000,7 @@ object Form11: TForm11
         Height = 64
         Top = 232
         Width = 61
+        Anchors = []
         OnClick = Image1Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963B9A7000089504E47
@@ -2344,6 +2355,7 @@ object Form11: TForm11
         Height = 56
         Top = 240
         Width = 53
+        Anchors = []
         OnClick = Image7Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963811A010089504E47
@@ -4616,6 +4628,7 @@ object Form11: TForm11
         Height = 25
         Top = 56
         Width = 201
+        Anchors = []
         Caption = 'Metodo de Pagamento:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4631,6 +4644,7 @@ object Form11: TForm11
         Height = 25
         Top = 56
         Width = 170
+        Anchors = []
         Caption = 'Selecione o Serviço:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4646,6 +4660,7 @@ object Form11: TForm11
         Height = 25
         Top = 144
         Width = 108
+        Anchors = []
         Caption = 'Insira a Data'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4661,6 +4676,7 @@ object Form11: TForm11
         Height = 25
         Top = 232
         Width = 156
+        Anchors = []
         Caption = 'Insira os Detalhes:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4676,6 +4692,7 @@ object Form11: TForm11
         Height = 25
         Top = 144
         Width = 97
+        Anchors = []
         Caption = 'Valor pago:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4691,6 +4708,7 @@ object Form11: TForm11
         Height = 25
         Top = 176
         Width = 78
+        Anchors = []
         EnableSets = False
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
@@ -4708,6 +4726,7 @@ object Form11: TForm11
         Height = 56
         Top = 240
         Width = 56
+        Anchors = []
         OnClick = Image8Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869636B05010089504E47
@@ -6812,6 +6831,7 @@ object Form11: TForm11
         Height = 34
         Top = 312
         Width = 90
+        Anchors = []
         Caption = 'Limpar'
         Color = 15984107
         Font.CharSet = ANSI_CHARSET
@@ -6831,8 +6851,9 @@ object Form11: TForm11
     object Image4: TImage
       Left = 1288
       Height = 74
-      Top = 584
+      Top = 592
       Width = 75
+      Anchors = [akRight, akBottom]
       OnClick = Image4Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696392CC000089504E47
@@ -8482,6 +8503,7 @@ object Form11: TForm11
       Height = 42
       Top = 47
       Width = 90
+      Anchors = []
       ClientHeight = 42
       ClientWidth = 90
       Color = 6896431
@@ -8494,6 +8516,7 @@ object Form11: TForm11
         Height = 34
         Top = 3
         Width = 32
+        Anchors = []
         OnClick = Image5Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869630D0B010089504E47
@@ -10642,8 +10665,9 @@ object Form11: TForm11
     object DBGrid1: TDBGrid
       Left = 704
       Height = 364
-      Top = 144
+      Top = 148
       Width = 537
+      Anchors = []
       Color = 15984107
       Columns = <>
       DataSource = DataSource1
@@ -10704,7 +10728,6 @@ object Form11: TForm11
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (

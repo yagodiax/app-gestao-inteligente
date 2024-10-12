@@ -1,12 +1,11 @@
 object Form1: TForm1
-  Left = -1368
+  Left = -6
   Height = 745
-  Top = -8
+  Top = 0
   Width = 1360
-  BorderStyle = bsSingle
   Caption = 'Pagina de Login'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   KeyPreview = True
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
@@ -15,6 +14,7 @@ object Form1: TForm1
     Height = 744
     Top = 0
     Width = 1366
+    Anchors = [akTop, akLeft, akRight, akBottom]
     ClientHeight = 744
     ClientWidth = 1366
     Color = 15984107
@@ -26,6 +26,7 @@ object Form1: TForm1
       Height = 72
       Top = 264
       Width = 223
+      Anchors = []
       Caption = 'Faça login com '#13#10'a sua conta'
       Color = clBlack
       Font.CharSet = ANSI_CHARSET
@@ -36,13 +37,13 @@ object Form1: TForm1
       Font.Quality = fqDraft
       ParentColor = False
       ParentFont = False
-      OnClick = lblEntreClick
     end
     object lblLogin: TEdit
       Left = 456
       Height = 29
       Top = 424
       Width = 264
+      Anchors = []
       Font.CharSet = ANSI_CHARSET
       Font.Height = -16
       Font.Pitch = fpVariable
@@ -50,9 +51,7 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 0
       Text = 'Insira seu Login:'
-      OnChange = lblLoginChange
       OnClick = lblLoginClick
-      OnEnter = lblLoginEnter
       OnKeyPress = lblLoginKeyPress
     end
     object lblSenha: TEdit
@@ -60,6 +59,7 @@ object Form1: TForm1
       Height = 29
       Top = 472
       Width = 264
+      Anchors = []
       EchoMode = emPassword
       Font.CharSet = ANSI_CHARSET
       Font.Height = -16
@@ -78,6 +78,7 @@ object Form1: TForm1
       Height = 240
       Top = 176
       Width = 248
+      Anchors = []
       Center = True
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869639266000089504E47
@@ -910,6 +911,7 @@ object Form1: TForm1
       Height = 15
       Top = 504
       Width = 120
+      Anchors = []
       Caption = 'Esqueceu a sua Senha?'
       Color = 16762368
       Font.CharSet = ANSI_CHARSET
@@ -925,6 +927,7 @@ object Form1: TForm1
       Height = 64
       Top = 432
       Width = 64
+      Anchors = []
       OnClick = Image1Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696378CD000089504E47

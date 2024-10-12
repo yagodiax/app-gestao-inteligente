@@ -69,7 +69,6 @@ begin
     try
       Form2.Left := Left;
       Form2.Top := Top;
-      Form2.WindowState := wsMaximized;
       Hide;
       Form2.ShowModal;
     finally

@@ -113,7 +113,6 @@ begin
     try
       Form8.Left := Left;
       Form8.Top := Top;
-      Form8.WindowState := wsMaximized;
       Hide;
       Form8.ShowModal;
     finally

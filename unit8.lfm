@@ -1,7 +1,7 @@
 object Form7: TForm7
-  Left = -1368
+  Left = 373
   Height = 745
-  Top = -8
+  Top = 141
   Width = 1360
   Caption = 'Entre em contato'
   ClientHeight = 745
@@ -13,6 +13,7 @@ object Form7: TForm7
     Height = 746
     Top = 0
     Width = 1362
+    Anchors = [akTop, akLeft, akRight, akBottom]
     ClientHeight = 746
     ClientWidth = 1362
     Color = 15984107
@@ -24,6 +25,7 @@ object Form7: TForm7
       Height = 248
       Top = 80
       Width = 256
+      Anchors = []
       Center = True
       ParentShowHint = False
       Picture.Data = {
@@ -857,6 +859,7 @@ object Form7: TForm7
       Height = 80
       Top = 384
       Width = 332
+      Anchors = []
       Caption = '      Entre em contato '#13#10'com o seu Administrador'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -872,6 +875,7 @@ object Form7: TForm7
       Height = 21
       Top = 688
       Width = 224
+      Anchors = [akBottom]
       Caption = 'gestaointeligenteltd@gmail.com'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431

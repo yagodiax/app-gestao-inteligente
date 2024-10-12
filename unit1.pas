@@ -23,10 +23,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Label1Click(Sender: TObject);
-    procedure lblEntreClick(Sender: TObject);
-    procedure lblLoginChange(Sender: TObject);
     procedure lblLoginClick(Sender: TObject);
-    procedure lblLoginEnter(Sender: TObject);
     procedure lblLoginKeyPress(Sender: TObject; var Key: char);
     procedure lblSenhaClick(Sender: TObject);
     procedure lblSenhaKeyPress(Sender: TObject; var Key: char);
@@ -49,11 +46,6 @@ uses
 { TForm1 }
 
 //Hello World!
-
-procedure TForm1.lblLoginEnter(Sender: TObject);
-begin
-
-end;
 
 procedure TForm1.lblLoginKeyPress(Sender: TObject; var Key: char);
 begin
@@ -86,7 +78,6 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   Position := poScreenCenter;
-  Form1.WindowState := wsMaximized;
 end;
 
 procedure TForm1.Image1Click(Sender: TObject);
@@ -114,16 +105,6 @@ begin
   end;
 end;
 
-procedure TForm1.lblEntreClick(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.lblLoginChange(Sender: TObject);
-begin
-
-end;
-
 function TForm1.ValidateLogin(const Nome, Senha: string): Boolean;
 var
   Query: TSQLQuery;
@@ -143,13 +124,13 @@ begin
       Query.Params.ParamByName('usuario').AsString := Nome;
       Query.Params.ParamByName('senha').AsString := Senha;
       Query.Open;
-      if not Query.EOF then
-      begin
-        Cargo := Query.FieldByName('cargo').AsString;
-        Result := True;
-        // Chama função para navegar para o formulário correto
-        NavigateToNextPage(Cargo);
-      end;
+    if not Query.EOF then
+    begin
+      Cargo := Query.FieldByName('cargo').AsString;
+      Result := True;
+      // Chama função para navegar para o formulário correto
+      NavigateToNextPage(Cargo);
+    end;
       SQLTransaction1.Commit;
     except
       SQLTransaction1.Rollback;
@@ -168,7 +149,6 @@ begin
     try
       Form8.Left := Left;
       Form8.Top := Top;
-      Form8.WindowState := wsMaximized;
       Form1.Hide;
       Form8.ShowModal;
     finally
@@ -181,7 +161,6 @@ begin
     try
       Form2.Left := Left;
       Form2.Top := Top;
-      Form2.WindowState := wsMaximized;
       Form1.Hide;
       Form2.ShowModal;
     finally

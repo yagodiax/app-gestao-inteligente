@@ -44,23 +44,21 @@ uses Unit1, Unit4, Unit6;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
-  Form2.WindowState := wsMaximized;
+
 end;
 
 procedure TForm2.Image10Click(Sender: TObject);
 begin
   Form1 := TForm1.Create(Self);
-    try
-      Form1.Left := Left;
-      Form1.Top := Top;
-      Form1.WindowState := wsMaximized;
-      Hide;
-      Form1.ShowModal;
-    finally
-      Form1.Free;
-    end;
+  try
+    Form1.Left := Left;
+    Form1.Top := Top;
+    Hide;
+    Form1.ShowModal;
+  finally
+    Form1.Free;
+  end;
 end;
-
 
 procedure TForm2.Image2Click(Sender: TObject);
 begin
@@ -68,7 +66,6 @@ begin
   try
     Form4.Left := Left;
     Form4.Top := Top;
-    Form4.WindowState := wsMaximized; // Corrigido para maximizar Form4
     Hide;
     Form4.ShowModal;
   finally
@@ -78,11 +75,10 @@ end;
 
 procedure TForm2.Image8Click(Sender: TObject);
 begin
-     Form6 := TForm6.Create(Self);
+  Form6 := TForm6.Create(Self);
   try
     Form6.Left := Left;
     Form6.Top := Top;
-    Form6.WindowState := wsMaximized;
     Hide;
     Form6.ShowModal;
   finally

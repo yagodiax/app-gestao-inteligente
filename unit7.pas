@@ -61,7 +61,6 @@ begin
     try
       Form1.Left := Left;
       Form1.Top := Top;
-      Form1.WindowState := wsMaximized;
       Hide;
       Form1.ShowModal;
     finally
@@ -75,7 +74,6 @@ begin
   try
     Form9.Left := Left;
     Form9.Top := Top;
-    Form9.WindowState := wsMaximized;
     Hide;
     Form9.ShowModal;
   finally
@@ -89,7 +87,6 @@ begin
   try
     Form5.Left := Left;
     Form5.Top := Top;
-    Form5.WindowState := wsMaximized;
     Hide;
     Form5.ShowModal;
   finally
@@ -103,7 +100,6 @@ begin
 try
   Form10.Left := Left;
   Form10.Top := Top;
-  Form10.WindowState := wsMaximized;
   Hide;
   Form10.ShowModal;
 finally
@@ -117,7 +113,6 @@ begin
 try
   Form11.Left := Left;
   Form11.Top := Top;
-  Form11.WindowState := wsMaximized;
   Hide;
   Form11.ShowModal;
 finally
@@ -131,7 +126,6 @@ begin
 try
   Form12.Left := Left;
   Form12.Top := Top;
-  Form12.WindowState := wsMaximized;
   Hide;
   Form12.ShowModal;
 finally
@@ -145,7 +139,6 @@ begin
 try
   Form3.Left := Left;
   Form3.Top := Top;
-  Form3.WindowState := wsMaximized;
   Hide;
   Form3.ShowModal;
 finally
