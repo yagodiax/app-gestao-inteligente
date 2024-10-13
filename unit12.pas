@@ -43,6 +43,7 @@ type
     tpagamento: TEdit;
     tservico: TEdit;
     tvalor: TEdit;
+    procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure Image4Click(Sender: TObject);
@@ -97,6 +98,15 @@ begin
     open;
     Last;
   end;
+end;
+
+procedure TForm12.FormCreate(Sender: TObject);
+begin
+    // Ativar a consulta
+    SQLQuery1.Open;
+
+    // Atribuir DataSource ao TDBGrid
+    DBGrid1.DataSource := DataSource1;
 end;
 
 procedure TForm12.Image2Click(Sender: TObject);

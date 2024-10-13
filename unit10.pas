@@ -33,6 +33,7 @@ type
     tcargo: TComboBox;
     tusuario: TEdit;
     tsenha: TEdit;
+    procedure FormCreate(Sender: TObject);
     procedure Image10Click(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
@@ -98,6 +99,18 @@ begin
   Form8.WindowState := wsNormal;
   Form10.Hide;
   Form8.Show;
+end;
+
+procedure TForm10.FormCreate(Sender: TObject);
+begin
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from admin');
+    open;
+    Last;
+  end;
 end;
 
 procedure TForm10.Image2Click(Sender: TObject);

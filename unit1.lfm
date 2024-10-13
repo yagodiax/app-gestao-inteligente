@@ -2623,11 +2623,11 @@ object Form1: TForm1
     UserName = 'avnadmin'
     HostName = 'gtechdb-gtech.e.aivencloud.com'
     SkipLibraryVersionCheck = True
-    Left = 1208
-    Top = 672
+    Left = 1168
+    Top = 664
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
     Database = MySQL56Connection1
     Params.Strings = (

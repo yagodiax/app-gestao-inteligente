@@ -43,6 +43,7 @@ type
     tpagamento: TComboBox;
     tservico: TComboBox;
     tvalor: TEdit;
+    procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image4Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
@@ -105,6 +106,11 @@ begin
     open;
     Last;
   end;
+end;
+
+procedure TForm11.FormCreate(Sender: TObject);
+begin
+
 end;
 
 procedure TForm11.Image4Click(Sender: TObject);

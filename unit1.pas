@@ -92,6 +92,11 @@ begin
   end;
   Self.Left := (Screen.Width div 2) - (Self.Width div 2);
   Self.Top := (Screen.Height div 2) - (Self.Height div 2);
+
+
+  // Ativar a conexão
+  MySQL56Connection1.Connected := True;
+
 end;
 
 procedure TForm1.CheckBox1Change(Sender: TObject);

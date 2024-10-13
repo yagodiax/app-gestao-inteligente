@@ -6,6 +6,7 @@ object Form11: TForm11
   Caption = 'Form11'
   ClientHeight = 745
   ClientWidth = 1360
+  OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
