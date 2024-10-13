@@ -12,10 +12,10 @@ type
   { TForm7 }
 
   TForm7 = class(TForm)
-    imgLogo: TImage;
-    lblEntre: TLabel;
-    lblEntre1: TLabel;
-    Panel1: TPanel;
+    imgLogo1: TImage;
+    lblEntre2: TLabel;
+    lblEntre3: TLabel;
+    Panel2: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure lblEntre1Click(Sender: TObject);
   private

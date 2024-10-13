@@ -1,7 +1,7 @@
 object Form12: TForm12
-  Left = 357
+  Left = -1368
   Height = 745
-  Top = 136
+  Top = -8
   Width = 1360
   Anchors = [akTop, akLeft, akRight, akBottom]
   Caption = 'Form12'

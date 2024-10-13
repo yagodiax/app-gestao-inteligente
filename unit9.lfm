@@ -1,28 +1,28 @@
 object Form9: TForm9
-  Left = -6
+  Left = -1368
   Height = 745
-  Top = 0
+  Top = -8
   Width = 1360
   Caption = 'Form9'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1360
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = -2
     Height = 90
     Top = -8
-    Width = 8
+    Width = 1368
     Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
     ClientHeight = 90
-    ClientWidth = 8
+    ClientWidth = 1368
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object lblEntre: TLabel
-      Left = -180
+      Left = 512
       Height = 49
       Top = 24
       Width = 369
@@ -857,20 +857,20 @@ object Form9: TForm9
   end
   object Panel2: TPanel
     Left = 0
-    Height = 0
+    Height = 666
     Top = 79
-    Width = 6
+    Width = 1366
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 0
-    ClientWidth = 6
+    ClientHeight = 666
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object Image10: TImage
-      Left = -72
+      Left = 1288
       Height = 74
-      Top = -74
+      Top = 592
       Width = 75
       Anchors = [akRight, akBottom]
       OnClick = Image10Click
@@ -2518,9 +2518,9 @@ object Form9: TForm9
       Stretch = True
     end
     object Panel3: TPanel
-      Left = -267
+      Left = 128
       Height = 364
-      Top = -182
+      Top = 144
       Width = 538
       Anchors = []
       ClientHeight = 364
@@ -8343,9 +8343,9 @@ object Form9: TForm9
       end
     end
     object DBGrid1: TDBGrid
-      Left = -264
+      Left = 712
       Height = 364
-      Top = -182
+      Top = 144
       Width = 537
       Anchors = []
       Color = 15984107
@@ -8385,7 +8385,6 @@ object Form9: TForm9
         Precision = -1
         Size = 2
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (

@@ -99,15 +99,16 @@ end;
 
 procedure TForm3.Image3Click(Sender: TObject);
 begin
-  Form8 := TForm8.Create(Self);
-    try
-      Form8.Left := Left;
-      Form8.Top := Top;
-      Hide;
-      Form8.ShowModal;
-    finally
-      Form8.Free;
-    end;
+  Form8.Left := Form3.Left;
+  Form8.Top := Form3.Top;
+  Form8.Width := Form3.Width;
+  Form8.Height := Form3.Height;
+  if Form3.WindowState = wsMaximized then
+    Form8.WindowState := wsMaximized
+  else
+  Form8.WindowState := wsNormal;
+  Form3.Hide;
+  Form8.Show;
 end;
 
 procedure TForm3.Panel6Click(Sender: TObject);

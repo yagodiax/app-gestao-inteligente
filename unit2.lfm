@@ -1,29 +1,29 @@
 object Form2: TForm2
-  Left = -8
+  Left = -1368
   Height = 745
   Top = -8
-  Width = 1366
+  Width = 1360
   BorderStyle = bsSingle
   Caption = 'Menu Inicial'
   ClientHeight = 745
-  ClientWidth = 1366
+  ClientWidth = 1360
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = -2
     Height = 90
     Top = -8
-    Width = 1374
+    Width = 1368
     Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
     ClientHeight = 90
-    ClientWidth = 1374
+    ClientWidth = 1368
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = 563
+      Left = 560
       Height = 49
       Top = 24
       Width = 248
@@ -861,16 +861,16 @@ object Form2: TForm2
     Left = 0
     Height = 666
     Top = 80
-    Width = 1372
+    Width = 1366
     Anchors = [akTop, akLeft, akRight, akBottom]
     ClientHeight = 666
-    ClientWidth = 1372
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object Image2: TImage
-      Left = 501
+      Left = 499
       Height = 120
       Top = 224
       Width = 120
@@ -1913,7 +1913,7 @@ object Form2: TForm2
       Stretch = True
     end
     object Image10: TImage
-      Left = 1294
+      Left = 1288
       Height = 74
       Top = 591
       Width = 75
@@ -3563,7 +3563,7 @@ object Form2: TForm2
       Stretch = True
     end
     object Image8: TImage
-      Left = 757
+      Left = 753
       Height = 120
       Top = 224
       Width = 120
@@ -6703,7 +6703,7 @@ object Form2: TForm2
       Stretch = True
     end
     object Label4: TLabel
-      Left = 458
+      Left = 456
       Height = 37
       Top = 360
       Width = 206
@@ -6719,7 +6719,7 @@ object Form2: TForm2
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 708
+      Left = 704
       Height = 37
       Top = 360
       Width = 217

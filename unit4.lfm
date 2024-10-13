@@ -1,28 +1,28 @@
 object Form4: TForm4
-  Left = 335
+  Left = -1374
   Height = 745
-  Top = 123
-  Width = 1360
+  Top = 2
+  Width = 1354
   Caption = 'Form4'
   ClientHeight = 745
-  ClientWidth = 1360
+  ClientWidth = 1354
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 98
     Top = -8
-    Width = 1374
+    Width = 1368
     Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
     ClientHeight = 98
-    ClientWidth = 1374
+    ClientWidth = 1368
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = 552
+      Left = 549
       Height = 49
       Top = 24
       Width = 310
@@ -860,16 +860,16 @@ object Form4: TForm4
     Left = 0
     Height = 659
     Top = 85
-    Width = 1360
+    Width = 1354
     Anchors = [akTop, akLeft, akRight, akBottom]
     ClientHeight = 659
-    ClientWidth = 1360
+    ClientWidth = 1354
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object tnome: TEdit
-      Left = 528
+      Left = 525
       Height = 25
       Top = 64
       Width = 184
@@ -906,7 +906,7 @@ object Form4: TForm4
       ParentFont = False
     end
     object DBGrid1: TDBGrid
-      Left = 679
+      Left = 675
       Height = 364
       Top = 144
       Width = 492
@@ -927,7 +927,7 @@ object Form4: TForm4
       TabOrder = 1
     end
     object Label10: TLabel
-      Left = 530
+      Left = 527
       Height = 25
       Top = 32
       Width = 124
@@ -943,7 +943,7 @@ object Form4: TForm4
       ParentFont = False
     end
     object Panel3: TPanel
-      Left = 128
+      Left = 126
       Height = 364
       Top = 144
       Width = 538
@@ -4746,7 +4746,7 @@ object Form4: TForm4
       end
     end
     object Image4: TImage
-      Left = 1288
+      Left = 1282
       Height = 74
       Top = 586
       Width = 75
@@ -6396,7 +6396,7 @@ object Form4: TForm4
       Stretch = True
     end
     object Panel6: TPanel
-      Left = 792
+      Left = 788
       Height = 42
       Top = 47
       Width = 90

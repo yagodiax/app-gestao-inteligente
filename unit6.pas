@@ -65,15 +65,16 @@ uses
 
 procedure TForm6.Image4Click(Sender: TObject);
 begin
-    Form2 := TForm2.Create(Self);
-    try
-      Form2.Left := Left;
-      Form2.Top := Top;
-      Hide;
-      Form2.ShowModal;
-    finally
-      Form2.Free;
-    end;
+  Form2.Left := Form6.Left;
+  Form2.Top := Form6.Top;
+  Form2.Width := Form6.Width;
+  Form2.Height := Form6.Height;
+  if Form6.WindowState = wsMaximized then
+    Form2.WindowState := wsMaximized
+  else
+  Form2.WindowState := wsNormal;
+  Form6.Hide;
+  Form2.Show;
 end;
 
 procedure TForm6.Image1Click(Sender: TObject);

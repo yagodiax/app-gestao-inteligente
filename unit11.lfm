@@ -1,10 +1,10 @@
 object Form11: TForm11
-  Left = 414
-  Height = 747
-  Top = 162
+  Left = -1368
+  Height = 745
+  Top = -8
   Width = 1360
   Caption = 'Form11'
-  ClientHeight = 747
+  ClientHeight = 745
   ClientWidth = 1360
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
@@ -857,11 +857,11 @@ object Form11: TForm11
   end
   object Panel2: TPanel
     Left = 0
-    Height = 667
+    Height = 665
     Top = 80
     Width = 1360
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 667
+    ClientHeight = 665
     ClientWidth = 1360
     Color = 15984107
     ParentBackground = False
@@ -923,7 +923,7 @@ object Form11: TForm11
     object Panel3: TPanel
       Left = 128
       Height = 364
-      Top = 148
+      Top = 147
       Width = 538
       Anchors = []
       ClientHeight = 364
@@ -6851,7 +6851,7 @@ object Form11: TForm11
     object Image4: TImage
       Left = 1288
       Height = 74
-      Top = 592
+      Top = 590
       Width = 75
       Anchors = [akRight, akBottom]
       OnClick = Image4Click
@@ -10665,7 +10665,7 @@ object Form11: TForm11
     object DBGrid1: TDBGrid
       Left = 704
       Height = 364
-      Top = 148
+      Top = 147
       Width = 537
       Anchors = []
       Color = 15984107

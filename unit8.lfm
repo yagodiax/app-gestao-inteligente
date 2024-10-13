@@ -1,33 +1,51 @@
 object Form7: TForm7
-  Left = 373
+  Left = -1363
   Height = 745
-  Top = 141
-  Width = 1360
+  Top = 0
+  Width = 1348
   Caption = 'Entre em contato'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1348
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
-  object Panel1: TPanel
+  object Panel2: TPanel
     Left = 0
-    Height = 1
+    Height = 745
     Top = 0
-    Width = 2
+    Width = 1366
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 1
-    ClientWidth = 2
+    ClientHeight = 745
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
-    object imgLogo: TImage
-      Left = -127
-      Height = 248
-      Top = -124
-      Width = 256
+    object lblEntre2: TLabel
+      Left = 521
+      Height = 72
+      Top = 152
+      Width = 323
+      Alignment = taCenter
+      Anchors = []
+      Caption = 'Entre em Contato'#13#10'Com um Administrador'
+      Color = clBlack
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = 6896431
+      Font.Height = -32
+      Font.Name = 'Quattrocento'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentBidiMode = False
+      ParentColor = False
+      ParentFont = False
+    end
+    object imgLogo1: TImage
+      Left = 560
+      Height = 240
+      Top = 289
+      Width = 248
       Anchors = []
       Center = True
-      ParentShowHint = False
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869639266000089504E47
         0D0A1A0A0000000D49484452000001F4000001F40806000000CBD6DF8A000000
@@ -854,26 +872,10 @@ object Form7: TForm7
       }
       Stretch = True
     end
-    object lblEntre: TLabel
-      Left = -165
-      Height = 80
-      Top = -39
-      Width = 332
-      Anchors = []
-      Caption = '      Entre em contato '#13#10'com o seu Administrador'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -29
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object lblEntre1: TLabel
-      Left = -111
+    object lblEntre3: TLabel
+      Left = 571
       Height = 21
-      Top = -57
+      Top = 705
       Width = 224
       Anchors = [akBottom]
       Caption = 'gestaointeligenteltd@gmail.com'
@@ -883,7 +885,6 @@ object Form7: TForm7
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
       ParentFont = False
-      OnClick = lblEntre1Click
     end
   end
 end

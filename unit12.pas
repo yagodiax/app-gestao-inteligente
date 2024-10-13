@@ -129,15 +129,16 @@ end;
 
 procedure TForm12.Image4Click(Sender: TObject);
 begin
-    Form8 := TForm8.Create(Self);
-    try
-      Form8.Left := Left;
-      Form8.Top := Top;
-      Hide;
-      Form8.ShowModal;
-    finally
-      Form8.Free;
-    end;
+  Form8.Left := Form12.Left;
+  Form8.Top := Form12.Top;
+  Form8.Width := Form12.Width;
+  Form8.Height := Form12.Height;
+  if Form12.WindowState = wsMaximized then
+    Form8.WindowState := wsMaximized
+  else
+  Form8.WindowState := wsNormal;
+  Form12.Hide;
+  Form8.Show;
 end;
 
 procedure TForm12.Image5Click(Sender: TObject);
