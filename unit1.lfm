@@ -2579,6 +2579,36 @@ object Form1: TForm1
       Proportional = True
       Stretch = True
     end
+    object CheckBox1: TCheckBox
+      Left = 16
+      Height = 19
+      Top = 704
+      Width = 76
+      Caption = 'Full Screen'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = 6896431
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnChange = CheckBox1Change
+    end
+    object lblEntre1: TLabel
+      Left = 571
+      Height = 21
+      Top = 704
+      Width = 224
+      Anchors = [akBottom]
+      Caption = 'gestaointeligenteltd@gmail.com'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = 6896431
+      Font.Height = -16
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+    end
   end
   object MySQL56Connection1: TMySQL56Connection
     Connected = True

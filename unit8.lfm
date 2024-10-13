@@ -4,26 +4,26 @@ object Form7: TForm7
   Top = 141
   Width = 1360
   Caption = 'Entre em contato'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 746
+    Height = 1
     Top = 0
-    Width = 1362
+    Width = 2
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 746
-    ClientWidth = 1362
+    ClientHeight = 1
+    ClientWidth = 2
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object imgLogo: TImage
-      Left = 552
+      Left = -127
       Height = 248
-      Top = 80
+      Top = -124
       Width = 256
       Anchors = []
       Center = True
@@ -855,9 +855,9 @@ object Form7: TForm7
       Stretch = True
     end
     object lblEntre: TLabel
-      Left = 512
+      Left = -165
       Height = 80
-      Top = 384
+      Top = -39
       Width = 332
       Anchors = []
       Caption = '      Entre em contato '#13#10'com o seu Administrador'
@@ -871,9 +871,9 @@ object Form7: TForm7
       ParentFont = False
     end
     object lblEntre1: TLabel
-      Left = 568
+      Left = -111
       Height = 21
-      Top = 688
+      Top = -57
       Width = 224
       Anchors = [akBottom]
       Caption = 'gestaointeligenteltd@gmail.com'

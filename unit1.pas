@@ -11,15 +11,18 @@ uses
 type
   { TForm1 }
   TForm1 = class(TForm)
+    CheckBox1: TCheckBox;
     Image1: TImage;
     imgLogo: TImage;
     Label1: TLabel;
     lblEntre: TLabel;
+    lblEntre1: TLabel;
     lblLogin: TEdit;
     lblSenha: TEdit;
     MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     SQLTransaction1: TSQLTransaction;
+    procedure CheckBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Label1Click(Sender: TObject);
@@ -39,7 +42,7 @@ var
 implementation
 
 uses
-  unit2, unit7, unit8;
+  unit2, unit7, unit8, IniFiles;
 
 {$R *.lfm}
 
@@ -76,8 +79,48 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
+var
+  Ini: TIniFile;
+  Fullscreen: Boolean;
 begin
-  Position := poScreenCenter;
+  Ini := TIniFile.Create(ChangeFileExt(Application.ExeName, '.ini'));
+  try
+    Fullscreen := Ini.ReadBool('Settings', 'Fullscreen', False);
+    CheckBox1.Checked := Fullscreen;
+    CheckBox1Change(CheckBox1);
+  finally
+    Ini.Free;
+  end;
+end;
+
+procedure TForm1.CheckBox1Change(Sender: TObject);
+var
+  I: Integer;
+  Ini: TIniFile;
+begin
+  Ini := TIniFile.Create(ChangeFileExt(Application.ExeName, '.ini'));
+  try
+    Ini.WriteBool('Settings', 'Fullscreen', CheckBox1.Checked);
+
+    if CheckBox1.Checked then
+    begin
+      for I := 0 to Screen.FormCount - 1 do
+      begin
+        Screen.Forms[I].BorderStyle := bsSizeable;
+        Screen.Forms[I].WindowState := wsMaximized;
+      end;
+    end
+    else
+    begin
+      for I := 0 to Screen.FormCount - 1 do
+      begin
+        Screen.Forms[I].BorderStyle := bsSizeable;
+        Screen.Forms[I].WindowState := wsNormal;
+      end;
+    end;
+  finally
+    Ini.Free;
+  end;
 end;
 
 procedure TForm1.Image1Click(Sender: TObject);

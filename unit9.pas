@@ -31,6 +31,7 @@ type
     SQLTransaction1: TSQLTransaction;
     tservico: TEdit;
     tvalor: TEdit;
+    procedure FormCreate(Sender: TObject);
     procedure Image10Click(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
@@ -77,6 +78,18 @@ begin
     finally
       Form8.Free;
     end;
+end;
+
+procedure TForm9.FormCreate(Sender: TObject);
+begin
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from servicos');
+    open;
+    Last;
+  end;
 end;
 
 procedure TForm9.Image1Click(Sender: TObject);
