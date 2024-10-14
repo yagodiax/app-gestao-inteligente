@@ -1,27 +1,27 @@
 object Form7: TForm7
-  Left = -1363
+  Left = -1368
   Height = 745
-  Top = 0
-  Width = 1348
+  Top = -8
+  Width = 1360
   Caption = 'Entre em contato'
   ClientHeight = 745
-  ClientWidth = 1348
+  ClientWidth = 1360
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel2: TPanel
     Left = 0
     Height = 745
     Top = 0
-    Width = 1366
+    Width = 1378
     Anchors = [akTop, akLeft, akRight, akBottom]
     ClientHeight = 745
-    ClientWidth = 1366
+    ClientWidth = 1378
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre2: TLabel
-      Left = 521
+      Left = 527
       Height = 72
       Top = 152
       Width = 323
@@ -40,7 +40,7 @@ object Form7: TForm7
       ParentFont = False
     end
     object imgLogo1: TImage
-      Left = 560
+      Left = 566
       Height = 240
       Top = 289
       Width = 248
@@ -873,7 +873,7 @@ object Form7: TForm7
       Stretch = True
     end
     object lblEntre3: TLabel
-      Left = 571
+      Left = 577
       Height = 21
       Top = 705
       Width = 224

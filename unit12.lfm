@@ -2,28 +2,28 @@ object Form12: TForm12
   Left = -1368
   Height = 745
   Top = -8
-  Width = 1360
+  Width = 1354
   Anchors = [akTop, akLeft, akRight, akBottom]
   Caption = 'Form12'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 90
     Top = -8
-    Width = 1374
+    Width = 14
     Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
     ClientHeight = 90
-    ClientWidth = 1374
+    ClientWidth = 14
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object lblEntre: TLabel
-      Left = 512
+      Left = -172
       Height = 49
       Top = 24
       Width = 358
@@ -859,12 +859,12 @@ object Form12: TForm12
   end
   object Panel2: TPanel
     Left = 0
-    Height = 672
+    Height = 0
     Top = 80
-    Width = 1360
+    Width = 0
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 672
-    ClientWidth = 1360
+    ClientHeight = 0
+    ClientWidth = 0
     Color = 15984107
     ParentBackground = False
     ParentColor = False
@@ -894,9 +894,9 @@ object Form12: TForm12
       ParentFont = False
     end
     object Panel3: TPanel
-      Left = 128
+      Left = -224
       Height = 364
-      Top = 144
+      Top = -182
       Width = 448
       Anchors = []
       ClientHeight = 364
@@ -1143,9 +1143,9 @@ object Form12: TForm12
       end
     end
     object Image2: TImage
-      Left = 620
+      Left = -32
       Height = 64
-      Top = 376
+      Top = -32
       Width = 64
       Anchors = []
       OnClick = Image2Click
@@ -3767,9 +3767,9 @@ object Form12: TForm12
       Stretch = True
     end
     object Image1: TImage
-      Left = 616
+      Left = -36
       Height = 72
-      Top = 208
+      Top = -36
       Width = 72
       Anchors = []
       OnClick = Image1Click
@@ -5121,9 +5121,9 @@ object Form12: TForm12
       Stretch = True
     end
     object Image4: TImage
-      Left = 1288
+      Left = -72
       Height = 74
-      Top = 591
+      Top = -81
       Width = 75
       Anchors = [akRight, akBottom]
       OnClick = Image4Click
@@ -6771,9 +6771,9 @@ object Form12: TForm12
       Stretch = True
     end
     object DBGrid1: TDBGrid
-      Left = 728
+      Left = -244
       Height = 364
-      Top = 144
+      Top = -182
       Width = 488
       Anchors = []
       Color = 15984107
@@ -6787,9 +6787,9 @@ object Form12: TForm12
       TabOrder = 1
     end
     object Image5: TImage
-      Left = 620
+      Left = -32
       Height = 64
-      Top = 296
+      Top = -32
       Width = 64
       Anchors = []
       OnClick = Image5Click
@@ -9272,8 +9272,9 @@ object Form12: TForm12
         Precision = -1
         Size = 255
       end>
-    Database = Form1.MySQL56Connection1
-    Transaction = Form1.SQLTransaction1
+    Active = True
+    Database = MySQL56Connection1
+    Transaction = SQLTransaction1
     SQL.Strings = (
       'SELECT * FROM gastos;'
     )
@@ -9283,15 +9284,31 @@ object Form12: TForm12
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
-    Database = Form1.MySQL56Connection1
+    Database = MySQL56Connection1
     Left = 1192
     Top = 24
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
     Left = 1280
+    Top = 24
+  end
+  object MySQL56Connection1: TMySQL56Connection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'gtech'
+    KeepConnection = True
+    Params.Strings = (
+      'Port=12187'
+    )
+    Password = 'AVNS_NNUtPUlCTAqXZ_l4xvL'
+    Transaction = SQLTransaction1
+    UserName = 'avnadmin'
+    HostName = 'gtechdb-gtech.e.aivencloud.com'
+    SkipLibraryVersionCheck = True
+    Left = 1000
     Top = 24
   end
 end

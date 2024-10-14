@@ -1,29 +1,29 @@
 object Form2: TForm2
-  Left = -1368
-  Height = 745
-  Top = -8
-  Width = 1360
+  Left = -1367
+  Height = 734
+  Top = 2
+  Width = 1350
   BorderStyle = bsSingle
   Caption = 'Menu Inicial'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = -2
     Height = 90
     Top = -8
-    Width = 1368
+    Width = 8
     Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
     ClientHeight = 90
-    ClientWidth = 1368
+    ClientWidth = 8
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = 560
+      Left = -120
       Height = 49
       Top = 24
       Width = 248
@@ -859,19 +859,19 @@ object Form2: TForm2
   end
   object Panel2: TPanel
     Left = 0
-    Height = 666
+    Height = 0
     Top = 80
-    Width = 1366
+    Width = 6
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 666
-    ClientWidth = 1366
+    ClientHeight = 0
+    ClientWidth = 6
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object Image2: TImage
-      Left = 499
-      Height = 120
+      Left = -58
+      Height = 0
       Top = 224
       Width = 120
       Anchors = [akTop, akBottom]
@@ -1913,9 +1913,9 @@ object Form2: TForm2
       Stretch = True
     end
     object Image10: TImage
-      Left = 1288
+      Left = -72
       Height = 74
-      Top = 591
+      Top = -75
       Width = 75
       Anchors = [akRight, akBottom]
       OnClick = Image10Click
@@ -3563,8 +3563,8 @@ object Form2: TForm2
       Stretch = True
     end
     object Image8: TImage
-      Left = 753
-      Height = 120
+      Left = -56
+      Height = 0
       Top = 224
       Width = 120
       Anchors = [akTop, akBottom]
@@ -6703,8 +6703,8 @@ object Form2: TForm2
       Stretch = True
     end
     object Label4: TLabel
-      Left = 456
-      Height = 37
+      Left = -101
+      Height = 0
       Top = 360
       Width = 206
       Anchors = [akTop, akBottom]
@@ -6719,8 +6719,8 @@ object Form2: TForm2
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 704
-      Height = 37
+      Left = -104
+      Height = 0
       Top = 360
       Width = 217
       Anchors = [akTop, akBottom]

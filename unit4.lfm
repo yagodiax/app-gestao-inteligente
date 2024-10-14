@@ -1,11 +1,11 @@
 object Form4: TForm4
-  Left = -1368
+  Left = -8
   Height = 745
   Top = -8
   Width = 1360
   Caption = 'Form4'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
@@ -10834,8 +10834,8 @@ object Form4: TForm4
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
-    Left = 1144
-    Top = 24
+    Left = 1168
+    Top = 16
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
@@ -10881,21 +10881,38 @@ object Form4: TForm4
         Precision = -1
         Size = 255
       end>
-    Database = Form1.MySQL56Connection1
-    Transaction = Form1.SQLTransaction1
+    Active = True
+    Database = MySQL56Connection1
+    Transaction = SQLTransaction1
     SQL.Strings = (
-      'SELECT * FROM vendas'
+      'SELECT * FROM vendas;'
     )
     Params = <>
     Macros = <>
-    Left = 1056
-    Top = 24
+    Left = 1104
+    Top = 16
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
-    Database = Form1.MySQL56Connection1
-    Left = 976
-    Top = 24
+    Database = MySQL56Connection1
+    Left = 1024
+    Top = 16
+  end
+  object MySQL56Connection1: TMySQL56Connection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'gtech'
+    KeepConnection = True
+    Params.Strings = (
+      'Port=12187'
+    )
+    Password = 'AVNS_NNUtPUlCTAqXZ_l4xvL'
+    Transaction = SQLTransaction1
+    UserName = 'avnadmin'
+    HostName = 'gtechdb-gtech.e.aivencloud.com'
+    SkipLibraryVersionCheck = True
+    Left = 912
+    Top = 16
   end
 end

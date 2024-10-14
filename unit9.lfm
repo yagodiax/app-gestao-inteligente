@@ -1,11 +1,11 @@
 object Form9: TForm9
-  Left = -1368
+  Left = -8
   Height = 745
   Top = -8
   Width = 1360
   Caption = 'Form9'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
@@ -8386,8 +8386,8 @@ object Form9: TForm9
         Size = 2
       end>
     Active = True
-    Database = Form1.MySQL56Connection1
-    Transaction = Form1.SQLTransaction1
+    Database = MySQL56Connection1
+    Transaction = SQLTransaction1
     SQL.Strings = (
       'SELECT * FROM servicos'
     )
@@ -8399,13 +8399,29 @@ object Form9: TForm9
   object SQLTransaction1: TSQLTransaction
     Active = True
     Action = caCommit
-    Database = Form1.MySQL56Connection1
+    Database = MySQL56Connection1
     Left = 1192
     Top = 16
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
     Left = 1280
+    Top = 16
+  end
+  object MySQL56Connection1: TMySQL56Connection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'gtech'
+    KeepConnection = True
+    Params.Strings = (
+      'Port=12187'
+    )
+    Password = 'AVNS_NNUtPUlCTAqXZ_l4xvL'
+    Transaction = SQLTransaction1
+    UserName = 'avnadmin'
+    HostName = 'gtechdb-gtech.e.aivencloud.com'
+    SkipLibraryVersionCheck = True
+    Left = 984
     Top = 16
   end
 end

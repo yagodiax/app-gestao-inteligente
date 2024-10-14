@@ -5,19 +5,22 @@ unit Unit4;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, MaskEdit, DBGrids;
+  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
+  ExtCtrls, StdCtrls, MaskEdit, DBGrids;
 
 type
 
   { TForm4 }
 
   TForm4 = class(TForm)
+    DataSource1: TDataSource;
     Image1: TImage;
     Image2: TImage;
     Image7: TImage;
+    MySQL56Connection1: TMySQL56Connection;
+    SQLQuery1: TSQLQuery;
+    SQLTransaction1: TSQLTransaction;
     tpagamento: TComboBox;
-    DataSource1: TDataSource;
     DBGrid1: TDBGrid;
     Image3: TImage;
     Image4: TImage;
@@ -35,8 +38,6 @@ type
     Panel2: TPanel;
     Panel3: TPanel;
     Panel6: TPanel;
-    SQLQuery1: TSQLQuery;
-    SQLTransaction1: TSQLTransaction;
     tdata: TMaskEdit;
     tdetalhes: TEdit;
     tnome: TEdit;
@@ -145,7 +146,7 @@ begin
   SQLQuery1.Close;
   // Define a Panel6 original para o TDBGrid
   SQLQuery1.Close;
-  SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
+  SQLQuery1.SQL.Text := 'SELECT * FROM vendas;';
   SQLQuery1.Open;
   // Insere a data atual no campo tdata
   tdata.Text := DateToStr(Now);

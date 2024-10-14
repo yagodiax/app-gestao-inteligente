@@ -5,8 +5,8 @@ unit Unit3;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, DBGrids, MaskEdit, Buttons;
+  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
+  ExtCtrls, StdCtrls, DBGrids, MaskEdit, Buttons;
 
 type
 
@@ -15,6 +15,7 @@ type
   TForm3 = class(TForm)
     ComboBox1: TComboBox;
     DataSource1: TDataSource;
+    DataSource2: TDataSource;
     DBGrid1: TDBGrid;
     Image1: TImage;
     Image2: TImage;
@@ -32,6 +33,7 @@ type
     Label8: TLabel;
     Label9: TLabel;
     lblEntre: TLabel;
+    MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -39,6 +41,7 @@ type
     Panel5: TPanel;
     Panel6: TPanel;
     SQLQuery1: TSQLQuery;
+    SQLTransaction1: TSQLTransaction;
     tdata: TMaskEdit;
     tdata1: TMaskEdit;
     procedure FormCreate(Sender: TObject);

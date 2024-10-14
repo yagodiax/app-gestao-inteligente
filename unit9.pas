@@ -5,8 +5,8 @@ unit Unit9;
 interface
 
 uses
-  Classes, SysUtils, DB, SQLDB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  DBGrids, StdCtrls;
+  Classes, SysUtils, DB, SQLDB, mysql56conn, Forms, Controls, Graphics, Dialogs,
+  ExtCtrls, DBGrids, StdCtrls;
 
 type
 
@@ -23,6 +23,7 @@ type
     Label9: TLabel;
     lblEntre: TLabel;
     logo: TImage;
+    MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;

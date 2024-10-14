@@ -5,14 +5,15 @@ unit Unit6;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, MaskEdit, DBGrids;
+  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
+  ExtCtrls, StdCtrls, MaskEdit, DBGrids;
 
 type
 
   { TForm6 }
 
   TForm6 = class(TForm)
+    MySQL56Connection1: TMySQL56Connection;
     tcategoria: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;

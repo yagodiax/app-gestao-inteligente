@@ -2,29 +2,29 @@ object Form1: TForm1
   Left = -1368
   Height = 745
   Top = -8
-  Width = 1360
+  Width = 1354
   Caption = 'Pagina de Login'
-  ClientHeight = 745
-  ClientWidth = 1360
+  ClientHeight = 0
+  ClientWidth = 0
   KeyPreview = True
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 744
+    Height = 0
     Top = 0
-    Width = 1366
+    Width = 6
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 744
-    ClientWidth = 1366
+    ClientHeight = 0
+    ClientWidth = 6
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = 456
+      Left = -109
       Height = 72
-      Top = 264
+      Top = -36
       Width = 223
       Anchors = []
       Caption = 'Faça login com '#13#10'a sua conta'
@@ -39,9 +39,9 @@ object Form1: TForm1
       ParentFont = False
     end
     object lblLogin: TEdit
-      Left = 456
+      Left = -129
       Height = 29
-      Top = 424
+      Top = -14
       Width = 264
       Anchors = []
       Font.CharSet = ANSI_CHARSET
@@ -55,9 +55,9 @@ object Form1: TForm1
       OnKeyPress = lblLoginKeyPress
     end
     object lblSenha: TEdit
-      Left = 456
+      Left = -129
       Height = 29
-      Top = 472
+      Top = -14
       Width = 264
       Anchors = []
       EchoMode = emPassword
@@ -74,9 +74,9 @@ object Form1: TForm1
       OnKeyPress = lblSenhaKeyPress
     end
     object imgLogo: TImage
-      Left = 672
+      Left = -121
       Height = 240
-      Top = 176
+      Top = -120
       Width = 248
       Anchors = []
       Center = True
@@ -907,9 +907,9 @@ object Form1: TForm1
       Stretch = True
     end
     object Label1: TLabel
-      Left = 600
+      Left = -57
       Height = 15
-      Top = 504
+      Top = -7
       Width = 120
       Anchors = []
       Caption = 'Esqueceu a sua Senha?'
@@ -923,9 +923,9 @@ object Form1: TForm1
       OnClick = Label1Click
     end
     object Image1: TImage
-      Left = 768
+      Left = -28
       Height = 64
-      Top = 432
+      Top = -32
       Width = 64
       Anchors = []
       OnClick = Image1Click
@@ -2596,9 +2596,9 @@ object Form1: TForm1
       OnChange = CheckBox1Change
     end
     object lblEntre1: TLabel
-      Left = 571
+      Left = -109
       Height = 21
-      Top = 704
+      Top = -40
       Width = 224
       Anchors = [akBottom]
       Caption = 'gestaointeligenteltd@gmail.com'
@@ -2627,7 +2627,7 @@ object Form1: TForm1
     Top = 664
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
     Database = MySQL56Connection1
     Params.Strings = (
