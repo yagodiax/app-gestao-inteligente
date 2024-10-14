@@ -2,18 +2,17 @@ object Form9: TForm9
   Left = -8
   Height = 745
   Top = -8
-  Width = 1360
+  Width = 1366
   Caption = 'Form9'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1366
   OnCreate = FormCreate
-  LCLVersion = '3.4.0.0'
+  LCLVersion = '3.6.0.0'
   object Panel1: TPanel
-    Left = -2
+    Left = 0
     Height = 90
     Top = -8
     Width = 1368
-    Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
     ClientHeight = 90
     ClientWidth = 1368
@@ -26,7 +25,6 @@ object Form9: TForm9
       Height = 49
       Top = 24
       Width = 369
-      Anchors = [akTop]
       Caption = 'Gerenciar Serviços'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
@@ -39,7 +37,7 @@ object Form9: TForm9
       ParentFont = False
     end
     object logo: TImage
-      Left = 8
+      Left = 0
       Height = 168
       Top = -35
       Width = 200
@@ -860,7 +858,6 @@ object Form9: TForm9
     Height = 666
     Top = 79
     Width = 1366
-    Anchors = [akTop, akLeft, akRight, akBottom]
     ClientHeight = 666
     ClientWidth = 1366
     Color = 15984107
@@ -868,11 +865,10 @@ object Form9: TForm9
     ParentColor = False
     TabOrder = 0
     object Image10: TImage
-      Left = 1288
+      Left = 1296
       Height = 74
       Top = 592
       Width = 75
-      Anchors = [akRight, akBottom]
       OnClick = Image10Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696392CC000089504E47
@@ -2522,7 +2518,6 @@ object Form9: TForm9
       Height = 364
       Top = 144
       Width = 538
-      Anchors = []
       ClientHeight = 364
       ClientWidth = 538
       Color = 6896431
@@ -2534,7 +2529,6 @@ object Form9: TForm9
         Height = 25
         Top = 112
         Width = 136
-        Anchors = []
         Caption = 'Insira o Serviço:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -2550,7 +2544,6 @@ object Form9: TForm9
         Height = 25
         Top = 144
         Width = 157
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -2563,7 +2556,6 @@ object Form9: TForm9
         Height = 25
         Top = 224
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -2576,7 +2568,6 @@ object Form9: TForm9
         Height = 25
         Top = 192
         Width = 50
-        Anchors = []
         Caption = 'Valor:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -2592,7 +2583,6 @@ object Form9: TForm9
         Height = 64
         Top = 144
         Width = 61
-        Anchors = []
         OnClick = Image1Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963B9A7000089504E47
@@ -3947,7 +3937,6 @@ object Form9: TForm9
         Height = 56
         Top = 152
         Width = 56
-        Anchors = []
         OnClick = Image3Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869636B05010089504E47
@@ -6052,7 +6041,6 @@ object Form9: TForm9
         Height = 56
         Top = 152
         Width = 53
-        Anchors = []
         OnClick = Image2Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963811A010089504E47
@@ -8325,7 +8313,6 @@ object Form9: TForm9
         Height = 34
         Top = 312
         Width = 90
-        Anchors = []
         Caption = 'Limpar'
         Color = 15984107
         Font.CharSet = ANSI_CHARSET
@@ -8347,7 +8334,6 @@ object Form9: TForm9
       Height = 364
       Top = 144
       Width = 537
-      Anchors = []
       Color = 15984107
       Columns = <>
       DataSource = DataSource1
@@ -8385,9 +8371,8 @@ object Form9: TForm9
         Precision = -1
         Size = 2
       end>
-    Active = True
-    Database = MySQL56Connection1
-    Transaction = SQLTransaction1
+    Database = Form1.MySQL56Connection1
+    Transaction = Form1.SQLTransaction1
     SQL.Strings = (
       'SELECT * FROM servicos'
     )
@@ -8397,31 +8382,15 @@ object Form9: TForm9
     Top = 16
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
-    Database = MySQL56Connection1
+    Database = Form1.MySQL56Connection1
     Left = 1192
     Top = 16
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
     Left = 1280
-    Top = 16
-  end
-  object MySQL56Connection1: TMySQL56Connection
-    Connected = True
-    LoginPrompt = False
-    DatabaseName = 'gtech'
-    KeepConnection = True
-    Params.Strings = (
-      'Port=12187'
-    )
-    Password = 'AVNS_NNUtPUlCTAqXZ_l4xvL'
-    Transaction = SQLTransaction1
-    UserName = 'avnadmin'
-    HostName = 'gtechdb-gtech.e.aivencloud.com'
-    SkipLibraryVersionCheck = True
-    Left = 984
     Top = 16
   end
 end

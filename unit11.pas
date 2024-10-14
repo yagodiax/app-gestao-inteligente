@@ -5,8 +5,8 @@ unit Unit11;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, DBGrids, StdCtrls, MaskEdit;
+  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  DBGrids, StdCtrls, MaskEdit;
 
 type
 
@@ -30,7 +30,6 @@ type
     Label8: TLabel;
     Label9: TLabel;
     lblEntre: TLabel;
-    MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -51,8 +50,10 @@ type
     procedure Image6Click(Sender: TObject);
     procedure Image7Click(Sender: TObject);
     procedure Image8Click(Sender: TObject);
+    procedure Panel2Click(Sender: TObject);
     procedure Panel4Click(Sender: TObject);
     procedure Panel6Click(Sender: TObject);
+    procedure tservicoChange(Sender: TObject);
   private
 
   public
@@ -111,21 +112,45 @@ end;
 
 procedure TForm11.FormCreate(Sender: TObject);
 begin
+  // Configura a Panel6 SQL para selecionar os valores desejados
+   SQLQuery1.Close;
+   SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
+   SQLQuery1.Open;
 
+   // Limpa o ComboBox antes de adicionar novos itens
+   tservico.Items.Clear;
+
+   // Adiciona os valores retornados da Panel6 ao ComboBox
+   while not SQLQuery1.EOF do
+   begin
+     tservico.Items.Add(SQLQuery1.FieldByName('nome').AsString);
+     SQLQuery1.Next;
+   end;
+
+   // Fecha a Panel6
+   SQLQuery1.Close;
+
+   // Define a Panel6 original para o TDBGrid
+   SQLQuery1.Close;
+   SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
+   SQLQuery1.Open;
+
+   // Insere a data atual no campo tdata
+   tdata.Text := DateToStr(Now);
 end;
 
 procedure TForm11.Image4Click(Sender: TObject);
 begin
-  Form8.Left := Form11.Left;
-  Form8.Top := Form11.Top;
-  Form8.Width := Form11.Width;
-  Form8.Height := Form11.Height;
-  if Form11.WindowState = wsMaximized then
-    Form8.WindowState := wsMaximized
-  else
-  Form8.WindowState := wsNormal;
-  Form11.Hide;
-  Form8.Show;
+        Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm11.Image5Click(Sender: TObject);
@@ -204,6 +229,11 @@ begin
   end;
 end;
 
+procedure TForm11.Panel2Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm11.Panel4Click(Sender: TObject);
 begin
   tservico.Caption := '';
@@ -234,6 +264,34 @@ begin
   if SQLQuery1.IsEmpty then
   begin
     ShowMessage('Nenhum resultado encontrado para a loja especificada.');
+  end;
+end;
+
+procedure TForm11.tservicoChange(Sender: TObject);
+begin
+  with SQLQuery1 do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('SELECT valor FROM servicos WHERE nome = :pservico');
+    ParamByName('pservico').AsString := tservico.Text;
+    Open;
+    if not EOF then
+    begin
+      tvalor.Text := FieldByName('valor').AsString;
+    end
+    else
+    begin
+      ShowMessage('Serviço não encontrado.');
+    end;
+  end;
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas');
+    open;
+    Last;
   end;
 end;
 

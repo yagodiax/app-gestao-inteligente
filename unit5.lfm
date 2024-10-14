@@ -1,32 +1,30 @@
 object Form5: TForm5
-  Left = -7
+  Left = -6
   Height = 734
-  Top = 2
-  Width = 1356
+  Top = 1
+  Width = 1362
   Caption = 'Form5'
   ClientHeight = 0
   ClientWidth = 0
-  LCLVersion = '3.4.0.0'
+  LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = -14
     Height = 98
     Top = -8
-    Width = 22
-    Anchors = [akTop, akLeft, akRight]
+    Width = 1382
     BevelColor = clNone
     ClientHeight = 98
-    ClientWidth = 22
+    ClientWidth = 1382
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = -174
+      Left = 512
       Height = 49
       Top = 24
       Width = 371
       Alignment = taCenter
-      Anchors = [akTop]
       Caption = 'Lucros e Despesas'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
@@ -39,7 +37,7 @@ object Form5: TForm5
       ParentFont = False
     end
     object Image3: TImage
-      Left = 13
+      Left = 16
       Height = 168
       Top = -37
       Width = 200
@@ -857,22 +855,20 @@ object Form5: TForm5
   end
   object Panel2: TPanel
     Left = 0
-    Height = 0
+    Height = 666
     Top = 79
-    Width = 6
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 0
-    ClientWidth = 6
+    Width = 1366
+    ClientHeight = 666
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object Image2: TImage
-      Left = -72
+      Left = 1296
       Height = 74
-      Top = -74
+      Top = 592
       Width = 75
-      Anchors = [akRight, akBottom]
       OnClick = Image2Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696392CC000089504E47
@@ -2518,11 +2514,10 @@ object Form5: TForm5
       Stretch = True
     end
     object DBGrid1: TDBGrid
-      Left = -240
+      Left = 776
       Height = 220
-      Top = -110
+      Top = 336
       Width = 488
-      Anchors = []
       Color = 15984107
       Columns = <>
       DataSource = DataSource2
@@ -2539,11 +2534,10 @@ object Form5: TForm5
       TabOrder = 0
     end
     object DBGrid2: TDBGrid
-      Left = -243
+      Left = 80
       Height = 228
-      Top = -114
+      Top = 336
       Width = 488
-      Anchors = []
       Color = 15984107
       Columns = <>
       DataSource = DataSource1
@@ -2560,11 +2554,10 @@ object Form5: TForm5
       TabOrder = 1
     end
     object Panel5: TPanel
-      Left = -110
+      Left = 344
       Height = 152
-      Top = -76
+      Top = 96
       Width = 224
-      Anchors = []
       ClientHeight = 152
       ClientWidth = 224
       Color = 6896431
@@ -2576,7 +2569,6 @@ object Form5: TForm5
         Height = 25
         Top = 96
         Width = 93
-        Anchors = []
         Caption = 'Lucro Total'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -2592,7 +2584,6 @@ object Form5: TForm5
         Height = 56
         Top = 24
         Width = 56
-        Anchors = []
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869633780010089504E47
           0D0A1A0A0000000D49484452000001F4000001F40806000000CBD6DF8A000000
@@ -5677,7 +5668,6 @@ object Form5: TForm5
         Height = 25
         Top = 40
         Width = 82
-        Anchors = []
         Caption = 'R$: 00,00'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -5690,11 +5680,10 @@ object Form5: TForm5
       end
     end
     object Panel6: TPanel
-      Left = -107
+      Left = 1040
       Height = 152
-      Top = -76
+      Top = 96
       Width = 224
-      Anchors = []
       ClientHeight = 152
       ClientWidth = 224
       Color = 6896431
@@ -5706,7 +5695,6 @@ object Form5: TForm5
         Height = 25
         Top = 96
         Width = 10
-        Anchors = []
         Caption = 'a'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -5722,7 +5710,6 @@ object Form5: TForm5
         Height = 56
         Top = 24
         Width = 56
-        Anchors = []
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869633780010089504E47
           0D0A1A0A0000000D49484452000001F4000001F40806000000CBD6DF8A000000
@@ -8807,7 +8794,6 @@ object Form5: TForm5
         Height = 25
         Top = 40
         Width = 82
-        Anchors = []
         Caption = 'R$: 00,00'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -8820,11 +8806,10 @@ object Form5: TForm5
       end
     end
     object tdata: TMaskEdit
-      Left = -36
+      Left = 651
       Height = 25
-      Top = -12
+      Top = 288
       Width = 78
-      Anchors = []
       EnableSets = False
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -8841,11 +8826,10 @@ object Form5: TForm5
       SpaceChar = '_'
     end
     object Label6: TLabel
-      Left = -73
+      Left = 600
       Height = 25
-      Top = -12
+      Top = 240
       Width = 152
-      Anchors = []
       Caption = 'Insira o Intervalo'
       Color = 6896431
       Font.CharSet = ANSI_CHARSET
@@ -8859,11 +8843,10 @@ object Form5: TForm5
       ParentFont = False
     end
     object Panel7: TPanel
-      Left = -42
+      Left = 627
       Height = 45
-      Top = -22
+      Top = 376
       Width = 90
-      Anchors = []
       ClientHeight = 45
       ClientWidth = 90
       Color = 6896431
@@ -8876,7 +8859,6 @@ object Form5: TForm5
         Height = 36
         Top = 8
         Width = 32
-        Anchors = []
         OnClick = Image7Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869630D0B010089504E47
@@ -11023,11 +11005,10 @@ object Form5: TForm5
       end
     end
     object tdata1: TMaskEdit
-      Left = -36
+      Left = 651
       Height = 25
-      Top = -12
+      Top = 328
       Width = 78
-      Anchors = []
       EnableSets = False
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -11044,11 +11025,10 @@ object Form5: TForm5
       SpaceChar = '_'
     end
     object Label7: TLabel
-      Left = -11
+      Left = 611
       Height = 25
-      Top = -12
+      Top = 288
       Width = 29
-      Anchors = []
       Caption = 'De:'
       Color = 6896431
       Font.CharSet = ANSI_CHARSET
@@ -11062,11 +11042,10 @@ object Form5: TForm5
       ParentFont = False
     end
     object Label8: TLabel
-      Left = -14
+      Left = 611
       Height = 25
-      Top = -12
+      Top = 328
       Width = 35
-      Anchors = []
       Caption = 'Até:'
       Color = 6896431
       Font.CharSet = ANSI_CHARSET
@@ -11080,11 +11059,10 @@ object Form5: TForm5
       ParentFont = False
     end
     object Panel8: TPanel
-      Left = -111
+      Left = 80
       Height = 152
-      Top = -76
+      Top = 96
       Width = 224
-      Anchors = []
       ClientHeight = 152
       ClientWidth = 224
       Color = 6896431
@@ -11096,7 +11074,6 @@ object Form5: TForm5
         Height = 25
         Top = 96
         Width = 64
-        Anchors = []
         Caption = 'Ganhos'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -11112,7 +11089,6 @@ object Form5: TForm5
         Height = 56
         Top = 24
         Width = 56
-        Anchors = []
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869633780010089504E47
           0D0A1A0A0000000D49484452000001F4000001F40806000000CBD6DF8A000000
@@ -14197,7 +14173,6 @@ object Form5: TForm5
         Height = 25
         Top = 40
         Width = 82
-        Anchors = []
         Caption = 'R$: 00,00'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -14210,11 +14185,10 @@ object Form5: TForm5
       end
     end
     object Panel9: TPanel
-      Left = -108
+      Left = 776
       Height = 152
-      Top = -76
+      Top = 96
       Width = 224
-      Anchors = []
       ClientHeight = 152
       ClientWidth = 224
       Color = 6896431
@@ -14226,7 +14200,6 @@ object Form5: TForm5
         Height = 25
         Top = 96
         Width = 79
-        Anchors = []
         Caption = 'Despesas'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -14242,7 +14215,6 @@ object Form5: TForm5
         Height = 56
         Top = 24
         Width = 56
-        Anchors = []
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869633780010089504E47
           0D0A1A0A0000000D49484452000001F4000001F40806000000CBD6DF8A000000
@@ -17327,7 +17299,6 @@ object Form5: TForm5
         Height = 25
         Top = 40
         Width = 82
-        Anchors = []
         Caption = 'R$: 00,00'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -17340,11 +17311,10 @@ object Form5: TForm5
       end
     end
     object Label11: TLabel
-      Left = -80
+      Left = 232
       Height = 25
-      Top = -12
+      Top = 304
       Width = 162
-      Anchors = []
       Caption = 'Tabela de Serviços'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -17356,11 +17326,10 @@ object Form5: TForm5
       ParentFont = False
     end
     object Label12: TLabel
-      Left = -80
+      Left = 928
       Height = 25
-      Top = -12
+      Top = 304
       Width = 168
-      Anchors = []
       Caption = 'Tabela de Despesas'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431

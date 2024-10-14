@@ -5,8 +5,8 @@ unit Unit3;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, DBGrids, MaskEdit, Buttons;
+  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  StdCtrls, DBGrids, MaskEdit, Buttons;
 
 type
 
@@ -15,7 +15,6 @@ type
   TForm3 = class(TForm)
     ComboBox1: TComboBox;
     DataSource1: TDataSource;
-    DataSource2: TDataSource;
     DBGrid1: TDBGrid;
     Image1: TImage;
     Image2: TImage;
@@ -33,7 +32,6 @@ type
     Label8: TLabel;
     Label9: TLabel;
     lblEntre: TLabel;
-    MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -41,9 +39,9 @@ type
     Panel5: TPanel;
     Panel6: TPanel;
     SQLQuery1: TSQLQuery;
-    SQLTransaction1: TSQLTransaction;
     tdata: TMaskEdit;
     tdata1: TMaskEdit;
+    procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image3Click(Sender: TObject);
@@ -67,8 +65,15 @@ uses
 { TForm3 }
 
 
+
+procedure TForm3.Button2Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm3.FormCreate(Sender: TObject);
 begin
+  begin
   // Configura a consulta SQL para selecionar os valores desejados
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
@@ -93,6 +98,7 @@ begin
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
   SQLQuery1.Open;
   end;
+end
 end;
 
 procedure TForm3.Image1Click(Sender: TObject);
@@ -102,27 +108,29 @@ end;
 
 procedure TForm3.Image3Click(Sender: TObject);
 begin
-  Form8.Left := Form3.Left;
-  Form8.Top := Form3.Top;
-  Form8.Width := Form3.Width;
-  Form8.Height := Form3.Height;
-  if Form3.WindowState = wsMaximized then
-    Form8.WindowState := wsMaximized
-  else
-  Form8.WindowState := wsNormal;
-  Form3.Hide;
-  Form8.Show;
+  Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm3.Panel6Click(Sender: TObject);
-var
+  var
   startDate, endDate, comboBoxText: String;
   totalValue: Double;
   recordCount: Integer;
-  itemList, serviceList: TStringList;
-  i, j, serviceCount: Integer;
+  itemList: TStringList;
+  serviceList: TStringList;
+  i, j: Integer;
+  serviceCount: Integer;
   serviceName: String;
-begin
+  begin
   startDate := tdata.Text;
   endDate := tdata1.Text;
   comboBoxText := ComboBox1.Text;
@@ -131,6 +139,7 @@ begin
   Label7.Caption := 'R$ 0,00';
   Label6.Caption := '0';
   Label10.Caption := '';
+
   SQLQuery1.Close;
 
   // Verifica se os campos de data estão preenchidos
@@ -142,11 +151,13 @@ begin
 
   // Define a consulta com os parâmetros necessários
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas WHERE data BETWEEN :startDate AND :endDate';
+
   if comboBoxText <> '' then
   begin
     SQLQuery1.SQL.Add(' AND servico = :comboBoxText');
     SQLQuery1.Params.ParamByName('comboBoxText').AsString := comboBoxText;
   end;
+
   SQLQuery1.Params.ParamByName('startDate').AsDate := StrToDate(startDate);
   SQLQuery1.Params.ParamByName('endDate').AsDate := StrToDate(endDate);
 
@@ -166,18 +177,20 @@ begin
   serviceList := TStringList.Create;
   serviceList.Sorted := True;
   serviceList.Duplicates := dupIgnore;
-
   try
     itemList.Clear;
     serviceList.Clear;
+
     SQLQuery1.First;
     while not SQLQuery1.EOF do
     begin
       totalValue := totalValue + SQLQuery1.FieldByName('valor').AsFloat;
       recordCount := recordCount + 1;
       serviceName := SQLQuery1.FieldByName('servico').AsString;
+
       itemList.Add(serviceName);
       serviceList.Add(serviceName);
+
       SQLQuery1.Next;
     end;
 
@@ -185,6 +198,7 @@ begin
     Label7.Caption := 'R$ ' + FormatFloat('0.00', totalValue);
     // Exibe a contagem total de registros em Label6
     Label6.Caption := IntToStr(recordCount);
+
     // Exibe a lista de serviços mais contratados sem repetição em Label10
     itemList.Sort;
     Label10.Caption := '';

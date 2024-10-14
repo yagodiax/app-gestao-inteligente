@@ -5,8 +5,8 @@ unit Unit12;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, DBGrids, StdCtrls, MaskEdit;
+  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  DBGrids, StdCtrls, MaskEdit;
 
 type
 
@@ -30,7 +30,6 @@ type
     Label7: TLabel;
     Label9: TLabel;
     lblEntre: TLabel;
-    MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -103,11 +102,14 @@ end;
 
 procedure TForm12.FormCreate(Sender: TObject);
 begin
-    // Ativar a consulta
-    SQLQuery1.Open;
-
-    // Atribuir DataSource ao TDBGrid
-    DBGrid1.DataSource := DataSource1;
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from gastos');
+    open;
+    Last;
+  end;
 end;
 
 procedure TForm12.Image2Click(Sender: TObject);
@@ -140,16 +142,16 @@ end;
 
 procedure TForm12.Image4Click(Sender: TObject);
 begin
-  Form8.Left := Form12.Left;
-  Form8.Top := Form12.Top;
-  Form8.Width := Form12.Width;
-  Form8.Height := Form12.Height;
-  if Form12.WindowState = wsMaximized then
-    Form8.WindowState := wsMaximized
-  else
-  Form8.WindowState := wsNormal;
-  Form12.Hide;
-  Form8.Show;
+    Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm12.Image5Click(Sender: TObject);

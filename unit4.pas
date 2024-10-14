@@ -5,22 +5,19 @@ unit Unit4;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, MaskEdit, DBGrids;
+  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  StdCtrls, MaskEdit, DBGrids;
 
 type
 
   { TForm4 }
 
   TForm4 = class(TForm)
-    DataSource1: TDataSource;
     Image1: TImage;
     Image2: TImage;
     Image7: TImage;
-    MySQL56Connection1: TMySQL56Connection;
-    SQLQuery1: TSQLQuery;
-    SQLTransaction1: TSQLTransaction;
     tpagamento: TComboBox;
+    DataSource1: TDataSource;
     DBGrid1: TDBGrid;
     Image3: TImage;
     Image4: TImage;
@@ -38,6 +35,8 @@ type
     Panel2: TPanel;
     Panel3: TPanel;
     Panel6: TPanel;
+    SQLQuery1: TSQLQuery;
+    SQLTransaction1: TSQLTransaction;
     tdata: TMaskEdit;
     tdetalhes: TEdit;
     tnome: TEdit;
@@ -51,6 +50,7 @@ type
     procedure Image4Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
+    procedure Panel1Click(Sender: TObject);
     procedure Panel6Click(Sender: TObject);
     procedure tservicoChange(Sender: TObject);
   private
@@ -74,15 +74,15 @@ uses
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
-  Form2 := TForm2.Create(Self);
-  try
-    Form2.Left := Left;
-    Form2.Top := Top;
-    Hide;
-    Form2.ShowModal;
-  finally
-    Form2.Free;
-  end;
+    Form2 := TForm2.Create(Self);
+    try
+      Form2.Left := Left;
+      Form2.Top := Top;
+      Hide;
+      Form2.ShowModal;
+    finally
+      Form2.Free;
+    end;
 end;
 
 procedure TForm4.Button4Click(Sender: TObject);
@@ -92,16 +92,20 @@ var
   idValue: Integer;
 begin
   searchValue := tnome.Text;
+
   if searchValue = '' then
   begin
     ShowMessage('Por favor, insira o nome ou ID da Loja.');
     Exit;
   end;
+
   isNumber := TryStrToInt(searchValue, idValue);
+
   with SQLQuery1 do
   begin
     Close;
     SQL.Clear;
+
     if isNumber then
     begin
       SQL.Add('SELECT loja, servico, data, valor, forma_pagamento, detalhes FROM vendas WHERE id = :pid');
@@ -112,7 +116,9 @@ begin
       SQL.Add('SELECT loja, servico, data, valor, forma_pagamento, detalhes FROM vendas WHERE loja = :ploja');
       ParamByName('ploja').AsString := searchValue;
     end;
+
     Open;
+
     if not IsEmpty then
     begin
       tservico.Text := FieldByName('servico').AsString;
@@ -134,20 +140,25 @@ begin
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
   SQLQuery1.Open;
+
   // Limpa o ComboBox antes de adicionar novos itens
   tservico.Items.Clear;
+
   // Adiciona os valores retornados da Panel6 ao ComboBox
   while not SQLQuery1.EOF do
   begin
     tservico.Items.Add(SQLQuery1.FieldByName('nome').AsString);
     SQLQuery1.Next;
   end;
+
   // Fecha a Panel6
   SQLQuery1.Close;
+
   // Define a Panel6 original para o TDBGrid
   SQLQuery1.Close;
-  SQLQuery1.SQL.Text := 'SELECT * FROM vendas;';
+  SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
   SQLQuery1.Open;
+
   // Insere a data atual no campo tdata
   tdata.Text := DateToStr(Now);
 end;
@@ -161,7 +172,9 @@ begin
     ShowMessage('Por favor, insira o nome da Loja.');
     Exit;
   end;
+
   valorFormatado := StringReplace(tvalor.Text, ',', '.', [rfReplaceAll]);
+
   with SQLQuery1 do
   begin
     close;
@@ -177,6 +190,7 @@ begin
     ExecSQL;
     SQLTransaction1.Commit;
   end;
+
   with SQLQuery1 do
   begin
     close;
@@ -199,16 +213,16 @@ end;
 
 procedure TForm4.Image4Click(Sender: TObject);
 begin
-  Form2.Left := Form4.Left;
-  Form2.Top := Form4.Top;
-  Form2.Width := Form4.Width;
-  Form2.Height := Form4.Height;
-  if Form4.WindowState = wsMaximized then
-    Form2.WindowState := wsMaximized
-  else
-  Form2.WindowState := wsNormal;
-  Form4.Hide;
-  Form2.Show;
+  Form2 := TForm2.Create(Self);
+    try
+      Form2.Left := Left;
+      Form2.Top := Top;
+      Form2.WindowState := wsMaximized;
+      Hide;
+      Form2.ShowModal;
+    finally
+      Form2.Free;
+    end;
 end;
 
 procedure TForm4.Image5Click(Sender: TObject);
@@ -218,7 +232,7 @@ end;
 
 procedure TForm4.Image6Click(Sender: TObject);
 begin
-  with SQLQuery1 do
+    with SQLQuery1 do
   begin
     close;
     sql.clear;
@@ -228,13 +242,19 @@ begin
   end;
 end;
 
+procedure TForm4.Panel1Click(Sender: TObject);
+begin
+
+end;
+
 procedure TForm4.Panel6Click(Sender: TObject);
 begin
-  if tnome.Text = '' then
+   if tnome.Text = '' then
   begin
     ShowMessage('Por favor, insira o nome da Loja para filtrar.');
     Exit;
   end;
+
   with SQLQuery1 do
   begin
     close;
@@ -243,6 +263,7 @@ begin
     ParamByName('ploja').AsString := tnome.Text;
     open;
   end;
+
   if SQLQuery1.IsEmpty then
   begin
     ShowMessage('Nenhum resultado encontrado para a loja especificada.');

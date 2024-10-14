@@ -2,18 +2,17 @@ object Form4: TForm4
   Left = -8
   Height = 745
   Top = -8
-  Width = 1360
+  Width = 1366
   Caption = 'Form4'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1366
   OnCreate = FormCreate
-  LCLVersion = '3.4.0.0'
+  LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 98
     Top = -8
     Width = 1374
-    Anchors = [akTop, akLeft, akRight]
     BevelColor = clNone
     ClientHeight = 98
     ClientWidth = 1374
@@ -21,13 +20,13 @@ object Form4: TForm4
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
+    OnClick = Panel1Click
     object lblEntre: TLabel
       Left = 552
       Height = 49
       Top = 24
       Width = 310
       Alignment = taCenter
-      Anchors = [akTop]
       Caption = 'Registrar Venda'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
@@ -860,10 +859,9 @@ object Form4: TForm4
     Left = 0
     Height = 659
     Top = 85
-    Width = 1360
-    Anchors = [akTop, akLeft, akRight, akBottom]
+    Width = 1366
     ClientHeight = 659
-    ClientWidth = 1360
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
@@ -873,7 +871,6 @@ object Form4: TForm4
       Height = 25
       Top = 64
       Width = 184
-      Anchors = [akTop]
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -906,11 +903,10 @@ object Form4: TForm4
       ParentFont = False
     end
     object DBGrid1: TDBGrid
-      Left = 679
+      Left = 704
       Height = 364
       Top = 144
-      Width = 492
-      Anchors = []
+      Width = 537
       Color = 15984107
       Columns = <>
       DataSource = DataSource1
@@ -927,11 +923,10 @@ object Form4: TForm4
       TabOrder = 1
     end
     object Label10: TLabel
-      Left = 530
+      Left = 528
       Height = 25
       Top = 32
       Width = 124
-      Anchors = [akTop]
       Caption = 'Nome da Loja:'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -947,7 +942,6 @@ object Form4: TForm4
       Height = 364
       Top = 144
       Width = 538
-      Anchors = []
       ClientHeight = 364
       ClientWidth = 538
       Color = 6896431
@@ -959,7 +953,6 @@ object Form4: TForm4
         Height = 25
         Top = 56
         Width = 170
-        Anchors = []
         Caption = 'Selecione o Serviço:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -975,7 +968,6 @@ object Form4: TForm4
         Height = 25
         Top = 88
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -994,7 +986,6 @@ object Form4: TForm4
         Height = 25
         Top = 176
         Width = 78
-        Anchors = []
         EnableSets = False
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
@@ -1012,7 +1003,6 @@ object Form4: TForm4
         Height = 25
         Top = 144
         Width = 108
-        Anchors = []
         Caption = 'Insira a Data'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1028,7 +1018,6 @@ object Form4: TForm4
         Height = 25
         Top = 232
         Width = 156
-        Anchors = []
         Caption = 'Insira os Detalhes:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1044,7 +1033,6 @@ object Form4: TForm4
         Height = 25
         Top = 264
         Width = 157
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1057,7 +1045,6 @@ object Form4: TForm4
         Height = 25
         Top = 176
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1070,7 +1057,6 @@ object Form4: TForm4
         Height = 25
         Top = 144
         Width = 97
-        Anchors = []
         Caption = 'Valor pago:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1086,7 +1072,6 @@ object Form4: TForm4
         Height = 25
         Top = 88
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1105,7 +1090,6 @@ object Form4: TForm4
         Height = 25
         Top = 56
         Width = 201
-        Anchors = []
         Caption = 'Metodo de Pagamento:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1121,7 +1105,6 @@ object Form4: TForm4
         Height = 64
         Top = 232
         Width = 61
-        Anchors = []
         OnClick = Image1Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963B9A7000089504E47
@@ -2476,7 +2459,6 @@ object Form4: TForm4
         Height = 56
         Top = 240
         Width = 53
-        Anchors = []
         OnClick = Image2Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963811A010089504E47
@@ -4746,11 +4728,10 @@ object Form4: TForm4
       end
     end
     object Image4: TImage
-      Left = 1288
+      Left = 1296
       Height = 74
-      Top = 586
+      Top = 584
       Width = 75
-      Anchors = [akRight, akBottom]
       OnClick = Image4Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696392CC000089504E47
@@ -6400,7 +6381,6 @@ object Form4: TForm4
       Height = 42
       Top = 47
       Width = 90
-      Anchors = [akTop]
       ClientHeight = 42
       ClientWidth = 90
       Color = 6896431
@@ -6413,7 +6393,6 @@ object Form4: TForm4
         Height = 34
         Top = 3
         Width = 32
-        Anchors = [akTop]
         OnClick = Image5Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869630D0B010089504E47
@@ -10834,8 +10813,8 @@ object Form4: TForm4
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
-    Left = 1168
-    Top = 16
+    Left = 1144
+    Top = 24
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
@@ -10881,38 +10860,21 @@ object Form4: TForm4
         Precision = -1
         Size = 255
       end>
-    Active = True
-    Database = MySQL56Connection1
-    Transaction = SQLTransaction1
+    Database = Form1.MySQL56Connection1
+    Transaction = Form1.SQLTransaction1
     SQL.Strings = (
-      'SELECT * FROM vendas;'
+      'SELECT * FROM vendas'
     )
     Params = <>
     Macros = <>
-    Left = 1104
-    Top = 16
+    Left = 1056
+    Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
-    Database = MySQL56Connection1
-    Left = 1024
-    Top = 16
-  end
-  object MySQL56Connection1: TMySQL56Connection
-    Connected = True
-    LoginPrompt = False
-    DatabaseName = 'gtech'
-    KeepConnection = True
-    Params.Strings = (
-      'Port=12187'
-    )
-    Password = 'AVNS_NNUtPUlCTAqXZ_l4xvL'
-    Transaction = SQLTransaction1
-    UserName = 'avnadmin'
-    HostName = 'gtechdb-gtech.e.aivencloud.com'
-    SkipLibraryVersionCheck = True
-    Left = 912
-    Top = 16
+    Database = Form1.MySQL56Connection1
+    Left = 976
+    Top = 24
   end
 end

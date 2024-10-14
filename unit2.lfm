@@ -1,29 +1,28 @@
 object Form2: TForm2
-  Left = -1367
+  Left = -6
   Height = 734
-  Top = 2
-  Width = 1350
+  Top = 1
+  Width = 1362
   BorderStyle = bsSingle
   Caption = 'Menu Inicial'
   ClientHeight = 0
   ClientWidth = 0
   OnCreate = FormCreate
-  LCLVersion = '3.4.0.0'
+  LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = -2
     Height = 90
     Top = -8
-    Width = 8
-    Anchors = [akTop, akLeft, akRight]
+    Width = 1368
     BevelColor = clNone
     ClientHeight = 90
-    ClientWidth = 8
+    ClientWidth = 1368
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = -120
+      Left = 560
       Height = 49
       Top = 24
       Width = 248
@@ -859,22 +858,20 @@ object Form2: TForm2
   end
   object Panel2: TPanel
     Left = 0
-    Height = 0
+    Height = 666
     Top = 80
-    Width = 6
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 0
-    ClientWidth = 6
+    Width = 1366
+    ClientHeight = 666
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object Image2: TImage
-      Left = -58
-      Height = 0
+      Left = 499
+      Height = 120
       Top = 224
       Width = 120
-      Anchors = [akTop, akBottom]
       OnClick = Image2Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963B880000089504E47
@@ -1913,11 +1910,10 @@ object Form2: TForm2
       Stretch = True
     end
     object Image10: TImage
-      Left = -72
+      Left = 1296
       Height = 74
-      Top = -75
+      Top = 591
       Width = 75
-      Anchors = [akRight, akBottom]
       OnClick = Image10Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696392CC000089504E47
@@ -3563,11 +3559,10 @@ object Form2: TForm2
       Stretch = True
     end
     object Image8: TImage
-      Left = -56
-      Height = 0
+      Left = 753
+      Height = 120
       Top = 224
       Width = 120
-      Anchors = [akTop, akBottom]
       OnClick = Image8Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963C886010089504E47
@@ -6703,11 +6698,10 @@ object Form2: TForm2
       Stretch = True
     end
     object Label4: TLabel
-      Left = -101
-      Height = 0
+      Left = 456
+      Height = 37
       Top = 360
       Width = 206
-      Anchors = [akTop, akBottom]
       Caption = 'Registrar Serviço'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -6719,11 +6713,10 @@ object Form2: TForm2
       ParentFont = False
     end
     object Label6: TLabel
-      Left = -104
-      Height = 0
+      Left = 704
+      Height = 37
       Top = 360
       Width = 217
-      Anchors = [akTop, akBottom]
       Caption = 'Registrar Despesa'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431

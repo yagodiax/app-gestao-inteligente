@@ -103,16 +103,16 @@ end;
 
 procedure TForm5.Image2Click(Sender: TObject);
 begin
-  Form8.Left := Form5.Left;
-  Form8.Top := Form5.Top;
-  Form8.Width := Form5.Width;
-  Form8.Height := Form5.Height;
-  if Form5.WindowState = wsMaximized then
-    Form8.WindowState := wsMaximized
-  else
-  Form8.WindowState := wsNormal;
-  Form5.Hide;
-  Form8.Show;
+    Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm5.Panel7Click(Sender: TObject);

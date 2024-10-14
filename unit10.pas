@@ -5,8 +5,8 @@ unit Unit10;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, DBGrids;
+  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  StdCtrls, DBGrids;
 
 type
 
@@ -24,7 +24,6 @@ type
     Label9: TLabel;
     lblEntre: TLabel;
     logo: TImage;
-    MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -39,6 +38,7 @@ type
     procedure Image1Click(Sender: TObject);
     procedure Image2Click(Sender: TObject);
     procedure Image3Click(Sender: TObject);
+    procedure Panel2Click(Sender: TObject);
     procedure Panel4Click(Sender: TObject);
   private
 
@@ -90,16 +90,16 @@ end;
 
 procedure TForm10.Image10Click(Sender: TObject);
 begin
-  Form8.Left := Form10.Left;
-  Form8.Top := Form10.Top;
-  Form8.Width := Form10.Width;
-  Form8.Height := Form10.Height;
-  if Form10.WindowState = wsMaximized then
-    Form8.WindowState := wsMaximized
-  else
-  Form8.WindowState := wsNormal;
-  Form10.Hide;
-  Form8.Show;
+        Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm10.FormCreate(Sender: TObject);
@@ -174,6 +174,11 @@ begin
     SQL.Add('SELECT * FROM admin');
     Open;
   end;
+end;
+
+procedure TForm10.Panel2Click(Sender: TObject);
+begin
+
 end;
 
 procedure TForm10.Panel4Click(Sender: TObject);

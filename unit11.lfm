@@ -1,33 +1,31 @@
 object Form11: TForm11
-  Left = -1367
-  Height = 734
-  Top = 2
-  Width = 1350
+  Left = -8
+  Height = 745
+  Top = -8
+  Width = 1366
   Caption = 'Form11'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1366
   OnCreate = FormCreate
-  LCLVersion = '3.4.0.0'
+  LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 88
+    Height = 98
     Top = -8
-    Width = 14
-    Anchors = [akTop, akLeft, akRight]
+    Width = 1374
     BevelColor = clNone
-    ClientHeight = 88
-    ClientWidth = 14
+    ClientHeight = 98
+    ClientWidth = 1374
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = -148
+      Left = 552
       Height = 49
       Top = 24
       Width = 310
       Alignment = taCenter
-      Anchors = [akTop]
       Caption = 'Registrar Venda'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
@@ -42,7 +40,7 @@ object Form11: TForm11
     object Image3: TImage
       Left = 0
       Height = 168
-      Top = -36
+      Top = -32
       Width = 200
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869639864000089504E47
@@ -858,22 +856,21 @@ object Form11: TForm11
   end
   object Panel2: TPanel
     Left = 0
-    Height = 0
-    Top = 80
-    Width = 0
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 0
-    ClientWidth = 0
+    Height = 659
+    Top = 85
+    Width = 1366
+    ClientHeight = 659
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
+    OnClick = Panel2Click
     object tnome: TEdit
-      Left = -92
+      Left = 528
       Height = 25
-      Top = -12
+      Top = 64
       Width = 184
-      Anchors = []
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -906,11 +903,10 @@ object Form11: TForm11
       ParentFont = False
     end
     object Label10: TLabel
-      Left = -62
+      Left = 528
       Height = 25
-      Top = -12
+      Top = 32
       Width = 124
-      Anchors = []
       Caption = 'Nome da Loja:'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
@@ -922,11 +918,10 @@ object Form11: TForm11
       ParentFont = False
     end
     object Panel3: TPanel
-      Left = -269
+      Left = 128
       Height = 364
-      Top = -182
+      Top = 144
       Width = 538
-      Anchors = []
       ClientHeight = 364
       ClientWidth = 538
       Color = 6896431
@@ -938,7 +933,6 @@ object Form11: TForm11
         Height = 25
         Top = 88
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -950,13 +944,13 @@ object Form11: TForm11
         )
         ParentFont = False
         TabOrder = 0
+        OnChange = tservicoChange
       end
       object tdetalhes: TEdit
         Left = 64
         Height = 25
         Top = 264
         Width = 157
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -969,7 +963,6 @@ object Form11: TForm11
         Height = 25
         Top = 176
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -982,7 +975,6 @@ object Form11: TForm11
         Height = 25
         Top = 88
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1001,7 +993,6 @@ object Form11: TForm11
         Height = 64
         Top = 232
         Width = 61
-        Anchors = []
         OnClick = Image1Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963B9A7000089504E47
@@ -2356,7 +2347,6 @@ object Form11: TForm11
         Height = 56
         Top = 240
         Width = 53
-        Anchors = []
         OnClick = Image7Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963811A010089504E47
@@ -4629,7 +4619,6 @@ object Form11: TForm11
         Height = 25
         Top = 56
         Width = 201
-        Anchors = []
         Caption = 'Metodo de Pagamento:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4645,7 +4634,6 @@ object Form11: TForm11
         Height = 25
         Top = 56
         Width = 170
-        Anchors = []
         Caption = 'Selecione o Serviço:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4661,7 +4649,6 @@ object Form11: TForm11
         Height = 25
         Top = 144
         Width = 108
-        Anchors = []
         Caption = 'Insira a Data'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4677,7 +4664,6 @@ object Form11: TForm11
         Height = 25
         Top = 232
         Width = 156
-        Anchors = []
         Caption = 'Insira os Detalhes:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4693,7 +4679,6 @@ object Form11: TForm11
         Height = 25
         Top = 144
         Width = 97
-        Anchors = []
         Caption = 'Valor pago:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -4709,7 +4694,6 @@ object Form11: TForm11
         Height = 25
         Top = 176
         Width = 78
-        Anchors = []
         EnableSets = False
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
@@ -4727,7 +4711,6 @@ object Form11: TForm11
         Height = 56
         Top = 240
         Width = 56
-        Anchors = []
         OnClick = Image8Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869636B05010089504E47
@@ -6832,7 +6815,6 @@ object Form11: TForm11
         Height = 34
         Top = 312
         Width = 90
-        Anchors = []
         Caption = 'Limpar'
         Color = 15984107
         Font.CharSet = ANSI_CHARSET
@@ -6850,11 +6832,10 @@ object Form11: TForm11
       end
     end
     object Image4: TImage
-      Left = -72
+      Left = 1296
       Height = 74
-      Top = -75
+      Top = 584
       Width = 75
-      Anchors = [akRight, akBottom]
       OnClick = Image4Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696392CC000089504E47
@@ -8500,11 +8481,10 @@ object Form11: TForm11
       Stretch = True
     end
     object Panel6: TPanel
-      Left = -45
+      Left = 792
       Height = 42
-      Top = -21
+      Top = 47
       Width = 90
-      Anchors = []
       ClientHeight = 42
       ClientWidth = 90
       Color = 6896431
@@ -8517,7 +8497,6 @@ object Form11: TForm11
         Height = 34
         Top = 3
         Width = 32
-        Anchors = []
         OnClick = Image5Click
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869630D0B010089504E47
@@ -10664,11 +10643,10 @@ object Form11: TForm11
       end
     end
     object DBGrid1: TDBGrid
-      Left = -268
+      Left = 704
       Height = 364
-      Top = -182
+      Top = 144
       Width = 537
-      Anchors = []
       Color = 15984107
       Columns = <>
       DataSource = DataSource1
@@ -10729,9 +10707,8 @@ object Form11: TForm11
         Precision = -1
         Size = 255
       end>
-    Active = True
-    Database = MySQL56Connection1
-    Transaction = SQLTransaction1
+    Database = Form1.MySQL56Connection1
+    Transaction = Form1.SQLTransaction1
     SQL.Strings = (
       'SELECT * FROM vendas;'
     )
@@ -10741,31 +10718,15 @@ object Form11: TForm11
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
-    Database = MySQL56Connection1
+    Database = Form1.MySQL56Connection1
     Left = 1216
     Top = 24
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
     Left = 1048
-    Top = 24
-  end
-  object MySQL56Connection1: TMySQL56Connection
-    Connected = True
-    LoginPrompt = False
-    DatabaseName = 'gtech'
-    KeepConnection = True
-    Params.Strings = (
-      'Port=12187'
-    )
-    Password = 'AVNS_NNUtPUlCTAqXZ_l4xvL'
-    Transaction = SQLTransaction1
-    UserName = 'avnadmin'
-    HostName = 'gtechdb-gtech.e.aivencloud.com'
-    SkipLibraryVersionCheck = True
-    Left = 928
     Top = 24
   end
 end

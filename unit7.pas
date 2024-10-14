@@ -57,100 +57,100 @@ uses
 
 procedure TForm8.Image10Click(Sender: TObject);
 begin
-  Form1.Left := Form8.Left;
-  Form1.Top := Form8.Top;
-  Form1.Width := Form8.Width;
-  Form1.Height := Form8.Height;
-  if Form8.WindowState = wsMaximized then
-    Form1.WindowState := wsMaximized
-  else
-  Form1.WindowState := wsNormal;
-  Form8.Hide;
-  Form1.Show;
+  Form1 := TForm1.Create(Self);
+    try
+      Form1.Left := Left;
+      Form1.Top := Top;
+      Form1.WindowState := wsMaximized;
+      Hide;
+      Form1.ShowModal;
+    finally
+      Form1.Free;
+    end;
 end;
 
 procedure TForm8.Image11Click(Sender: TObject);
 begin
-  Form9.Left := Form8.Left;
-  Form9.Top := Form8.Top;
-  Form9.Width := Form8.Width;
-  Form9.Height := Form8.Height;
-  if Form8.WindowState = wsMaximized then
-    Form9.WindowState := wsMaximized
-  else
-  Form9.WindowState := wsNormal;
-  Form8.Hide;
-  Form9.Show;
+  Form9 := TForm9.Create(Self);
+  try
+    Form9.Left := Left;
+    Form9.Top := Top;
+    Form9.WindowState := wsMaximized;
+    Hide;
+    Form9.ShowModal;
+  finally
+    Form9.Free;
+  end;
 end;
 
 procedure TForm8.Image12Click(Sender: TObject);
 begin
-  Form5.Left := Form8.Left;
-  Form5.Top := Form8.Top;
-  Form5.Width := Form8.Width;
-  Form5.Height := Form8.Height;
-  if Form8.WindowState = wsMaximized then
-    Form5.WindowState := wsMaximized
-  else
-  Form5.WindowState := wsNormal;
-  Form8.Hide;
-  Form5.Show;
+  Form5 := TForm5.Create(Self);
+  try
+    Form5.Left := Left;
+    Form5.Top := Top;
+    Form5.WindowState := wsMaximized;
+    Hide;
+    Form5.ShowModal;
+  finally
+    Form5.Free;
+  end;
 end;
 
 procedure TForm8.Image13Click(Sender: TObject);
 begin
-  Form10.Left := Form8.Left;
-  Form10.Top := Form8.Top;
-  Form10.Width := Form8.Width;
-  Form10.Height := Form8.Height;
-  if Form8.WindowState = wsMaximized then
-    Form10.WindowState := wsMaximized
-  else
-  Form10.WindowState := wsNormal;
-  Form8.Hide;
-  Form10.Show;
+  Form10 := TForm10.Create(Self);
+try
+  Form10.Left := Left;
+  Form10.Top := Top;
+  Form10.WindowState := wsMaximized;
+  Hide;
+  Form10.ShowModal;
+finally
+  Form10.Free;
+end;
 end;
 
 procedure TForm8.Image14Click(Sender: TObject);
 begin
-  Form11.Left := Form8.Left;
-  Form11.Top := Form8.Top;
-  Form11.Width := Form8.Width;
-  Form11.Height := Form8.Height;
-  if Form8.WindowState = wsMaximized then
-    Form11.WindowState := wsMaximized
-  else
-  Form11.WindowState := wsNormal;
-  Form8.Hide;
-  Form11.Show;
+      Form11 := TForm11.Create(Self);
+try
+  Form11.Left := Left;
+  Form11.Top := Top;
+  Form11.WindowState := wsMaximized;
+  Hide;
+  Form11.ShowModal;
+finally
+  Form11.Free;
+end;
 end;
 
 procedure TForm8.Image15Click(Sender: TObject);
 begin
-  Form12.Left := Form8.Left;
-  Form12.Top := Form8.Top;
-  Form12.Width := Form8.Width;
-  Form12.Height := Form8.Height;
-  if Form8.WindowState = wsMaximized then
-    Form12.WindowState := wsMaximized
-  else
-  Form12.WindowState := wsNormal;
-  Form8.Hide;
-  Form12.Show;
+      Form12 := TForm12.Create(Self);
+try
+  Form12.Left := Left;
+  Form12.Top := Top;
+  Form12.WindowState := wsMaximized;
+  Hide;
+  Form12.ShowModal;
+finally
+  Form12.Free;
+end;
 end;
 
 procedure TForm8.Image9Click(Sender: TObject);
 begin
-  Form3.Left := Form8.Left;
-  Form3.Top := Form8.Top;
-  Form3.Width := Form8.Width;
-  Form3.Height := Form8.Height;
-  if Form8.WindowState = wsMaximized then
-    Form3.WindowState := wsMaximized
-  else
-  Form3.WindowState := wsNormal;
-  Form8.Hide;
-  Form3.Show;
+    Form3 := TForm3.Create(Self);
+try
+  Form3.Left := Left;
+  Form3.Top := Top;
+  Form3.WindowState := wsMaximized;
+  Hide;
+  Form3.ShowModal;
+finally
+  Form3.Free;
+end;
 end;
 
 end.

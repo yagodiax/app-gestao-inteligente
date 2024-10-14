@@ -5,15 +5,14 @@ unit Unit6;
 interface
 
 uses
-  Classes, SysUtils, SQLDB, mysql56conn, DB, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, MaskEdit, DBGrids;
+  Classes, SysUtils, SQLDB, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  StdCtrls, MaskEdit, DBGrids;
 
 type
 
   { TForm6 }
 
   TForm6 = class(TForm)
-    MySQL56Connection1: TMySQL56Connection;
     tcategoria: TComboBox;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
@@ -66,16 +65,16 @@ uses
 
 procedure TForm6.Image4Click(Sender: TObject);
 begin
-  Form2.Left := Form6.Left;
-  Form2.Top := Form6.Top;
-  Form2.Width := Form6.Width;
-  Form2.Height := Form6.Height;
-  if Form6.WindowState = wsMaximized then
-    Form2.WindowState := wsMaximized
-  else
-  Form2.WindowState := wsNormal;
-  Form6.Hide;
-  Form2.Show;
+    Form2 := TForm2.Create(Self);
+    try
+      Form2.Left := Left;
+      Form2.Top := Top;
+      Form2.WindowState := wsMaximized;
+      Hide;
+      Form2.ShowModal;
+    finally
+      Form2.Free;
+    end;
 end;
 
 procedure TForm6.Image1Click(Sender: TObject);

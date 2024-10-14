@@ -5,8 +5,8 @@ unit Unit9;
 interface
 
 uses
-  Classes, SysUtils, DB, SQLDB, mysql56conn, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, DBGrids, StdCtrls;
+  Classes, SysUtils, DB, SQLDB, Forms, Controls, Graphics, Dialogs, ExtCtrls,
+  DBGrids, StdCtrls;
 
 type
 
@@ -23,7 +23,6 @@ type
     Label9: TLabel;
     lblEntre: TLabel;
     logo: TImage;
-    MySQL56Connection1: TMySQL56Connection;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -70,21 +69,21 @@ end;
 
 procedure TForm9.Image10Click(Sender: TObject);
 begin
-  Form8.Left := Form9.Left;
-  Form8.Top := Form9.Top;
-  Form8.Width := Form9.Width;
-  Form8.Height := Form9.Height;
-  if Form9.WindowState = wsMaximized then
-    Form8.WindowState := wsMaximized
-  else
-  Form8.WindowState := wsNormal;
-  Form9.Hide;
-  Form8.Show;
+      Form8 := TForm8.Create(Self);
+    try
+      Form8.Left := Left;
+      Form8.Top := Top;
+      Form8.WindowState := wsMaximized;
+      Hide;
+      Form8.ShowModal;
+    finally
+      Form8.Free;
+    end;
 end;
 
 procedure TForm9.FormCreate(Sender: TObject);
 begin
-  with SQLQuery1 do
+    with SQLQuery1 do
   begin
     close;
     sql.clear;

@@ -1,33 +1,31 @@
 object Form6: TForm6
-  Left = -1368
-  Height = 745
-  Top = -8
-  Width = 1354
+  Left = -92
+  Height = 732
+  Top = 0
+  Width = 1375
   Caption = 'Form6'
   ClientHeight = 0
   ClientWidth = 0
   OnCreate = FormCreate
-  LCLVersion = '3.4.0.0'
+  LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = -8
     Height = 90
     Top = -8
-    Width = 14
-    Anchors = [akTop, akLeft, akRight]
+    Width = 1376
     BevelColor = clNone
     ClientHeight = 90
-    ClientWidth = 14
+    ClientWidth = 1376
     Color = 6896431
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object lblEntre: TLabel
-      Left = -172
+      Left = 512
       Height = 49
       Top = 24
       Width = 358
       Alignment = taCenter
-      Anchors = [akTop]
       Caption = 'Registrar Despesa'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
@@ -40,7 +38,7 @@ object Form6: TForm6
       ParentFont = False
     end
     object Image3: TImage
-      Left = 8
+      Left = 9
       Height = 168
       Top = -36
       Width = 200
@@ -858,12 +856,11 @@ object Form6: TForm6
   end
   object Panel2: TPanel
     Left = 0
-    Height = 0
+    Height = 745
     Top = 80
-    Width = 6
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 0
-    ClientWidth = 6
+    Width = 1366
+    ClientHeight = 745
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
@@ -893,11 +890,10 @@ object Form6: TForm6
       ParentFont = False
     end
     object Panel3: TPanel
-      Left = -222
+      Left = 128
       Height = 364
-      Top = -182
+      Top = 144
       Width = 448
-      Anchors = []
       ClientHeight = 364
       ClientWidth = 448
       Color = 6896431
@@ -909,7 +905,6 @@ object Form6: TForm6
         Height = 25
         Top = 224
         Width = 70
-        Anchors = []
         EnableSets = False
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
@@ -927,7 +922,6 @@ object Form6: TForm6
         Height = 25
         Top = 192
         Width = 108
-        Anchors = []
         Caption = 'Insira a Data'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -943,7 +937,6 @@ object Form6: TForm6
         Height = 25
         Top = 64
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -956,7 +949,6 @@ object Form6: TForm6
         Height = 25
         Top = 32
         Width = 136
-        Anchors = []
         Caption = 'Insira o Serviço:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -972,7 +964,6 @@ object Form6: TForm6
         Height = 25
         Top = 144
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -985,7 +976,6 @@ object Form6: TForm6
         Height = 25
         Top = 112
         Width = 97
-        Anchors = []
         Caption = 'Valor pago:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1001,7 +991,6 @@ object Form6: TForm6
         Height = 25
         Top = 272
         Width = 156
-        Anchors = []
         Caption = 'Insira os Detalhes:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1017,7 +1006,6 @@ object Form6: TForm6
         Height = 25
         Top = 304
         Width = 361
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1030,7 +1018,6 @@ object Form6: TForm6
         Height = 25
         Top = 32
         Width = 162
-        Anchors = []
         Caption = 'Forma Pagamento:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1046,7 +1033,6 @@ object Form6: TForm6
         Height = 25
         Top = 64
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1059,7 +1045,6 @@ object Form6: TForm6
         Height = 25
         Top = 112
         Width = 88
-        Anchors = []
         Caption = 'Categoria:'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1075,7 +1060,6 @@ object Form6: TForm6
         Height = 25
         Top = 192
         Width = 97
-        Anchors = []
         Caption = 'Fornecedor'
         Font.CharSet = ANSI_CHARSET
         Font.Color = 15984107
@@ -1091,7 +1075,6 @@ object Form6: TForm6
         Height = 25
         Top = 224
         Width = 157
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1104,7 +1087,6 @@ object Form6: TForm6
         Height = 25
         Top = 144
         Width = 160
-        Anchors = []
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13
         Font.Pitch = fpVariable
@@ -1121,11 +1103,10 @@ object Form6: TForm6
       end
     end
     object DBGrid1: TDBGrid
-      Left = -240
+      Left = 728
       Height = 364
-      Top = -182
+      Top = 144
       Width = 488
-      Anchors = []
       Color = 15984107
       Columns = <>
       DataSource = DataSource1
@@ -1137,11 +1118,10 @@ object Form6: TForm6
       TabOrder = 1
     end
     object Image2: TImage
-      Left = -29
+      Left = 620
       Height = 64
-      Top = -32
+      Top = 352
       Width = 64
-      Anchors = []
       OnClick = Image2Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869636C46010089504E47
@@ -3761,11 +3741,10 @@ object Form6: TForm6
       Stretch = True
     end
     object Image1: TImage
-      Left = -33
+      Left = 616
       Height = 72
-      Top = -36
+      Top = 232
       Width = 72
-      Anchors = []
       OnClick = Image1Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963C4A7000089504E47
@@ -5115,11 +5094,10 @@ object Form6: TForm6
       Stretch = True
     end
     object Image4: TImage
-      Left = -66
+      Left = 1296
       Height = 74
-      Top = -73
+      Top = 591
       Width = 75
-      Anchors = [akRight, akBottom]
       OnClick = Image4Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696392CC000089504E47
@@ -6815,9 +6793,8 @@ object Form6: TForm6
         Precision = -1
         Size = 255
       end>
-    Active = True
-    Database = MySQL56Connection1
-    Transaction = SQLTransaction1
+    Database = Form1.MySQL56Connection1
+    Transaction = Form1.SQLTransaction1
     SQL.Strings = (
       'SELECT * FROM gastos;'
     )
@@ -6827,31 +6804,15 @@ object Form6: TForm6
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
-    Database = MySQL56Connection1
+    Database = Form1.MySQL56Connection1
     Left = 1184
     Top = 24
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
     Left = 1272
-    Top = 24
-  end
-  object MySQL56Connection1: TMySQL56Connection
-    Connected = True
-    LoginPrompt = False
-    DatabaseName = 'gtech'
-    KeepConnection = True
-    Params.Strings = (
-      'Port=12187'
-    )
-    Password = 'AVNS_NNUtPUlCTAqXZ_l4xvL'
-    Transaction = SQLTransaction1
-    UserName = 'avnadmin'
-    HostName = 'gtechdb-gtech.e.aivencloud.com'
-    SkipLibraryVersionCheck = True
-    Left = 984
     Top = 24
   end
 end

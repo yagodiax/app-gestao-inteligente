@@ -9,8 +9,8 @@ uses
   {$IFDEF HASAMIGA}
   athreads,
   {$ENDIF}
-  Interfaces, Forms, datetimectrls, unit1, unit2, unit8, unit3, unit4, unit6,
-  unit5, unit7, unit9, unit10, unit11, unit12;
+  Interfaces, Forms, datetimectrls, unit1, unit2,
+  unit8, unit3, unit4, unit6, unit5, unit7, unit9, unit10, unit11, unit12;
 
 {$R *.res}
 

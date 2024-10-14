@@ -1,32 +1,31 @@
 object Form1: TForm1
-  Left = -1368
+  Left = -8
   Height = 745
   Top = -8
-  Width = 1354
+  Width = 1366
+  BorderStyle = bsSingle
   Caption = 'Pagina de Login'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1366
   KeyPreview = True
   OnCreate = FormCreate
-  LCLVersion = '3.4.0.0'
+  LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = 0
-    Height = 0
+    Height = 744
     Top = 0
-    Width = 6
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 0
-    ClientWidth = 6
+    Width = 1366
+    ClientHeight = 744
+    ClientWidth = 1366
     Color = 15984107
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = -109
+      Left = 456
       Height = 72
-      Top = -36
+      Top = 264
       Width = 223
-      Anchors = []
       Caption = 'Faça login com '#13#10'a sua conta'
       Color = clBlack
       Font.CharSet = ANSI_CHARSET
@@ -37,13 +36,13 @@ object Form1: TForm1
       Font.Quality = fqDraft
       ParentColor = False
       ParentFont = False
+      OnClick = lblEntreClick
     end
     object lblLogin: TEdit
-      Left = -129
+      Left = 456
       Height = 29
-      Top = -14
+      Top = 424
       Width = 264
-      Anchors = []
       Font.CharSet = ANSI_CHARSET
       Font.Height = -16
       Font.Pitch = fpVariable
@@ -51,15 +50,16 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 0
       Text = 'Insira seu Login:'
+      OnChange = lblLoginChange
       OnClick = lblLoginClick
+      OnEnter = lblLoginEnter
       OnKeyPress = lblLoginKeyPress
     end
     object lblSenha: TEdit
-      Left = -129
+      Left = 456
       Height = 29
-      Top = -14
+      Top = 472
       Width = 264
-      Anchors = []
       EchoMode = emPassword
       Font.CharSet = ANSI_CHARSET
       Font.Height = -16
@@ -74,11 +74,10 @@ object Form1: TForm1
       OnKeyPress = lblSenhaKeyPress
     end
     object imgLogo: TImage
-      Left = -121
+      Left = 672
       Height = 240
-      Top = -120
+      Top = 176
       Width = 248
-      Anchors = []
       Center = True
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869639266000089504E47
@@ -907,11 +906,10 @@ object Form1: TForm1
       Stretch = True
     end
     object Label1: TLabel
-      Left = -57
+      Left = 600
       Height = 15
-      Top = -7
+      Top = 504
       Width = 120
-      Anchors = []
       Caption = 'Esqueceu a sua Senha?'
       Color = 16762368
       Font.CharSet = ANSI_CHARSET
@@ -923,11 +921,10 @@ object Form1: TForm1
       OnClick = Label1Click
     end
     object Image1: TImage
-      Left = -28
+      Left = 768
       Height = 64
-      Top = -32
+      Top = 432
       Width = 64
-      Anchors = []
       OnClick = Image1Click
       Picture.Data = {
         1754506F727461626C654E6574776F726B4772617068696378CD000089504E47
@@ -2579,36 +2576,6 @@ object Form1: TForm1
       Proportional = True
       Stretch = True
     end
-    object CheckBox1: TCheckBox
-      Left = 16
-      Height = 19
-      Top = 704
-      Width = 76
-      Caption = 'Full Screen'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Name = 'Segoe UI Semibold'
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 2
-      OnChange = CheckBox1Change
-    end
-    object lblEntre1: TLabel
-      Left = -109
-      Height = 21
-      Top = -40
-      Width = 224
-      Anchors = [akBottom]
-      Caption = 'gestaointeligenteltd@gmail.com'
-      Font.CharSet = ANSI_CHARSET
-      Font.Color = 6896431
-      Font.Height = -16
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
-      ParentFont = False
-    end
   end
   object MySQL56Connection1: TMySQL56Connection
     Connected = True
@@ -2623,8 +2590,8 @@ object Form1: TForm1
     UserName = 'avnadmin'
     HostName = 'gtechdb-gtech.e.aivencloud.com'
     SkipLibraryVersionCheck = True
-    Left = 1168
-    Top = 664
+    Left = 1208
+    Top = 672
   end
   object SQLTransaction1: TSQLTransaction
     Active = True
