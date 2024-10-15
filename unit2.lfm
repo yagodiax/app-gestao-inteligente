@@ -1,12 +1,12 @@
 object Form2: TForm2
-  Left = -6
-  Height = 734
-  Top = 1
-  Width = 1362
+  Left = -8
+  Height = 745
+  Top = -8
+  Width = 1366
   BorderStyle = bsSingle
   Caption = 'Menu Inicial'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1366
   OnCreate = FormCreate
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel

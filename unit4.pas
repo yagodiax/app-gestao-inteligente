@@ -167,7 +167,8 @@ procedure TForm4.Image1Click(Sender: TObject);
 var
   valorFormatado: String;
 begin
-  if (tnome.Text = '') then
+  if (tnome.Text = '') or (tservico.Text = '') or (tdata.Text = '') or (tvalor.Text = '') or
+  (tpagamento.Text = '') then
   begin
     ShowMessage('Por favor, insira o nome da Loja.');
     Exit;

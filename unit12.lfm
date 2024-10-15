@@ -4,8 +4,8 @@ object Form12: TForm12
   Top = -8
   Width = 1366
   Caption = 'Form12'
-  ClientHeight = 745
-  ClientWidth = 1366
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel
@@ -9247,6 +9247,7 @@ object Form12: TForm12
         Precision = -1
         Size = 255
       end>
+    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -9258,7 +9259,7 @@ object Form12: TForm12
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1192
