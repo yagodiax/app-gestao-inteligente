@@ -3,9 +3,9 @@ object Form11: TForm11
   Height = 745
   Top = -8
   Width = 1366
-  Caption = 'Form11'
-  ClientHeight = 745
-  ClientWidth = 1366
+  Caption = 'Gerenciador de Vendas'
+  ClientHeight = 0
+  ClientWidth = 0
   OnCreate = FormCreate
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel
@@ -21,12 +21,12 @@ object Form11: TForm11
     ParentColor = False
     TabOrder = 0
     object lblEntre: TLabel
-      Left = 552
+      Left = 512
       Height = 49
       Top = 24
-      Width = 310
+      Width = 346
       Alignment = taCenter
-      Caption = 'Registrar Venda'
+      Caption = 'Gerenciar Vendas'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
       Font.Color = 15984107
@@ -10707,7 +10707,6 @@ object Form11: TForm11
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -10719,7 +10718,7 @@ object Form11: TForm11
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1216

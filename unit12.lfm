@@ -3,7 +3,7 @@ object Form12: TForm12
   Height = 745
   Top = -8
   Width = 1366
-  Caption = 'Form12'
+  Caption = 'Gerenciador de Vendas'
   ClientHeight = 0
   ClientWidth = 0
   OnCreate = FormCreate
@@ -21,12 +21,12 @@ object Form12: TForm12
     ParentColor = False
     TabOrder = 1
     object lblEntre: TLabel
-      Left = 504
+      Left = 488
       Height = 49
       Top = 24
-      Width = 358
+      Width = 394
       Alignment = taCenter
-      Caption = 'Registrar Despesa'
+      Caption = 'Gerenciar Despesas'
       Color = clNone
       Font.CharSet = ANSI_CHARSET
       Font.Color = 15984107
@@ -9247,7 +9247,6 @@ object Form12: TForm12
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -9259,7 +9258,7 @@ object Form12: TForm12
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1192

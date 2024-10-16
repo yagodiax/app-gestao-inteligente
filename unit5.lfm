@@ -1,11 +1,11 @@
 object Form5: TForm5
-  Left = -6
-  Height = 734
-  Top = 1
-  Width = 1362
-  Caption = 'Form5'
-  ClientHeight = 0
-  ClientWidth = 0
+  Left = -8
+  Height = 745
+  Top = -8
+  Width = 1366
+  Caption = 'Filtro de Lucros e Despesas'
+  ClientHeight = 745
+  ClientWidth = 1366
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = -14

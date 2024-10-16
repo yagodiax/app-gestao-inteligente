@@ -3,7 +3,7 @@ object Form9: TForm9
   Height = 745
   Top = -8
   Width = 1366
-  Caption = 'Form9'
+  Caption = 'Gerenciar Serviços'
   ClientHeight = 745
   ClientWidth = 1366
   OnCreate = FormCreate
@@ -8371,7 +8371,6 @@ object Form9: TForm9
         Precision = -1
         Size = 2
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -8383,7 +8382,7 @@ object Form9: TForm9
     Top = 16
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1192

@@ -22,7 +22,8 @@
         <UnitName Value="Unit1"/>
         <EditorIndex Value="2"/>
         <TopLine Value="6"/>
-        <CursorPos X="3" Y="40"/>
+        <CursorPos X="31" Y="28"/>
+        <ComponentState Value="1"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -35,7 +36,7 @@
         <UnitName Value="Unit2"/>
         <EditorIndex Value="3"/>
         <TopLine Value="50"/>
-        <CursorPos X="9" Y="61"/>
+        <CursorPos X="32" Y="75"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -61,7 +62,7 @@
         <UnitName Value="Unit3"/>
         <EditorIndex Value="4"/>
         <TopLine Value="123"/>
-        <CursorPos X="23" Y="146"/>
+        <CursorPos X="10" Y="138"/>
         <UsageCount Value="82"/>
         <Loaded Value="True"/>
       </Unit>
@@ -74,8 +75,7 @@
         <UnitName Value="Unit4"/>
         <EditorIndex Value="5"/>
         <TopLine Value="182"/>
-        <CursorPos Y="194"/>
-        <ComponentState Value="1"/>
+        <CursorPos X="28" Y="198"/>
         <UsageCount Value="80"/>
         <Loaded Value="True"/>
       </Unit>
@@ -89,7 +89,6 @@
         <EditorIndex Value="7"/>
         <TopLine Value="66"/>
         <CursorPos X="5" Y="68"/>
-        <ComponentState Value="2"/>
         <UsageCount Value="73"/>
         <Loaded Value="True"/>
       </Unit>
@@ -114,8 +113,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit7"/>
         <EditorIndex Value="9"/>
-        <TopLine Value="92"/>
-        <CursorPos X="3" Y="74"/>
+        <TopLine Value="91"/>
+        <CursorPos X="50" Y="105"/>
         <UsageCount Value="60"/>
         <Loaded Value="True"/>
       </Unit>
@@ -129,7 +128,6 @@
         <EditorIndex Value="10"/>
         <TopLine Value="80"/>
         <CursorPos X="10" Y="91"/>
-        <ComponentState Value="2"/>
         <UsageCount Value="58"/>
         <Loaded Value="True"/>
       </Unit>
@@ -142,8 +140,7 @@
         <UnitName Value="Unit10"/>
         <EditorIndex Value="11"/>
         <TopLine Value="105"/>
-        <CursorPos X="10" Y="112"/>
-        <ComponentState Value="2"/>
+        <CursorPos X="31" Y="120"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
       </Unit>
@@ -154,10 +151,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit11"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="12"/>
         <TopLine Value="265"/>
         <CursorPos X="6" Y="271"/>
-        <ComponentState Value="2"/>
         <UsageCount Value="42"/>
         <Loaded Value="True"/>
       </Unit>
@@ -169,8 +166,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit12"/>
         <TopLine Value="61"/>
-        <CursorPos X="69" Y="85"/>
-        <ComponentState Value="2"/>
+        <CursorPos X="63" Y="73"/>
         <UsageCount Value="42"/>
         <Loaded Value="True"/>
       </Unit>
@@ -180,7 +176,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="3655"/>
         <CursorPos X="28" Y="3759"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\dbc\ZDbcMySql.pas"/>
@@ -284,10 +280,9 @@
       <Unit>
         <Filename Value="C:\lazarus\lcl\lclclasses.pp"/>
         <UnitName Value="LCLClasses"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="143"/>
-        <CursorPos Y="157"/>
+        <CursorPos X="31" Y="159"/>
         <UsageCount Value="13"/>
         <Loaded Value="True"/>
       </Unit>
