@@ -167,7 +167,7 @@ begin
     close;
     sql.clear;
     sql.add('update gastos set categoria = :pcategoria, servico = :pservico, data = :pdata, valor = :pvalor, forma_pagamento = :ppagamento, detalhes = :pdetalhes, fornecedor = :pfornecedor');
-    sql.add('where servico = :pservico');  // assuming you have an ID field to uniquely identify the record
+    sql.add('where servico = :pservico');
     ParamByName('pcategoria').AsString := tcategoria.text;
     ParamByName('pservico').AsString := tservico.text;
     ParamByName('pdata').AsDate := strtodate(tdata.text);

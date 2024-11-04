@@ -68,7 +68,7 @@ begin
   try
     Form4.Left := Left;
     Form4.Top := Top;
-    Form4.WindowState := wsMaximized; // Corrigido para maximizar Form4
+    Form4.WindowState := wsMaximized;
     Hide;
     Form4.ShowModal;
   finally

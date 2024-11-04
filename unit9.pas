@@ -148,7 +148,6 @@ begin
 
   ShowMessage('Serviço deletado com sucesso.');
 
-  // Atualiza a visualização da lista de serviços
   with SQLQuery1 do
   begin
     Close;
@@ -184,7 +183,6 @@ begin
 
   ShowMessage('Valor do serviço atualizado com sucesso.');
 
-  // Atualiza a visualização da lista de serviços
   with SQLQuery1 do
   begin
     Close;

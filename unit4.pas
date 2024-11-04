@@ -136,30 +136,24 @@ end;
 
 procedure TForm4.FormCreate(Sender: TObject);
 begin
-  // Configura a Panel6 SQL para selecionar os valores desejados
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
   SQLQuery1.Open;
 
-  // Limpa o ComboBox antes de adicionar novos itens
   tservico.Items.Clear;
 
-  // Adiciona os valores retornados da Panel6 ao ComboBox
   while not SQLQuery1.EOF do
   begin
     tservico.Items.Add(SQLQuery1.FieldByName('nome').AsString);
     SQLQuery1.Next;
   end;
 
-  // Fecha a Panel6
   SQLQuery1.Close;
 
-  // Define a Panel6 original para o TDBGrid
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
   SQLQuery1.Open;
 
-  // Insere a data atual no campo tdata
   tdata.Text := DateToStr(Now);
 end;
 

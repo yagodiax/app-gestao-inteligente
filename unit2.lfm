@@ -5,8 +5,8 @@ object Form2: TForm2
   Width = 1366
   BorderStyle = bsSingle
   Caption = 'Menu Funcionario'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1366
   OnCreate = FormCreate
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel

@@ -93,7 +93,7 @@ procedure TForm1.Image1Click(Sender: TObject);
 begin
   if ValidateLogin(lblLogin.Text, lblSenha.Text) then
   begin
-    // O cargo já está sendo tratado dentro do ValidateLogin
+
   end
   else
   begin
@@ -133,7 +133,7 @@ begin
   Query := TSQLQuery.Create(nil);
   try
     if SQLTransaction1.Active then
-      SQLTransaction1.Rollback;  // Reverte a transação ativa, se houver
+      SQLTransaction1.Rollback;
 
     Query.SQLConnection := MySQL56Connection1;
     Query.Transaction := SQLTransaction1;
@@ -147,7 +147,6 @@ begin
       begin
         Cargo := Query.FieldByName('cargo').AsString;
         Result := True;
-        // Chama função para navegar para o formulário correto
         NavigateToNextPage(Cargo);
       end;
       SQLTransaction1.Commit;

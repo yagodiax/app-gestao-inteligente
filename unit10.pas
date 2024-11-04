@@ -134,7 +134,6 @@ begin
 
   ShowMessage('Usuário deletado com sucesso.');
 
-  // Atualiza a visualização da lista de administradores
   with SQLQuery1 do
   begin
     Close;
@@ -166,7 +165,6 @@ begin
 
   ShowMessage('Dados do usuário atualizados com sucesso.');
 
-  // Atualiza a visualização da lista de administradores
   with SQLQuery1 do
   begin
     Close;

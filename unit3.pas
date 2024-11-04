@@ -74,26 +74,22 @@ end;
 procedure TForm3.FormCreate(Sender: TObject);
 begin
   begin
-  // Configura a consulta SQL para selecionar os valores desejados
+
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT nome FROM servicos';
   SQLQuery1.Open;
 
-  // Limpa o ComboBox antes de adicionar novos itens
   ComboBox1.Items.Clear;
 
-  // Adiciona os valores retornados da consulta ao ComboBox
   while not SQLQuery1.EOF do
   begin
     ComboBox1.Items.Add(SQLQuery1.FieldByName('nome').AsString);
     SQLQuery1.Next;
   end;
 
-  // Fecha a consulta
   SQLQuery1.Close;
 
   begin
-  // Define a consulta original para o TDBGrid
   SQLQuery1.Close;
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas';
   SQLQuery1.Open;
@@ -135,21 +131,18 @@ procedure TForm3.Panel6Click(Sender: TObject);
   endDate := tdata1.Text;
   comboBoxText := ComboBox1.Text;
 
-  // Limpa os dados das labels antes da consulta
   Label7.Caption := 'R$ 0,00';
   Label6.Caption := '0';
   Label10.Caption := '';
 
   SQLQuery1.Close;
 
-  // Verifica se os campos de data estão preenchidos
   if (startDate = '') or (endDate = '') then
   begin
     ShowMessage('Por favor, preencha ambos os campos de data.');
     Exit;
   end;
 
-  // Define a consulta com os parâmetros necessários
   SQLQuery1.SQL.Text := 'SELECT * FROM vendas WHERE data BETWEEN :startDate AND :endDate';
 
   if comboBoxText <> '' then
@@ -161,10 +154,8 @@ procedure TForm3.Panel6Click(Sender: TObject);
   SQLQuery1.Params.ParamByName('startDate').AsDate := StrToDate(startDate);
   SQLQuery1.Params.ParamByName('endDate').AsDate := StrToDate(endDate);
 
-  // Executa a consulta
   SQLQuery1.Open;
 
-  // Verifica se há registros retornados
   if SQLQuery1.IsEmpty then
   begin
     ShowMessage('Nenhum dado encontrado.');
@@ -194,12 +185,9 @@ procedure TForm3.Panel6Click(Sender: TObject);
       SQLQuery1.Next;
     end;
 
-    // Exibe o total de valores em Label7
     Label7.Caption := 'R$ ' + FormatFloat('0.00', totalValue);
-    // Exibe a contagem total de registros em Label6
     Label6.Caption := IntToStr(recordCount);
 
-    // Exibe a lista de serviços mais contratados sem repetição em Label10
     itemList.Sort;
     Label10.Caption := '';
     for i := 0 to serviceList.Count - 1 do

@@ -130,14 +130,13 @@ begin
   QueryGastos := TSQLQuery.Create(nil);
   try
     if SQLTransaction1.Active then
-      SQLTransaction1.Rollback; // Reverte a transação ativa, se houver
+      SQLTransaction1.Rollback;
     QueryVendas.SQLConnection := MySQL56Connection1;
     QueryGastos.SQLConnection := MySQL56Connection1;
     QueryVendas.Transaction := SQLTransaction3;
     QueryGastos.Transaction := SQLTransaction3;
     SQLTransaction1.StartTransaction;
     try
-      // Primeira consulta: Soma dos valores da tabela 'vendas'
       QueryVendas.SQL.Text := 'SELECT SUM(valor) AS TotalValor FROM vendas WHERE data BETWEEN :dataInicio AND :dataFim';
       QueryVendas.Params.ParamByName('dataInicio').AsDate := StrToDate(startDate);
       QueryVendas.Params.ParamByName('dataFim').AsDate := StrToDate(endDate);
@@ -147,14 +146,13 @@ begin
         SomaValor := QueryVendas.FieldByName('TotalValor').AsFloat;
       end;
 
-      // Segunda consulta: Soma dos valores da tabela 'gastos'
       QueryGastos.SQL.Text := 'SELECT SUM(valor) AS TotalGastos FROM gastos WHERE data BETWEEN :dataInicio AND :dataFim';
       QueryGastos.Params.ParamByName('dataInicio').AsDate := StrToDate(startDate);
       QueryGastos.Params.ParamByName('dataFim').AsDate := StrToDate(endDate);
       QueryGastos.Open;
       if not QueryGastos.EOF then
       begin
-        SomaGastos := QueryGastos.Fields[0].AsFloat; // Acessa o valor do primeiro campo retornado
+        SomaGastos := QueryGastos.Fields[0].AsFloat;
       end;
 
       SQLTransaction1.Commit;
@@ -167,15 +165,12 @@ begin
     QueryGastos.Free;
   end;
 
-  // Calcula o lucro
   Lucro := SomaValor - SomaGastos;
 
-  // Atualiza as labels ou outros elementos da interface do usuário
   tganho.Caption := FormatFloat('R$: 0.00', SomaValor);
   tdespesa.Caption := FormatFloat('R$: 0.00', SomaGastos);
   tlucro.Caption := FormatFloat('R$: 0.00', Lucro);
 
-  // Atualiza os itens nos TDBGrid com os dados filtrados
   with SQLQuery1 do
   begin
     Close;
