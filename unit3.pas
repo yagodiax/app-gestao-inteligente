@@ -45,6 +45,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure Image3Click(Sender: TObject);
+    procedure Panel2Click(Sender: TObject);
     procedure Panel6Click(Sender: TObject);
   private
 
@@ -114,6 +115,11 @@ begin
     finally
       Form8.Free;
     end;
+end;
+
+procedure TForm3.Panel2Click(Sender: TObject);
+begin
+
 end;
 
 procedure TForm3.Panel6Click(Sender: TObject);

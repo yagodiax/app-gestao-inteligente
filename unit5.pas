@@ -20,7 +20,6 @@ type
     Image2: TImage;
     Image3: TImage;
     Image5: TImage;
-    Image6: TImage;
     Image7: TImage;
     Image8: TImage;
     Image9: TImage;
@@ -31,11 +30,9 @@ type
     SQLQuery3: TSQLQuery;
     SQLTransaction3: TSQLTransaction;
     tlucro: TLabel;
-    Label17: TLabel;
     tganho: TLabel;
     tdespesa: TLabel;
     Label4: TLabel;
-    Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
@@ -44,7 +41,6 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel5: TPanel;
-    Panel6: TPanel;
     Panel7: TPanel;
     Panel8: TPanel;
     Panel9: TPanel;

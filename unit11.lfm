@@ -1,11 +1,11 @@
 object Form11: TForm11
   Left = -8
   Height = 745
-  Top = -8
-  Width = 1366
+  Top = 0
+  Width = 1365
   Caption = 'Gerenciador de Vendas'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1365
   OnCreate = FormCreate
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel
@@ -10707,6 +10707,7 @@ object Form11: TForm11
         Precision = -1
         Size = 255
       end>
+    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -10718,7 +10719,7 @@ object Form11: TForm11
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1216

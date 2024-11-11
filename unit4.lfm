@@ -1,11 +1,11 @@
 object Form4: TForm4
-  Left = -8
-  Height = 745
-  Top = -8
-  Width = 1366
+  Left = -7
+  Height = 734
+  Top = 2
+  Width = 1363
   Caption = 'Registrar Venda'
-  ClientHeight = 745
-  ClientWidth = 1366
+  ClientHeight = 734
+  ClientWidth = 1363
   OnCreate = FormCreate
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel
@@ -10860,6 +10860,7 @@ object Form4: TForm4
         Precision = -1
         Size = 255
       end>
+    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -10871,7 +10872,7 @@ object Form4: TForm4
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 976

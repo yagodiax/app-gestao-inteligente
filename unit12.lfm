@@ -1,11 +1,11 @@
 object Form12: TForm12
-  Left = -8
-  Height = 745
-  Top = -8
-  Width = 1366
+  Left = -7
+  Height = 734
+  Top = 2
+  Width = 1364
   Caption = 'Gerenciador de Vendas'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 734
+  ClientWidth = 1364
   OnCreate = FormCreate
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel
@@ -6757,7 +6757,13 @@ object Form12: TForm12
       DataSource = DataSource1
       FixedColor = 15984107
       FixedHotColor = 15984107
+      Font.CharSet = ANSI_CHARSET
       Font.Color = 6896431
+      Font.Height = -13
+      Font.Name = 'Segoe UI Semibold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
       Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
       ParentFont = False
       TabOrder = 1
@@ -9247,6 +9253,7 @@ object Form12: TForm12
         Precision = -1
         Size = 255
       end>
+    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -9258,7 +9265,7 @@ object Form12: TForm12
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1192
