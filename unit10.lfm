@@ -8409,7 +8409,6 @@ object Form10: TForm10
         Precision = -1
         Size = 50
       end>
-    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (
@@ -8421,7 +8420,7 @@ object Form10: TForm10
     Top = 24
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caCommit
     Database = Form1.MySQL56Connection1
     Left = 1160

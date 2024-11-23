@@ -76,9 +76,9 @@ procedure TForm11.Image1Click(Sender: TObject);
 var
   valorFormatado: String;
 begin
-  if (tnome.Text = '') then
+  if (tnome.Text = '') or (tservico.Text = '') or (tdata.Text = '') or (tpagamento.Text = '') or (tvalor.Text = '') then
   begin
-    ShowMessage('Por favor, insira o nome da Loja.');
+    ShowMessage('Por favor, insira todos os campos.');
     Exit;
   end;
 
@@ -236,6 +236,14 @@ begin
   tpagamento.Caption := '';
   tvalor.Caption := '';
   tnome.Caption := '';
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from vendas');
+    open;
+    Last;
+  end;
 end;
 
 procedure TForm11.Panel6Click(Sender: TObject);

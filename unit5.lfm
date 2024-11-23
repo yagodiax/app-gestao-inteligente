@@ -4,16 +4,16 @@ object Form5: TForm5
   Top = -8
   Width = 1366
   Caption = 'Filtro de Lucros e Despesas'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 745
+  ClientWidth = 1366
   LCLVersion = '3.6.0.0'
   object Panel1: TPanel
     Left = -14
-    Height = 98
+    Height = 90
     Top = -8
     Width = 1382
     BevelColor = clNone
-    ClientHeight = 98
+    ClientHeight = 90
     ClientWidth = 1382
     Color = 6896431
     ParentBackground = False
@@ -855,10 +855,10 @@ object Form5: TForm5
   end
   object Panel2: TPanel
     Left = 0
-    Height = 666
-    Top = 88
+    Height = 674
+    Top = 80
     Width = 1366
-    ClientHeight = 666
+    ClientHeight = 674
     ClientWidth = 1366
     Color = 15984107
     ParentBackground = False

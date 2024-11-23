@@ -79,9 +79,9 @@ end;
 
 procedure TForm6.Image1Click(Sender: TObject);
 begin
-   if (tservico.Text = '') then
+   if (tservico.Text = '') or (tfornecedor.Text = '') or (tdata.Text = '') or (tpagamento.Text = '') or (tcategoria.Text = '') or (tvalor.Text = '') THEN
   begin
-    ShowMessage('Por favor, insira o Serviço.');
+    ShowMessage('Por favor, insira todos os campos.');
     Exit;
   end;
    with SQLQuery1 do

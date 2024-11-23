@@ -164,7 +164,7 @@ begin
   if (tnome.Text = '') or (tservico.Text = '') or (tdata.Text = '') or (tvalor.Text = '') or
   (tpagamento.Text = '') then
   begin
-    ShowMessage('Por favor, insira o nome da Loja.');
+    ShowMessage('Por favor, insira todos os dados.');
     Exit;
   end;
 

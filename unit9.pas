@@ -65,6 +65,14 @@ procedure TForm9.Panel4Click(Sender: TObject);
 begin
   tservico.Caption := '';
   tvalor.Caption := '';
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select * from servicos');
+    open;
+    Last;
+  end;
 end;
 
 procedure TForm9.Image10Click(Sender: TObject);
@@ -94,17 +102,44 @@ begin
 end;
 
 procedure TForm9.Image1Click(Sender: TObject);
-  var
+var
   valorFormatado: String;
 begin
   if (tservico.Text = '') then
   begin
-    ShowMessage('Por favor, insira o nome da Loja.');
+    ShowMessage('Por favor, insira o nome do Serviço.');
+    Exit;
+  end;
+  if (tvalor.Text = '') then
+  begin
+    ShowMessage('Por favor, insira o valor do Serviço.');
     Exit;
   end;
 
   valorFormatado := StringReplace(tvalor.Text, ',', '.', [rfReplaceAll]);
 
+  // Verificar se o serviço já existe
+  with SQLQuery1 do
+  begin
+    close;
+    sql.clear;
+    sql.add('select count(*) as Total from servicos where nome = :pnome');
+    ParamByName('pnome').AsString := tservico.Text;
+    open;
+
+    if FieldByName('Total').AsInteger > 0 then
+    begin
+      ShowMessage('Já existe um serviço com esse nome.');
+      Exit;
+    end;
+    close;
+    sql.clear;
+    sql.add('select * from servicos');
+    open;
+    Last;
+  end;
+
+  // Inserir o novo serviço
   with SQLQuery1 do
   begin
     close;
@@ -117,6 +152,7 @@ begin
     SQLTransaction1.Commit;
   end;
 
+  // Atualizar a lista de serviços
   with SQLQuery1 do
   begin
     close;

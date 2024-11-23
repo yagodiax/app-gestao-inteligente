@@ -60,9 +60,9 @@ uses
 
 procedure TForm10.Image1Click(Sender: TObject);
 begin
-  if (tusuario.Text = '') then
+  if (tusuario.Text = '') or (tsenha.Text = '') or (tcargo.Text = '') then
   begin
-    ShowMessage('Por favor, insira o nome da Loja.');
+    ShowMessage('Por favor, insira todos os Dados.');
     Exit;
   end;
   with SQLQuery1 do

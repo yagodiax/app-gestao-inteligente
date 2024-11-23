@@ -69,9 +69,9 @@ uses
 
 procedure TForm12.Image1Click(Sender: TObject);
 begin
-   if (tservico.Text = '') then
+   if (tcategoria.Text = '') or (tdata.Text = '') or (tvalor.Text = '') or (tservico.Text = '') or (tfornecedor.Text = '') or (tpagamento.Text = '')then
   begin
-    ShowMessage('Por favor, insira o Serviço.');
+    ShowMessage('Por favor, insira todos os campos.');
     Exit;
   end;
    with SQLQuery1 do
@@ -86,7 +86,7 @@ begin
     ParamByName('pvalor').AsString:= tvalor.text;
     ParamByName('ppagamento').AsString:= tpagamento.text;
     ParamByName('pdetalhes').AsString:= tdetalhes.text;
-    ParamByName('pfornecedor').AsString:= tdetalhes.text;
+    ParamByName('pfornecedor').AsString:= tfornecedor.text;
     ExecSQL;
     SQLTransaction1.Commit;
   end;
