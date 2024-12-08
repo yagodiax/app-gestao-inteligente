@@ -8956,6 +8956,7 @@ object Form3: TForm3
         Precision = -1
         Size = 255
       end>
+    Active = True
     Database = Form1.MySQL56Connection1
     Transaction = Form1.SQLTransaction1
     SQL.Strings = (

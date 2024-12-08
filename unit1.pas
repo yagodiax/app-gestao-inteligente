@@ -13,6 +13,7 @@ type
   TForm1 = class(TForm)
     Image1: TImage;
     imgLogo: TImage;
+    imgLogo1: TImage;
     Label1: TLabel;
     lblEntre: TLabel;
     lblLogin: TEdit;
